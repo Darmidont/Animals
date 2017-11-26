@@ -9,16 +9,9 @@ using Animal.Common.Models.Data;
 namespace Animal.Web.Controllers
 {
 	public class HomeController : Controller
-	{
-		private readonly IUserService _userService;
-		public HomeController(IUserService _userService)
-		{
-			_userService = _userService;
-		}
+	{		
 		public ActionResult Index()
 		{
-			var dd = _userService.Hello();
-			var users = _userService.GetUsers();
 			return View();
 		}
 
@@ -81,9 +74,6 @@ namespace Animal.Web.Controllers
 		{
 			return View();
 		}
-
-
-
 
 		public ActionResult getKindOfAnimal(KindOfAnimalEnity kindOfAnimalEnity)
 		{
