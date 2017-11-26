@@ -54,13 +54,11 @@ namespace Animal.Web.Controllers
 		public ActionResult AnimalHusbandry()
 		{
 			//	var dd = _userService.Hello();
-			var users = _userService.GetUsers();
 			return View("Index");
 		}
 
 		public ActionResult AddUser(UserEnity userEnity)
 		{
-			_userService.AddUser(userEnity);
 			return View("Index");
 		}
 
