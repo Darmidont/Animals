@@ -9,4 +9,18 @@
 		public string Login { get; set; }
 		public string Description { get; set; }
 	}
+
+	public class ParticularAnimalEnity
+	{
+		public int Id { get; set; }
+
+		public string AnimalId { get; set; }
+		public string AnimalTypePropertyId { get; set; }
+		public string Value { get; set; }
+	}
+
+	public class KindOfAnimalEnity
+	{
+		public int Id { get; set; }
+	}
 }
