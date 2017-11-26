@@ -3,11 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Animal Family</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-
 
 
 <body>
@@ -31,17 +30,20 @@
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr/>
+<div class="container body-content">
+    @RenderBody()
+    <hr/>
         
+    <footer>
+        <p>&copy; Rastsvietalov Sergey PI-15-4 @DateTime.Now.Year - Animal Family</p>
+    </footer>
+</div>
+    
+<footer>
+    <p>&copy; Rastsvietalov Sergey PI-15-4 @DateTime.Now.Year - Animal Family</p>
+</footer>
 
-        <footer>
-            <p>&copy; Rastsvietalov Sergey PI-15-4 @DateTime.Now.Year - Animal Family</p>
-        </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

@@ -25,9 +25,14 @@ namespace Animal.Web.Controllers
 		}
 
 		[HttpPost]
-		public ActionResult Register()
+		public ActionResult Register(UserModel model)
 		{
-			var model = new UserModel();
+			if (ModelState.IsValid)
+			{
+				return View("RegistrationCompleted");
+			}
+
+
 			return View("GetRegistrationModel", model);
 		}
 
