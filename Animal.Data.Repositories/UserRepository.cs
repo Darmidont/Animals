@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 using Animal.Common;
 using Animal.Common.Models.Data;
 using Animal.Data.Interfaces;
@@ -30,5 +31,19 @@ namespace Animal.Data.Repositories
 
 			return result;
 		}
+
+		public void AddUser(UserEnity user)
+		{
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAddUser"))
+			{
+				Database.AddInParameter(dbCommand, "@FirstName", DbType.String, user.FirstName);
+				Database.AddInParameter(dbCommand, "@LastName", DbType.String, user.LastName);
+				Database.AddInParameter(dbCommand, "@Email", DbType.String, user.Email);
+				Database.AddInParameter(dbCommand, "@Login", DbType.String, user.Login);
+				Database.AddInParameter(dbCommand, "@Description", DbType.String, user.Description);
+				Database.ExecuteNonQuery(dbCommand);
+			}
+		}
+
 	}
 }

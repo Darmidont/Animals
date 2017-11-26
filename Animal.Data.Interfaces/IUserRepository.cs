@@ -10,5 +10,7 @@ namespace Animal.Data.Interfaces
 	public interface IUserRepository
 	{
 		IEnumerable<UserEnity> GetUsers();
+
+		void AddUser(UserEnity user);
 	}
 }

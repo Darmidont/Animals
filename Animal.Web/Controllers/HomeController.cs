@@ -10,15 +10,15 @@ namespace Animal.Web.Controllers
 {
 	public class HomeController : Controller
 	{
-		private readonly ITestService _testService;
-		public HomeController(ITestService testService)
+		private readonly IUserService _userService;
+		public HomeController(IUserService _userService)
 		{
-			_testService = testService;
+			_userService = _userService;
 		}
 		public ActionResult Index()
 		{
-			var dd = _testService.Hello();
-			var users = _testService.GetUsers();
+			var dd = _userService.Hello();
+			var users = _userService.GetUsers();
 			return View();
 		}
 
