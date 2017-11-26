@@ -29,9 +29,9 @@ namespace Animal.Web.Controllers
 			return View();
 		}
 
-		public ActionResult Contact()
+		public ActionResult Personal()
 		{
-			ViewBag.Message = "Your contact page.";
+			ViewBag.Message = "Your personal page.";
 
 			return View();
 		}
@@ -97,12 +97,6 @@ namespace Animal.Web.Controllers
 			return View();
 		}
 
-		public ActionResult Contact()
-		{
-			ViewBag.Message = "Your contact page.";
-
-			return View();
-		}
-
+		
 	}
 }
