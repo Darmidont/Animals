@@ -30,5 +30,23 @@ namespace Animal.Web.Controllers
 			var model = new UserModel();
 			return View("GetRegistrationModel", model);
 		}
+
+
+		[HttpPost]
+
+		public ActionResult GetAuthorizationView()
+		{
+			var model = new UserModel();
+			return View("GetRegistrationModel", model);
+		}
+
+
+		[HttpPost]
+
+		public ActionResult Authorization()
+		{
+			var model = new UserModel();
+			return View("GetRegistrationModel", model);
+		}
 	}
 }

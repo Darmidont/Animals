@@ -22,3 +22,356 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+html {
+    background: url(../pictures/stroitelstvo.png) repeat;
+    min-height: 100%;
+    box-sizing: border-box;
+    font: 12px/2 Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+#login {
+    border-radius: 20px;
+    margin: 140px auto;
+    width: 400px;
+    -webkit-perspective: 1000;
+}
+
+    #login h2 {
+        position: relative;
+        margin: 0;
+        padding: 15px;
+        border: 4px solid #3b8c27;
+        border-radius: 5px 5px 0 0;
+        font-size: 16px;
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 1px 1px rgba(0,0,0,.2);
+        background-color: #087041;
+        box-shadow: 0 0 5px 5px F0FFF0;
+        background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.15) );
+        font-family: Tahoma;
+    }
+
+        #login h2:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            bottom: 2px;
+            left: 0;
+            border-bottom: 1px dashed rgba(0,0,0,.5);
+        }
+
+    #login a {
+        color: #696969;
+        text-decoration: none;
+    }
+
+        #login a:hover {
+            color: #369;
+        }
+
+    #login p {
+        margin: 0;
+    }
+
+    #login .social {
+        display: inline-block;
+        height: 20px;
+        margin-left: 0px;
+        padding: 0 2px;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+        #login .social:before {
+            content: "";
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            vertical-align: top;
+            margin: 3px 5px 0 0;
+        }
+
+        #login .social.fb:before {
+            background: url('../pictures/Facebook.png') no-repeat;
+        }
+
+        #login .social.gp:before {
+            background: url('../pictures/google.png') no-repeat;
+        }
+
+        #login .social.vk:before {
+            background: url('../pictures/vk.png') no-repeat;
+        }
+
+        #login .social.tw:before {
+            background: url('../pictures/twitter.png') no-repeat;
+        }
+
+
+
+
+        #login .social:hover {
+            color: #333;
+            background: #eee;
+            box-shadow: 1px 1px 1px #bbb;
+        }
+
+    #login fieldset {
+        display: block;
+        margin: 0;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid rgba(0,0,0,.3);
+        border-top: 0;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 1px 2px #aaa;
+    }
+
+    #login input {
+        width: 238px;
+        margin: 0;
+        padding: 12px 10px;
+        border: 1px solid #ccc;
+        outline: none;
+        font-size: 14px;
+    }
+
+        #login input:focus {
+            background: #fafafa;
+            box-shadow: inset 0 1px 7px #ddd;
+        }
+
+        #login input[type="email"] {
+            border-radius: 3px 3px 0 0;
+        }
+
+        #login input[type="password"] {
+            border-width: 0 1px;
+            border-radius: 0;
+        }
+
+    #login .login input[type="password"] {
+        border-width: 0 1px 1px 1px;
+        border-radius: 0 0 3px 3px;
+    }
+
+    #login input[type="text"] {
+        border-radius: 0 0 3px 3px;
+    }
+
+    #login input[type="submit"] {
+        width: 260px;
+        padding: 12px 20px;
+        margin: 15px 0;
+        border: 1px solid #C1711B;
+        border-radius: 3px;
+        color: #111;
+        font-size: 1.3em;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px rgba(255,255,255,.5);
+        cursor: pointer;
+        background-color: #FFB83A;
+        box-shadow: inset 0 1px 1px rgba(255,255,0,.6);
+        background-image: linear-gradient(rgba(255,207,92,.7), rgba(223,156,38,.8));
+    }
+
+        #login input[type="submit"]:hover {
+            background-color: #F5FF00;
+        }
+
+        #login input[type="submit"]:active {
+            padding: 13px 20px 11px;
+            text-shadow: -1px -1px 1px rgba(255,255,255,.6);
+            box-shadow: inset 0 1px 4px rgba(0,0,0,.2);
+        }
+
+
+.flip {
+    position: relative;
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+}
+
+.login,
+.signup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    box-shadow: 0 0 5px 5px #F0FFF0
+}
+
+.signup {
+    z-index: 2;
+}
+
+.login {
+    -webkit-transform: rotateY(180deg);
+}
+
+.flip.flipped {
+    -webkit-transform: rotateY(-180deg);
+}
+
+#login input.login-err,
+#login input.login-err:focus {
+    color: #C4550B;
+    background-color: #FFEDD7;
+    border-color: #EB975F;
+}
+
+    #login input.login-err::-webkit-input-placeholder {
+        color: #C4550B;
+    }
+
+#login input.login-ok,
+#login input.login-ok:focus {
+    color: #4E831F;
+    background-color: #EBFDDC;
+    border-color: #9FCC41;
+}
+
+    #login input.login-ok::-webkit-input-placeholder {
+        color: #4E831F;
+    }
+
+#login p.login-msg {
+    display: none;
+    margin: 0 0 5px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #C4550B;
+}
+
+.top_bar_up-building {
+    line-height: 24px;
+    font-size: 11px;
+    background: rgba(0, 0, 0, 0.08);
+    text-transform: uppercase;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-family: calibri;
+    font-size: 13px;
+    box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+    -webkit-animation: slideOut 0.5s ease-in-out 0.3s backwards;
+}
+
+@-webkit-keyframes slideOut {
+    0% {
+        top: -30px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+
+
+.top_bar_up-building a {
+    padding: 0px 10px;
+    letter-spacing: 1px;
+    color: #333;
+    text-shadow: 0px 1px 1px #fff;
+    display: block;
+    float: left;
+    text-decoration: none;
+}
+
+    .top_bar_up-building a:hover {
+        background: #fff;
+    }
+
+.top_bar_up-building span.right {
+    float: right;
+}
+
+    .top_bar_up-building span.right a {
+        float: left;
+        display: block;
+    }
+
+
+
+
+#menu {
+    list-style: none;
+    width: 98%;
+    margin: 400px auto 0px auto;
+    height: 60px;
+    padding: 0px 20px 0px 20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #014464;
+    background: -moz-linear-gradient(top, #0272a7, #013953);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0272a7), to(#013953));
+    /* Borders */
+    border: 1px solid #002232;
+    -moz-box-shadow: inset 0px 0px 1px #edf9ff;
+    -webkit-box-shadow: inset 0px 0px 1px #edf9ff;
+    box-shadow: inset 0px 0px 1px #edf9ff;
+}
+
+    #menu li {
+        float: left;
+        display: block;
+        text-align: center;
+        position: relative;
+        padding: 8px 10px 4px 10px;
+        margin-right: 30px;
+        margin-top: 7px;
+        border: none;
+    }
+
+        #menu li:hover {
+            border: 1px solid #777777;
+            padding: 4px 9px 4px 9px;
+            /* Background color and gradients */
+            background: #F4F4F4;
+            background: -moz-linear-gradient(top, #F4F4F4, #EEEEEE);
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F4F4F4), to(#32CD32));
+            /* Rounded corners */
+            -moz-border-radius: 5px 5px 0px 0px;
+            -webkit-border-radius: 5px 5px 0px 0px;
+            border-radius: 5px 5px 0px 0px;
+        }
+
+        #menu li a {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: #EEEEEE;
+            display: block;
+            outline: 0;
+            text-decoration: none;
+            text-shadow: 1px 1px 1px #000;
+        }
+
+        #menu li:hover a {
+            color: #161616;
+            text-shadow: 1px 1px 1px #FFFFFF;
+        }
+
+    #menu .menu_right {
+        float: right;
+        margin-right: 0px;
+    }
+
+    #menu li .align_right {
+        -moz-border-radius: 5px 0px 5px 5px;
+        -webkit-border-radius: 5px 0px 5px 5px;
+        border-radius: 5px 0px 5px 5px;
+    }
+
+    #menu li:hover .align_right {
+        left: auto;
+        right: -1px;
+        top: auto;

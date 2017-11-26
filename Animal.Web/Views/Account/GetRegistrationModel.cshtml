@@ -1,8 +1,64 @@
 ﻿
 @{
-    
+
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<h2>Welcome to registration page! Here you can start</h2>
 
-<h2>GetRegistrationModel</h2>
+
+
+
+<div id="login">
+    <div class="flip">
+        <div class="signup">
+            <h2>Registration</h2>
+            <fieldset>
+                <p class="login-msg"></p>
+                <form>
+                    <input type="email" placeholder="Your e-mail..." required />
+                    <input type="password" placeholder="Your password..." required />
+                    <input type="text" placeholder="Your login..." required />
+                    <input type="submit" value="Click to register" />
+                </form>
+                <p>Login with: <span class="social fb">Facebook</span>
+                    <span class="social gp">Google +</span>
+                    <span class="social vk">Vk</span>
+                    <span class="social tw">Twitter</span>
+                </p>
+                <a href="#" class="flipper">Have you registered? Login</a>
+            </fieldset>
+        </div>
+
+        <div class="login">
+            <h2>Authorization</h2>
+            <fieldset>
+                <form>
+                    <input type="email" placeholder="Login or Email" required />
+                    <input type="password" placeholder="Password" required />
+                    <input type="submit" value="Login" />
+                </form>
+                Login with:
+                <p>
+                <span class="social fb">Facebook </span> 
+                <span class="social gp">Google+</span>     
+                <span class="social vk">Vk</span>
+                <span class="social tw">Twitter</span>
+      
+                <p><a href="#" class="flipper">No account? Registration.</a><br>
+                    <a href="#">Forgot your password?</a></p>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/index.js"></script>
+
+<script>
+    $('a.flipper').click(function(){
+        $('.flip').toggleClass('flipped');
+    });
+</script>
 
