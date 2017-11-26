@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Animal.Bal.Interfaces;
+using Animal.Common.Models.Data;
 
 namespace Animal.Web.Controllers
 {
@@ -34,5 +35,74 @@ namespace Animal.Web.Controllers
 
 			return View();
 		}
+
+
+		public ActionResult Registration()
+		{
+
+			ViewBag.Message = "Hello! You can start using our service from this page!";
+
+			return View();
+		}
+
+		public ActionResult Authorization()
+		{
+			ViewBag.Message = "You can authorize here:";
+			return View();
+		}
+
+		public ActionResult Description()
+		{
+			ViewBag.Message = "Here you can find all descriptions about devices:";
+			return View();
+		}
+
+
+		public ActionResult AnimalHusbandry()
+		{
+			//	var dd = _userService.Hello();
+			var users = _userService.GetUsers();
+			return View("Index");
+		}
+
+		public ActionResult AddUser(UserEnity userEnity)
+		{
+			_userService.AddUser(userEnity);
+			return View("Index");
+		}
+
+		public ActionResult AddUser()
+		{
+			return View();
+		}
+
+
+		public ActionResult GetParticularAnimalProperties(ParticularAnimalEnity particularAnimalEnity)
+		{
+			return View();
+		}
+
+
+
+
+		public ActionResult getKindOfAnimal(KindOfAnimalEnity kindOfAnimalEnity)
+		{
+			return View();
+		}
+
+		public ActionResult AboutUs()
+		{
+			ViewBag.Message = "Your application description page.";
+
+			return View();
+		}
+
+		public ActionResult Contact()
+		{
+			ViewBag.Message = "Your contact page.";
+
+			return View();
+		}
+
 	}
 }
