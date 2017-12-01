@@ -15,7 +15,7 @@ namespace Animal.Common.Config
 		{
 			//var modelMapperBuilder = builder ?? new MapperBuilder();
 			var cfg = new MapperConfigurationExpression();
-			cfg.CreateMap<UserEnity, UserModel>();
+			cfg.CreateMap<UserEntity, UserModel>();
 
 			
 		}

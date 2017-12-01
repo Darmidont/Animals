@@ -9,8 +9,8 @@ namespace Animal.Data.Interfaces
 {
 	public interface IUserRepository
 	{
-		IEnumerable<UserEnity> GetUsers();
+		IEnumerable<UserEntity> GetUsers();
 
-		void AddUser(UserEnity user);
+		void AddUser(UserEntity user);
 	}
 }

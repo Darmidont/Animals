@@ -24,14 +24,16 @@ namespace Animal.Bal.Services
 			return "Hello";
 		}
 
-		public IEnumerable<UserEnity> GetUsers()
+		public IEnumerable<UserEntity> GetUsers()
 		{
 			return _userRepository.GetUsers();
 		}
 
-		public void AddUser(UserEnity user)
+		public void AddUser(UserEntity user)
 		{
 			_userRepository.AddUser(user);
 		}
+
+
 	}
 }

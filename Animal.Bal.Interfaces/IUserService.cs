@@ -9,8 +9,10 @@ namespace Animal.Bal.Interfaces
 {
 	public interface IUserService
 	{
-		string Hello();
-		IEnumerable<UserEnity> GetUsers();
-		void AddUser(UserEnity user);
+	//	string Hello();
+		IEnumerable<UserEntity> GetUsers();
+		void AddUser(UserEntity user);
+
 	}
 }
+

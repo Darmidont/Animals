@@ -15,6 +15,13 @@ namespace Animal.Web.Controllers
 			return View();
 		}
 
+		public ActionResult UsersList()
+		{
+			//IEnumerable<IUserService> users = db
+			//	ViewBag.
+			return View();
+		}
+
 		public ActionResult About()
 		{
 			ViewBag.Message = "Your application description page.";
@@ -57,7 +64,7 @@ namespace Animal.Web.Controllers
 			return View("Index");
 		}
 
-		public ActionResult AddUser(UserEnity userEnity)
+		public ActionResult AddUser(UserEntity userEnity)
 		{
 			return View("Index");
 		}
@@ -68,7 +75,7 @@ namespace Animal.Web.Controllers
 		}
 
 
-		public ActionResult GetParticularAnimalProperties(ParticularAnimalEnity particularAnimalEnity)
+		public ActionResult GetParticularAnimalProperties(ParticularAnimalEntity particularAnimalEnity)
 		{
 			return View();
 		}
