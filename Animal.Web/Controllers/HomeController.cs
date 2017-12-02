@@ -75,12 +75,12 @@ namespace Animal.Web.Controllers
 		}
 
 
-		public ActionResult GetParticularAnimalProperties(ParticularAnimalEntity particularAnimalEnity)
+		public ActionResult GetParticularAnimalProperties(AnimalParticularEntity particularAnimalEnity)
 		{
 			return View();
 		}
 
-		public ActionResult getKindOfAnimal(KindOfAnimalEnity kindOfAnimalEnity)
+		public ActionResult getKindOfAnimal(AnimalKindEntity kindOfAnimalEnity)
 		{
 			return View();
 		}

@@ -12,18 +12,4 @@
 		public int CreatedDate { get; set; }
 		public int LastLoginDate { get; set; }
 	}
-
-	public class ParticularAnimalEntity
-	{
-		public int Id { get; set; }
-
-		public string AnimalId { get; set; }
-		public string AnimalTypePropertyId { get; set; }
-		public string Value { get; set; }
-	}
-
-	public class KindOfAnimalEntity
-	{
-		public int Id { get; set; }
-	}
 }

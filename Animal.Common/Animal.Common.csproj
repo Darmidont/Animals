@@ -76,8 +76,11 @@
     <Compile Include="Config\MapConfig.cs" />
     <Compile Include="Config\NonDisposableUnityContainerDecorator.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Models\Bal\AnimalKindModel.cs" />
+    <Compile Include="Models\Bal\AnimalParticularModel.cs" />
     <Compile Include="Models\Bal\UserModel.cs" />
-    <Compile Include="Models\Data\PatricularAnimalEntity.cs" />
+    <Compile Include="Models\Data\AnimalKindEntity.cs" />
+    <Compile Include="Models\Data\AnimalParticularEntity.cs" />
     <Compile Include="Models\Data\UserEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnityConfig.cs" />

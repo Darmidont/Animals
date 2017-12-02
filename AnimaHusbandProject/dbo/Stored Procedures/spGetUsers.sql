@@ -3,5 +3,5 @@
 
 as
 begin
-select * from dbo.[User]
+select * from dbo.[Users]
 end

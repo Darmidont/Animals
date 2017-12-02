@@ -50,6 +50,8 @@ namespace Animal.Web.Controllers
 			return View("Registration", model);
 		}
 
+
+
 		[HttpPost]
 		public ActionResult Register(UserModel model)
 		{
