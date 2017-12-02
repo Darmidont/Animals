@@ -1,0 +1,24 @@
+﻿@using Animal.Common.Models.Data
+@model IEnumerable<AnimalKindEntity>
+
+@{
+    ViewBag.Title = "DifferentKindsOfAnimalsList";
+}
+
+<h2>Different Kinds Of Animals List</h2>
+
+
+@foreach (var meaning in @Model)
+{
+    
+    <div>
+        <h3>@meaning.PlannedNumberOfAnimals</h3>
+        <p>@meaning.CurrentNumberOfAnimals</p>
+        <p>@meaning.DescriptionOFAnimals</p>
+    </div>
+
+
+
+
+}
+
