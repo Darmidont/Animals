@@ -56,9 +56,9 @@ namespace Animal.Web.Controllers
 		{
 			if (ModelState.IsValid)
 			{
+				_userService.AddUser(model);
 				return View("RegistrationCompleted");
 			}
-
 
 			return View("Registration", model);
 		}

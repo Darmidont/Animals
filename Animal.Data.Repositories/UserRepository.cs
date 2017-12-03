@@ -9,6 +9,7 @@ using Animal.Data.Interfaces;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using Microsoft.Practices.Unity;
 using System.Configuration;
+using Animal.Common.Models.Bal;
 
 namespace Animal.Data.Repositories
 {
@@ -36,39 +37,19 @@ namespace Animal.Data.Repositories
 			return result;
 		}
 
-		public void AddUser(UserEntity user)
+		public void AddUser(UserModel user)
 		{
-			int userId = 0;
-			//string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAddUser"))
 			{
-
-				//Database.CommandType = CommandType.StoredProcedure;
 				Database.AddInParameter(dbCommand, "@FirstName", DbType.String, user.FirstName);
 				Database.AddInParameter(dbCommand, "@LastName", DbType.String, user.LastName);
 				Database.AddInParameter(dbCommand, "@Email", DbType.String, user.Email);
 				Database.AddInParameter(dbCommand, "@Login", DbType.String, user.Login);
 				Database.AddInParameter(dbCommand, "@Password", DbType.String, user.Password);
 				Database.AddInParameter(dbCommand, "@Description", DbType.String, user.Description);
-				Database.AddInParameter(dbCommand, "@CreatedDate",DbType.DateTime, user.CreatedDate);
-				Database.AddInParameter(dbCommand, "@LastLoginDate", DbType.DateTime, user.LastLoginDate);
+				//Database.AddInParameter(dbCommand, "@CreatedDate",DbType.DateTime, user.CreatedDate);
+				//Database.AddInParameter(dbCommand, "@LastLoginDate", DbType.DateTime, user.LastLoginDate);
 				Database.ExecuteNonQuery(dbCommand);
-
-				string message = string.Empty;
-				switch (userId)
-				{
-					case -1:
-						message = "Username already exists.\\nPlease choose a different username.";
-						break;
-					case -2:
-						message = "Supplied email address has already been used.";
-						break;
-					default:
-						message = "Registration successful.\\nUser Id: " + userId.ToString();
-						break;
-				}
-
 			}
 		}
 

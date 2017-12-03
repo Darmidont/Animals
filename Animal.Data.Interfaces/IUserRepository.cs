@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Animal.Common.Models.Bal;
 using Animal.Common.Models.Data;
 
 namespace Animal.Data.Interfaces
@@ -11,6 +8,6 @@ namespace Animal.Data.Interfaces
 	{
 		IEnumerable<UserEntity> GetUsers();
 
-		void AddUser(UserEntity user);
+		void AddUser(UserModel user);
 	}
 }
