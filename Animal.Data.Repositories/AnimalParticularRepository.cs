@@ -18,7 +18,6 @@ namespace Animal.Data.Repositories
 		{
 		}
 
-
 		public IEnumerable<AnimalParticularEntity> GetParticularAnimalStats()
 		{
 			var result = new List<AnimalParticularEntity>();
@@ -37,6 +36,9 @@ namespace Animal.Data.Repositories
 		}
 
 
-
+		public IEnumerable<AnimalParticularEntity> GetAnimals(int animalKindId)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

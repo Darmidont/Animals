@@ -15,9 +15,9 @@ namespace Animal.Web.Controllers
 		//  private IAnimalRepository repository;
 	    private readonly IKindOfAnimalService _animalService;
 
-		public WorkWithAnimalController(IAnimalParticularRepository repo)
+		public WorkWithAnimalController(IKindOfAnimalService animalService)
 	    {
-		    repository = repo;
+		    _animalService =animalService;
 	    }
 
         // GET: WorkWithAnimal
@@ -32,14 +32,12 @@ namespace Animal.Web.Controllers
 	    {
 		    if (ModelState.IsValid)
 		    {
-			    _animalService.AddNewKindOfAnimal(model);
-			    return View("AddingNewTypeOfAnimalCompleted", );
+			    _animalService.Add(model);
+			    return View("AddingNewTypeOfAnimalCompleted");
 		    }
 
 		    return View("Registration", model);
 	    }
-
-
 
 	}
 }
