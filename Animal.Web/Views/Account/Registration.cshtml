@@ -1,11 +1,36 @@
-﻿
+﻿@using Animal.Common.Models.Data
+@model IEnumerable<UserEntity>
+
+
 @{
     ViewBag.Title = "Registration";
 }
 
 
-
 <h2>Register now at Animal Husbandry. It's free!</h2>
+
+
+
+<!--@foreach (var meaning in @Model)
+{
+
+    <div>
+        <h3>@meaning.FirstName</h3>
+        <p>@meaning.LastName</p>
+        <p>@meaning.Email</p>
+        <p>@meaning.Login</p>
+        <p>@meaning.Password</p>
+        <p>@meaning.Description</p>
+        <p>@meaning.CreatedDate</p>
+        <p>@meaning.LastLoginDate</p>
+     
+    </div>
+
+
+}
+    -->
+
+
 
 <table border="0" cellpadding="0" cellspacing="0">
     <tr>
