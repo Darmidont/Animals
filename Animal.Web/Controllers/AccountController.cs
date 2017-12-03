@@ -36,7 +36,6 @@ namespace Animal.Web.Controllers
 	//	public ActionResult LogOnResult(LogOnViewModel )
 
 
-			private DatabaseF
 
 		public AccountController(IUserService userService)
 		{

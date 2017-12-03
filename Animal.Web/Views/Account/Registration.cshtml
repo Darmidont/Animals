@@ -1,9 +1,9 @@
 ﻿@using Animal.Common.Models.Data
-@model IEnumerable<UserEntity>
 
 
 @{
     ViewBag.Title = "Registration";
+    @model  Animal.Common.Models.Bal.UserModel
 }
 
 
@@ -11,123 +11,29 @@
 
 
 
-<!--@foreach (var meaning in @Model)
-{
-
+<!--
     <div>
-        <h3>@meaning.FirstName</h3>
+        <h3>@FirstName</h3>
         <p>@meaning.LastName</p>
         <p>@meaning.Email</p>
         <p>@meaning.Login</p>
         <p>@meaning.Password</p>
         <p>@meaning.Description</p>
         <p>@meaning.CreatedDate</p>
-        <p>@meaning.LastLoginDate</p>
-     
-    </div>
-
-
-}
+        <p>@meaning.LastLoginDate</p>         
     -->
 
 
+    @using (Html.BeginForm("Register", "Account", "Post"))
+    {
+        <div>
+            @Html.LabelFor(x => x.FirstName)
+            @Html.TextBoxFor(x => x.FirstName)
+            @Html.ValidationMessageFor(x => x.FirstName)
+            
 
-<table border="0" cellpadding="0" cellspacing="0">
-    <tr>
-        <th colspan="3">
-            Registration
-        </th>
-    </tr>
+            <button type="submit" value="Register">Search</button>
+        </div>
+    }
 
-
-    <tr>
-        <td>
-            First Name
-        </td>
-        <td>
-            <asp:TextBox ID="txtFirstName" runat="server" />
-        </td>
-        <td>
-            <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="txtFirstName"
-                                        runat="server" />
-        </td>
-    </tr>
-
-
-    <tr>
-        <td>
-            Last Name
-        </td>
-        <td>
-            <asp:TextBox ID="txtLastName" runat="server" TextMode="LastName" />
-        </td>
-        <td>
-            <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="txtLastName"
-                                        runat="server" />
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            Email
-        </td>
-        <td>
-            <asp:TextBox ID="txtEmail" runat="server" />
-        </td>
-        <td>
-            <asp:RequiredFieldValidator ErrorMessage="Required" Display="Dynamic" ForeColor="Red"
-                                        ControlToValidate="txtEmail" runat="server" />
-            <asp:RegularExpressionValidator runat="server" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*\w+([-.]\w+)*\.\w+([-.]\w+)*"
-                                            ControlToValidate="txtEmail" ForeColor="Red" ErrorMessage="Invalid email address." />
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            Login
-        </td>
-        <td>
-            <asp:TextBox ID="txtLogin" runat="server" TextMode="Login" />
-        </td>
-        <td>
-            <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="txtLogin"
-                                        runat="server" />
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            Password
-        </td>
-        <td>
-            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" />
-        </td>
-        <td>
-            <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="txtPassword"
-                                        runat="server" />
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            Confirm Password
-        </td>
-        <td>
-            <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" />
-        </td>
-        <td>
-            <asp:CompareValidator ErrorMessage="Passwords do not match." ForeColor="Red" ControlToCompare="txtPassword"
-                                  ControlToValidate="txtConfirmPassword" runat="server" />
-        </td>
-    </tr>
-
-
-    <tr>
-        <td></td>
-        <td>
-            <asp:Button Text="Register!" runat="server" OnClick="RegisterUser" />
-        </td>
-        <td></td>
-    </tr>
-</table>
 
