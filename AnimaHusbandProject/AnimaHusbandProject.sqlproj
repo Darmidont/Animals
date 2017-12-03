@@ -73,6 +73,7 @@
     <Build Include="dbo\Stored Procedures\sppAddParticularAnimal.sql" />
     <Build Include="dbo\Stored Procedures\spDeleteParticularAnimal.sql" />
     <Build Include="dbo\Stored Procedures\spGetParticularAnimal.sql" />
+    <Build Include="dbo\Stored Procedures\spGetParticularAnimalStats.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="AnimaHusbandProject.refactorlog" />

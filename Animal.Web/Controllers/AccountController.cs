@@ -81,6 +81,13 @@ namespace Animal.Web.Controllers
 			return View("Authorization", model);
 		}
 
+		[HttpPost]
+		public ActionResult Logout()
+		{
+			Session.Clear();
+			return RedirectToAction("Index", "Home");
+
+		}
 
 
 

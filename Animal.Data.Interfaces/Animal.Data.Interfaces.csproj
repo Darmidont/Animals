@@ -40,7 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IAnimalRepository.cs" />
+    <Compile Include="IAnimalKindRepository.cs" />
+    <Compile Include="IAnimalParticularRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

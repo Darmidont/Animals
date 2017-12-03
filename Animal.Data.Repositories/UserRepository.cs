@@ -55,31 +55,9 @@ namespace Animal.Data.Repositories
 
 
 
-
-		protected void RegisterUser(UserEntity user)
+		public void DeleteUser(UserModel user)
 		{
-		
-		//	string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-			//using (SqlConnection con = new SqlConnection(constr))
-			{
-				using (SqlCommand cmd = new SqlCommand("Insert_User"))
-				{
-					using (SqlDataAdapter sda = new SqlDataAdapter())
-					{
-						cmd.CommandType = CommandType.StoredProcedure;
-					//	cmd.Parameters.AddWithValue("@Username", txtUsername.Text.Trim());
-						//cmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
-
-						//cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
-					//	cmd.Connection = con;
-					//	con.Open();
-					//	userId = Convert.ToInt32(cmd.ExecuteScalar());
-					//	con.Close();
-					}
-				}
 			
-				//ClientScript.RegisterStartupScript(GetType(), "alert", "alert('" + message + "');", true);
-			}
 		}
 
 

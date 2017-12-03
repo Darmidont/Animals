@@ -4,15 +4,18 @@ using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Animal.Bal.Interfaces;
+using Animal.Common.Models.Bal;
 using Animal.Data.Interfaces;
 
 namespace Animal.Web.Controllers
 {
     public class WorkWithAnimalController : Controller
     {
-	    private IAnimalRepository repository;
+		//  private IAnimalRepository repository;
+	    private readonly IKindOfAnimalService _animalService;
 
-	    public WorkWithAnimalController(IAnimalRepository repo)
+		public WorkWithAnimalController(IAnimalParticularRepository repo)
 	    {
 		    repository = repo;
 	    }
@@ -23,10 +26,20 @@ namespace Animal.Web.Controllers
             return View();
         }
 
-	    public ActionResult DifferentKindsOfAnimalsList()
-	    {
-		    return View(repository.Animals);
 
+	    [HttpPost]
+	    public ActionResult AddNewKindOfAnimal(AnimalKindModel model)
+	    {
+		    if (ModelState.IsValid)
+		    {
+			    _animalService.AddNewKindOfAnimal(model);
+			    return View("AddingNewTypeOfAnimalCompleted", );
+		    }
+
+		    return View("Registration", model);
 	    }
-    }
+
+
+
+	}
 }

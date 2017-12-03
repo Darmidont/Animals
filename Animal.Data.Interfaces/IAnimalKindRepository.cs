@@ -7,11 +7,9 @@ using Animal.Common.Models.Data;
 
 namespace Animal.Data.Interfaces
 {
-	public interface IAnimalRepository
+	public interface IAnimalKindRepository
 	{
 
 		IEnumerable<AnimalKindEntity> Animals { get; }
-		IEnumerable<AnimalParticularEntity> Animal { get; }
-
 	}
 }

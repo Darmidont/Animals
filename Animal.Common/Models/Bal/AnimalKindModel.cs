@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace Animal.Common.Models.Bal
 {
-	class AnimalKindModel
+	public class AnimalKindModel
 	{
-		public  int Id { get; set; }
+		public int Id { get; set; }
+
+		[Required]
+		public string Name { get; set; }
 
 		[Required]
 		public int PlannedNumberOfAnimals { get; set; }

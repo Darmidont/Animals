@@ -1,24 +1,41 @@
 ﻿@using Animal.Common.Models.Data
-@model IEnumerable<AnimalKindEntity>
 
-@{
-    ViewBag.Title = "DifferentKindsOfAnimalsList";
-}
+
 
 <h2>Different Kinds Of Animals List</h2>
 
 
-@foreach (var meaning in @Model)
+@{
+    ViewBag.Title = "DifferentKindsOfAnimalsList";
+@model  Animal.Common.Models.Bal.AnimalKindModel
+        }
+
+
+
+<h2>Here you can add new kinds of animals that you have</h2>
+
+@using (Html.BeginForm("AddNewKindOfAnimal", "WorkWithAnimal", "Post"))
 {
-    
-    <div>
-        <h3>@meaning.PlannedNumberOfAnimals</h3>
-        <p>@meaning.CurrentNumberOfAnimals</p>
-        <p>@meaning.DescriptionOFAnimals</p>
+    <div class ="adding_kind_of_animals">
+        @Html.LabelFor(x => x.Name)
+        @Html.TextBoxFor(x => x.Name)
+        @Html.ValidationMessageFor(x => x.Name)
+        <br>
+        @Html.LabelFor(x => x.PlannedNumberOfAnimals)
+        @Html.TextBoxFor(x => x.PlannedNumberOfAnimals)
+        @Html.ValidationMessageFor(x => x.PlannedNumberOfAnimals)
+        <br>
+        @Html.LabelFor(x => x.CurrentNumberOfAnimals)
+        @Html.TextBoxFor(x => x.CurrentNumberOfAnimals)
+        @Html.ValidationMessageFor(x => x.CurrentNumberOfAnimals)
+        <br>
+        @Html.LabelFor(x => x.DescriptionOFAnimals)
+        @Html.TextBoxFor(x => x.DescriptionOFAnimals)
+        @Html.ValidationMessageFor(x => x.DescriptionOFAnimals)
+        <br>
+        <button type="submit" value="ListOfAnimalKinds">Add New</button>
     </div>
-
-
-
-
 }
+
+
 

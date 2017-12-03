@@ -36,6 +36,17 @@ namespace Animal.Bal.Services
 			_userRepository.AddUser(user);
 		}
 
+		public void DeleteUser(UserModel user)
+		{
+			_userRepository.DeleteUser(user);
+		}
+
+		public void ChangeUser(UserModel user)
+		{
+			_userRepository.ChangeUser(user);
+		}
+
+		
 
 	}
 }

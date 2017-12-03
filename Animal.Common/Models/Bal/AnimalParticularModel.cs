@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Animal.Common.Models.Bal
 {
-	class AnimalParticularModel
+	public class AnimalParticularModel
 	{
 		public int Id { get; set; }
 
