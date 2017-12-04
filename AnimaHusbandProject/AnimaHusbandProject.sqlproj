@@ -63,10 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Users.sql" />
-    <Build Include="dbo\Tables\AnimalType.sql" />
     <Build Include="dbo\Tables\AnimalProperties.sql" />
-    <Build Include="dbo\Tables\AnimalTypeProperties.sql" />
-    <Build Include="dbo\Tables\Animals.sql" />
     <Build Include="dbo\Tables\TypeAnimalProperties.sql" />
     <Build Include="dbo\Stored Procedures\spGetUsers.sql" />
     <Build Include="dbo\Stored Procedures\spAddUser.sql" />
@@ -74,6 +71,7 @@
     <Build Include="dbo\Stored Procedures\spDeleteParticularAnimal.sql" />
     <Build Include="dbo\Stored Procedures\spGetParticularAnimal.sql" />
     <Build Include="dbo\Stored Procedures\spGetParticularAnimalStats.sql" />
+    <Build Include="dbo\Tables\NewsIntoBoard.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="AnimaHusbandProject.refactorlog" />

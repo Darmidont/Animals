@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[NewsIntoBoard]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY (1, 1),
+	[Name] NVARCHAR(200) NOT NULL,
+	[DateOfCreating] DATETIME NOT NULL,
+	[Message] NVARCHAR(1000) NOT NULL
+	
+
+)

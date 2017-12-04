@@ -82,6 +82,7 @@
     <Compile Include="Models\Data\AdminEntity.cs" />
     <Compile Include="Models\Data\AnimalKindEntity.cs" />
     <Compile Include="Models\Data\AnimalParticularEntity.cs" />
+    <Compile Include="Models\Data\ParticularNewsIntoBoardServiceEntity.cs" />
     <Compile Include="Models\Data\UserEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnityConfig.cs" />
