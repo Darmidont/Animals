@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAdminService.cs" />
     <Compile Include="IKindOfAnimalService.cs" />
     <Compile Include="IParticularAnimalService.cs" />
     <Compile Include="IUserService.cs" />

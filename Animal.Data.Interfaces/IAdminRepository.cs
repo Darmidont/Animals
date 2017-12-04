@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Animal.Common.Models.Data;
 
 namespace Animal.Data.Interfaces
 {
-	public interface IAnimalKindRepository
+public interface IAdminRepository
 	{
-
-		IEnumerable<AnimalKindEntity> Animals(int particularAnimalId);
-
+		IEnumerable<AdminEntity> Admin(int admin);
 	}
-	
 }

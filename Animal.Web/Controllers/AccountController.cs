@@ -93,6 +93,8 @@ namespace Animal.Web.Controllers
 
 
 
+
+
 	//	[HttpPost]
 		//public async Task<ActionResult> Logout()
 		//{

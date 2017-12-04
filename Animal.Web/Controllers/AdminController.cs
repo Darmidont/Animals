@@ -16,5 +16,15 @@ namespace Animal.Web.Controllers
 
 
 
-    }
+
+	    [HttpPost]
+	    public ActionResult Logout()
+	    {
+		    Session.Clear();
+		    return RedirectToAction("Index", "Home");
+
+	    }
+
+
+	}
 }

@@ -17,8 +17,7 @@ namespace Animal.Web.Controllers
 
 		public ActionResult UsersList()
 		{
-			//IEnumerable<IUserService> users = db
-			//	ViewBag.
+			
 			return View();
 		}
 

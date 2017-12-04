@@ -79,6 +79,7 @@
     <Compile Include="Models\Bal\AnimalKindModel.cs" />
     <Compile Include="Models\Bal\AnimalParticularModel.cs" />
     <Compile Include="Models\Bal\UserModel.cs" />
+    <Compile Include="Models\Data\AdminEntity.cs" />
     <Compile Include="Models\Data\AnimalKindEntity.cs" />
     <Compile Include="Models\Data\AnimalParticularEntity.cs" />
     <Compile Include="Models\Data\UserEntity.cs" />

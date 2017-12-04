@@ -33,11 +33,23 @@ namespace Animal.Web.Controllers
 		    if (ModelState.IsValid)
 		    {
 			    _animalService.Add(model);
-			    return View("AddingNewTypeOfAnimalCompleted");
+			  //  return View("AddingNewTypeOfAnimalCompleted");
 		    }
 
-		    return View("Registration", model);
+		    return View("DifferentKindsOfAnimalsList", model);
 	    }
 
-	}
+
+	    [HttpPost]
+
+	    public ActionResult AddNewAnimal(AnimalParticularModel model)
+	    {
+		    if (ModelState.IsValid)
+		    {
+			    _animalService.Add(model);
+			//    return View("");
+		    }
+	    }
+
+    }
 }

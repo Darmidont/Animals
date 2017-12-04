@@ -10,9 +10,6 @@ namespace Animal.Common.Models.Data
 	{
 
 		public int Id { get; set; }
-		public string AnimalId { get; set; }
-		public string AnimalTypePropertyId { get; set; }
-		public string Value { get; set; }
 		public string Name { get; set; }	
 		public bool Alive { get; set; }	
 		public int HeartRhythms { get; set; }

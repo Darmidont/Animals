@@ -233,6 +233,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\favicon.ico" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -270,11 +271,11 @@
     <Content Include="Views\Account\Logout.cshtml" />
     <Content Include="Views\Account\Registration.cshtml" />
     <Content Include="Views\WorkWithAnimal\DifferentKindsOfAnimalsList.cshtml" />
+    <Content Include="Views\WorkWithAnimal\DifferentAnimalsFromKindList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Components\" />
-    <Folder Include="Images\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Admin\" />
   </ItemGroup>

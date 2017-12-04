@@ -38,15 +38,17 @@ namespace Animal.Bal.Services
 
 		public void DeleteUser(UserModel user)
 		{
-			_userRepository.DeleteUser(user);
+			_userRepository.Delete(user);
 		}
 
 		public void ChangeUser(UserModel user)
 		{
-			_userRepository.ChangeUser(user);
+			_userRepository.Change(user);
 		}
 
-		
-
+		public void ChangeUserData(UserModel user)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }
