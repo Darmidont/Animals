@@ -47,13 +47,9 @@ namespace Animal.Data.Repositories
 				Database.AddInParameter(dbCommand, "@Login", DbType.String, user.Login);
 				Database.AddInParameter(dbCommand, "@Password", DbType.String, user.Password);
 				Database.AddInParameter(dbCommand, "@Description", DbType.String, user.Description);
-				//Database.AddInParameter(dbCommand, "@CreatedDate",DbType.DateTime, user.CreatedDate);
-				//Database.AddInParameter(dbCommand, "@LastLoginDate", DbType.DateTime, user.LastLoginDate);
 				Database.ExecuteNonQuery(dbCommand);
 			}
 		}
-
-
 
 		public void Delete(UserModel user)
 		{
@@ -62,7 +58,17 @@ namespace Animal.Data.Repositories
 
 		public void Update(UserModel user)
 		{
-			throw new NotImplementedException();
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.spUpdateUser"))
+			{
+				Database.AddInParameter(dbCommand, "@Id", DbType.String, user.Id);
+				Database.AddInParameter(dbCommand, "@FirstName", DbType.String, user.FirstName);
+				Database.AddInParameter(dbCommand, "@LastName", DbType.String, user.LastName);
+				Database.AddInParameter(dbCommand, "@Email", DbType.String, user.Email);
+				Database.AddInParameter(dbCommand, "@Login", DbType.String, user.Login);
+				Database.AddInParameter(dbCommand, "@Password", DbType.String, user.Password);
+				Database.AddInParameter(dbCommand, "@Description", DbType.String, user.Description);
+				Database.ExecuteNonQuery(dbCommand);
+			}
 		}
 	}
 }
