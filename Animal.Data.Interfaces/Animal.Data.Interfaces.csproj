@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IAdminRepository.cs" />
     <Compile Include="IAnimalKindRepository.cs" />
     <Compile Include="IAnimalParticularRepository.cs" />
     <Compile Include="IParticularNewsIntoBoardService.cs" />

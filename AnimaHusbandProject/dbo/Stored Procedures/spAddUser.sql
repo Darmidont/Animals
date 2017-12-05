@@ -7,9 +7,8 @@
 	@Description nvarchar(500)
 AS
 BEGIN
-UPDATE dbo.[Users] 
-
-([FirstName], [LastName], [Email], [Login], [Password], [Description])
-VALUES (@FirstName, @LastName, @Email, @Login, @Password, @Description)
+insert into dbo.[Users] 
+([FirstName], [LastName], [Email], [Login], [Password], [Description], CreatedDate)
+VALUES (@FirstName, @LastName, @Email, @Login, @Password, @Description, getdate())
 SELECT SCOPE_IDENTITY() -- UserId
 END

@@ -59,7 +59,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminRepository.cs" />
     <Compile Include="AnimalKindRepository.cs" />
     <Compile Include="AnimalParticularRepository.cs" />
     <Compile Include="Helpers\MapperHelpers.cs" />

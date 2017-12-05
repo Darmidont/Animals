@@ -12,13 +12,7 @@ namespace Animal.Bal.Services
 {
 public class AdminService: IAdminService
 	{
-		private readonly IAdminRepository _adminRepository;
-
-		public AdminService(IAdminRepository adminRepository)
-		{
-			_adminRepository = adminRepository;
-		}
-
+		
 		public string Hello()
 		{
 			return "Hello";
@@ -26,23 +20,43 @@ public class AdminService: IAdminService
 
 		public IEnumerable<UserEntity> GetUsers()
 		{
-			return _adminRepository.GetUsers();
+			throw new NotImplementedException();
 		}
 
 		public void AddUser(UserModel user)
 		{
 
-			_adminRepository.AddUser(user);
+			throw new NotImplementedException();
 		}
 
 		public void DeleteUser(UserModel user)
 		{
-			_adminRepository.Delete(user);
+			throw new NotImplementedException();
+		}
+
+		public void UpdateUserData(UserModel user)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void AddNews(ParticularNewsModel news)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void UpdateAdminData(UserModel user)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void ChangeAdminData(AdminModel admin)
+		{
+			throw new NotImplementedException();
 		}
 
 		public void UpdateUser(UserModel user)
 		{
-			_adminRepository.Change(user);
+			throw new NotImplementedException();
 		}
 
 		IEnumerable<UserEntity> IAdminService.GetUsers()
@@ -60,12 +74,12 @@ public class AdminService: IAdminService
 			throw new NotImplementedException();
 		}
 
-		void IAdminService.ChangeUserData(UserModel user)
+		void ChangeUserData(UserModel user)
 		{
 			throw new NotImplementedException();
 		}
 
-		void IAdminService.AdminData(UserModel user)
+		void AdminData(UserModel user)
 		{
 			throw new NotImplementedException();
 		}
