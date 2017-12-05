@@ -11,6 +11,8 @@ namespace Animal.Common.Models.Bal
 	{
 		public int Id { get; set; }
 
+		public int AnimalTypeId { get; set; }
+
 		[Required]
 		public string Name { get; set; }
 

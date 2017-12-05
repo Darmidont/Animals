@@ -17,7 +17,6 @@ namespace Animal.Bal.Interfaces
         void ChangeUserData(UserModel user);
 
 
-
 	}
 }
 

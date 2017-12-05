@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Animal.Common.Models.Bal;
+using Animal.Common.Models.Data;
 
 namespace Animal.Bal.Interfaces
 {
@@ -12,8 +13,9 @@ namespace Animal.Bal.Interfaces
 
 		IEnumerable<ParticularNewsIntoBoardEntity> GetNews();
 
-		void AddNews(NewsIntoBoardParticularEntity news);
-		void DeleteNews(NewsIntoBoardParticularEntity news);
-		void ChangeNews(NewsIntoBoardParticularEntity news);
+		void AddNews(ParticularNewsModel news);
+		void DeleteNews(ParticularNewsModel news);
+		void ChangeNews(ParticularNewsModel news);
+
 	}
 }

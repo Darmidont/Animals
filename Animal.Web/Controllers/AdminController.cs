@@ -16,6 +16,8 @@ namespace Animal.Web.Controllers
 
 
 
+		
+
 
 	    [HttpPost]
 	    public ActionResult Logout()

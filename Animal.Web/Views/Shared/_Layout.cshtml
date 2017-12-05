@@ -26,7 +26,8 @@
             <ul class="nav navbar-nav">
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
                 <li>@Html.ActionLink("About", "About", "Home")</li>
-                <li>@Html.ActionLink("Contact", "AboutUs", "Home")</li>
+                <li>@Html.ActionLink("News board","NewsBoardView","Board")
+             <!--   <li>@Html.ActionLink("Contact", "AboutUs", "Home")</li> -->
                 <li>@Html.ActionLink("Registration", "GetRegistrationView", "Account")</li>
                 <li>@Html.ActionLink("Authorization", "Authorization", "Account")</li>
                 <li>@Html.ActionLink("Logout","Logout","Account")</li>
@@ -38,10 +39,15 @@
 <div class="container body-content">
     @RenderBody()
     <hr/>
-        
-    <footer>
+ 
+    
+
+    <footer id ="footer">
         <p>&copy; Rastsvietalov Sergey PI-15-4 @DateTime.Now.Year - Animal Family</p>
     </footer>
+    
+  
+   
 </div>
     
 

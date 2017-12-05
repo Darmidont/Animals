@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Animal.Common.Models.Data
 {
-	public class ParticularNewsIntoBoardServiceEntity
+	public class ParticularNewsIntoBoardEntity
 	{
 		public int Id { get; set; }
+
+		//public int 
 
 		public string Name { get; set; }
 
