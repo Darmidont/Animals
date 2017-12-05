@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Animal.Common.Models.Data;
 
-namespace Animal.Bal.Interfaces
+namespace Animal.Data.Repositories
 {
-	public interface INewsBoardService
+	public class NewsBoardRepository: Repository<ParticularNewsIntoBoardEntity>, IParticularNewsIntoBoardService
 	{
 
-		IEnumerable<ParticularNewsIntoBoardEntity> NewsBoard();
+
 
 	}
 }
