@@ -18,24 +18,6 @@ namespace Animal.Web.Controllers
 	public class AccountController : Controller
 	{
 		private readonly IUserService _userService;
-		//private readonly SignInManager<IdentityUser> _signInManager;
-
-	//	 IClientFormsAuthenticationCredentialsProvider authProvider;
-
-	//	public AccountController(IClientFormsAuthenticationCredentialsProvider auth)
-	//	{
-		//	authProvider = auth;
-	//	}
-
-	//	public ViewResult LogOnResult()
-	//	{
-	//		return View();
-	//	}
-
-	//	[HttpPost]
-	//	public ActionResult LogOnResult(LogOnViewModel )
-
-
 
 		public AccountController(IUserService userService)
 		{
@@ -59,8 +41,11 @@ namespace Animal.Web.Controllers
 				_userService.AddUser(model);
 				return View("RegistrationCompleted");
 			}
-
-			return View("Registration", model);
+			else
+			{
+				return View("Registration", model);
+			}
+			
 		}
 
 
@@ -88,10 +73,6 @@ namespace Animal.Web.Controllers
 			return RedirectToAction("Index", "Home");
 
 		}
-
-
-		
-
 
 
 

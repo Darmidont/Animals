@@ -8,6 +8,7 @@
 AS
 BEGIN
 UPDATE dbo.[Users] 
+
 ([FirstName], [LastName], [Email], [Login], [Password], [Description])
 VALUES (@FirstName, @LastName, @Email, @Login, @Password, @Description)
 SELECT SCOPE_IDENTITY() -- UserId

@@ -13,11 +13,15 @@ namespace Animal.Bal.Interfaces
 		IEnumerable<UserEntity> GetUsers();
 		void AddUser(UserModel user);
 		void DeleteUser(UserModel user);
-		void ChangeUserData(UserModel user);
+		void UpdateUserData(UserModel user);
 
-		void AdminData(UserModel user);
+		void AddNews(ParticularNewsModel news);
+		void DeleteNews(ParticularNewsModel news);
 
+		void UpdateAdminData(UserModel user);
 		void ChangeAdminData(AdminModel admin);
+
+		
 
 	}
 }

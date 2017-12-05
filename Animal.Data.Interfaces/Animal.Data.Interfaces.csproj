@@ -43,6 +43,7 @@
     <Compile Include="IAdminRepository.cs" />
     <Compile Include="IAnimalKindRepository.cs" />
     <Compile Include="IAnimalParticularRepository.cs" />
+    <Compile Include="IParticularNewsIntoBoardService.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

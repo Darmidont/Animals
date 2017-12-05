@@ -14,8 +14,10 @@ namespace Animal.Common.Models.Bal
 		public int AdminId { get; set; }
 
 		[Required]
-		public string Name { get; set; }
+		public string Login { get; set; }
 
+		[Required]
+		public string Password { get; set; }
 
 	}
 }

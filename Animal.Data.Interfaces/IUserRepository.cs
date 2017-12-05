@@ -7,8 +7,10 @@ namespace Animal.Data.Interfaces
 	public interface IUserRepository
 	{
 		IEnumerable<UserEntity> GetUsers();
+
+
 		void Add(UserModel user);
-		void Delete(UserModel user);
+		//void Delete(UserModel user);
 		void Update(UserModel user);
 	}
 }

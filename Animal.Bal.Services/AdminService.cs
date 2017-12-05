@@ -40,7 +40,7 @@ public class AdminService: IAdminService
 			_adminRepository.Delete(user);
 		}
 
-		public void ChangeUser(UserModel user)
+		public void UpdateUser(UserModel user)
 		{
 			_adminRepository.Change(user);
 		}

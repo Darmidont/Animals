@@ -12,5 +12,7 @@ namespace Animal.Bal.Interfaces
 
 		IEnumerable<ParticularNewsIntoBoardEntity> NewsBoard();
 
+
+
 	}
 }
