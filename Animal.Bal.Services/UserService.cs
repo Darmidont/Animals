@@ -33,7 +33,7 @@ namespace Animal.Bal.Services
 		public void AddUser(UserModel user)
 		{
 
-			_userRepository.AddUser(user);
+			_userRepository.Add(user);
 		}
 
 		public void DeleteUser(UserModel user)
@@ -43,10 +43,10 @@ namespace Animal.Bal.Services
 
 		public void ChangeUser(UserModel user)
 		{
-			_userRepository.Change(user);
+			_userRepository.Update(user);
 		}
 
-		public void ChangeUserData(UserModel user)
+		public void Update(UserModel user)
 		{
 			throw new NotImplementedException();
 		}

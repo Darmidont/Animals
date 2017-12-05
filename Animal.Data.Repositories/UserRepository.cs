@@ -37,7 +37,7 @@ namespace Animal.Data.Repositories
 			return result;
 		}
 
-		public void AddUser(UserModel user)
+		public void Add(UserModel user)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAddUser"))
 			{
@@ -55,11 +55,14 @@ namespace Animal.Data.Repositories
 
 
 
-		public void DeleteUser(UserModel user)
+		public void Delete(UserModel user)
 		{
 			
 		}
 
-
+		public void Update(UserModel user)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

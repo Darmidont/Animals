@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Animal.Common.Models.Bal;
 using Animal.Common.Models.Data;
 
@@ -14,9 +10,7 @@ namespace Animal.Bal.Interfaces
 		IEnumerable<UserEntity> GetUsers();
 		void AddUser(UserModel user);
 		void DeleteUser(UserModel user);
-        void ChangeUserData(UserModel user);
-
-
+        void Update(UserModel user);
 	}
 }
 

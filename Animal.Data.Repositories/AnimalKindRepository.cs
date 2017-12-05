@@ -38,7 +38,6 @@ namespace Animal.Data.Repositories
 			return result;
 		}
 
-
 		public void AddAnimalKind(AnimalKindModel animalKind)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAddAnimalKind"))
@@ -51,10 +50,10 @@ namespace Animal.Data.Repositories
 			}
 
 		}
-		public IEnumerable<AnimalKindEntity> GetAnimals(int animalParticularId)
+
+		public IEnumerable<AnimalKindEntity> Animals(int particularAnimalId)
 		{
 			throw new NotImplementedException();
 		}
-
 	}
 }
