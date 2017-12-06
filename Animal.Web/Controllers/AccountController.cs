@@ -50,7 +50,6 @@ namespace Animal.Web.Controllers
 
 
 		[HttpPost]
-
 		public ActionResult GetAuthorizationView()
 		{
 			var model = new UserModel();
@@ -59,7 +58,6 @@ namespace Animal.Web.Controllers
 
 
 		[HttpPost]
-
 		public ActionResult Authorization()
 		{
 			var model = new UserModel();
@@ -75,6 +73,15 @@ namespace Animal.Web.Controllers
 		}
 
 
+		[HttpPost]
+		public ActionResult DeletingUser()
+		{
+			//var model = 
+			//return View("UserWasDeleted", model)
+		}
+
+
+		
 
 	//	[HttpPost]
 		//public async Task<ActionResult> Logout()

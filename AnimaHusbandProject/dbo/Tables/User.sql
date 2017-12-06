@@ -8,5 +8,4 @@
     [Password] nvarchar(200) NOT NULL, 
 	[Description] nvarchar(500), 
     [CreatedDate] DATETIME NOT NULL, 
-    [LastLoginDate] DATETIME NULL
 )

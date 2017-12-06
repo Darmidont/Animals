@@ -15,7 +15,6 @@ public class AdminEntity
 
 		public string Description { get; set; }
 
-
 		public int LastLoginDate { get; set; }
 
 	}
