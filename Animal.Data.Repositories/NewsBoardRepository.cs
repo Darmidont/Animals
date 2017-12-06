@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Animal.Common.Models.Data;
+using Animal.Data.Interfaces;
 
 namespace Animal.Data.Repositories
 {

@@ -12,6 +12,8 @@ namespace Animal.Web.Controllers
 {
     public class WorkWithAnimalController : Controller
     {
+
+	//	private Animal db = 
 		//  private IAnimalRepository repository;
 	    private readonly IKindOfAnimalService _animalService;
 
@@ -33,10 +35,12 @@ namespace Animal.Web.Controllers
 		    if (ModelState.IsValid)
 		    {
 			    _animalService.Add(model);
-			  //  return View("AddingNewTypeOfAnimalCompleted");
+			//    return View("AddingNewTypeOfAnimalCompleted",);
 		    }
-
-		    return View("DifferentKindsOfAnimalsList", model);
+		    else
+		    {
+			    return View("DifferentKindsOfAnimalsList", model);
+		    }
 	    }
 
 
@@ -49,6 +53,12 @@ namespace Animal.Web.Controllers
 			    _animalService.Add(model);
 			//    return View("");
 		    }
+	    }
+
+		private AnimalParticularModel db = new AnimalParticularModel();
+	    public ActionResult ShowingListOfAnimalsFromKind()
+	    {
+		 //   var animals = db.CurrentNumberOfAnimals.ToList<AnimalParticularModel>().
 	    }
 
     }

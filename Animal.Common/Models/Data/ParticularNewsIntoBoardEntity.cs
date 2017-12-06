@@ -10,8 +10,6 @@ namespace Animal.Common.Models.Data
 	{
 		public int Id { get; set; }
 
-		//public int 
-
 		public string Name { get; set; }
 
 		public DateTime Date { get; set; }

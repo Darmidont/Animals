@@ -12,8 +12,6 @@ namespace Animal.Bal.Services
 	public class ParticularNewsIntoBoard : IParticularNewsIntoBoardService
 	{
 
-
-
 		public void AddNews(ParticularNewsModel news)
 		{
 			throw new NotImplementedException();

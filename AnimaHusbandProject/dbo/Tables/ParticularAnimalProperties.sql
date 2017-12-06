@@ -9,6 +9,7 @@
 	[CaloriesBurnedPerDay] INT NOT NULL,
 	[BreathingRatePerMinute] INT NOT NULL,
 	[LastWeight] FLOAT NOT NULL,
+
 	[Description] nvarchar(500)
 
 )
