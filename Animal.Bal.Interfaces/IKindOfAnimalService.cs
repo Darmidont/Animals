@@ -11,7 +11,5 @@ namespace Animal.Bal.Interfaces
 		void Update(AnimalKindModel animalKind);
 		void Delete(AnimalKindModel animalKind);
 
-
-
 	}
 }

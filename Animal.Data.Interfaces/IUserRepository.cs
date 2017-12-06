@@ -10,7 +10,9 @@ namespace Animal.Data.Interfaces
 
 
 		void Add(UserModel user);
+
 		//void Delete(UserModel user);
 		void Update(UserModel user);
+		
 	}
 }

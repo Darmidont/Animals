@@ -76,6 +76,7 @@ namespace Animal.Web.Controllers
 		[HttpPost]
 		public ActionResult DeletingUser()
 		{
+			throw  new NotImplementedException();
 			//var model = 
 			//return View("UserWasDeleted", model)
 		}

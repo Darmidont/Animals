@@ -2,7 +2,7 @@
 
 	    --Id 
 		-- AnimalTypeId
-		 @Name 
+		 @Name,
 		 @Alive 
          @HeartRhythms 
          @CaloriesBurned 

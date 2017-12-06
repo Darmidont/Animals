@@ -35,7 +35,7 @@ namespace Animal.Web.Controllers
 		    if (ModelState.IsValid)
 		    {
 			    _animalService.Add(model);
-			//    return View("AddingNewTypeOfAnimalCompleted",);
+			    return View("AddingNewTypeOfAnimalCompleted",);
 		    }
 		    else
 		    {
@@ -51,7 +51,7 @@ namespace Animal.Web.Controllers
 		    if (ModelState.IsValid)
 		    {
 			    _animalService.Add(model);
-			//    return View("");
+			    return View();
 		    }
 	    }
 
@@ -59,6 +59,7 @@ namespace Animal.Web.Controllers
 	    public ActionResult ShowingListOfAnimalsFromKind()
 	    {
 		 //   var animals = db.CurrentNumberOfAnimals.ToList<AnimalParticularModel>().
+		 throw new NotImplementedException();
 	    }
 
     }
