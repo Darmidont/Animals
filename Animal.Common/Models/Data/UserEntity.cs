@@ -33,6 +33,8 @@ namespace Animal.Common.Models.Data
 		public int CreatedDate { get; set; }
 		[Display(Name = "Last login date")]
 		[DataType(DataType.DateTime)]
+
+
 		public int LastLoginDate { get; set; }
 	}
 }

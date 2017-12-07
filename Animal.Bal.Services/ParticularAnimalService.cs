@@ -52,5 +52,10 @@ namespace Animal.Bal.Services
 		{
 			throw new NotImplementedException();
 		}
+
+		public void AddAnimalParticular(AnimalParticularModel model)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

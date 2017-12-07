@@ -51,8 +51,6 @@ namespace Animal.Data.Repositories
 				Database.AddInParameter(dbCommand, "@LastWeight", DbType.Int32, animalParticular.BreathingRate);
 				Database.AddInParameter(dbCommand, "@LastWeight", DbType.Int32, animalParticular.LastWeight);
 				Database.ExecuteNonQuery(dbCommand);
-
-	
 	}
 
 		}

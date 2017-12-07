@@ -9,6 +9,7 @@
 <link rel ="icon" href ="@Url.Content("~/Images/logoWolf.ico")/>
     
 
+
 </head>
 
 
@@ -23,19 +24,34 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            @Html.ActionLink("Animal Family", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-        </div>
+            
+            
+
+       
+            <div class="logo">
+                <img src="Images/logoWolf.jpg" alt="" />
+            </div>
+                
+           
+             
+            </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
+                @Html.ActionLink("Animal Husbandry", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
                 <li>@Html.ActionLink("About", "About", "Home")</li>
-                <li>@Html.ActionLink("News board","NewsBoardPage","NewsBoard")
-                <li>@Html.ActionLink("Own Cab","OwnCab","Account")
+                <li>@Html.ActionLink("News board", "NewsBoardPage", "NewsBoard")
+                <li>@Html.ActionLink("Own Cab", "OwnCab", "Account")
+                <ul>
+                    <li>@Html.ActionLink("Personal page", "OwnCab", "Account")
+                    <li>@Html.ActionLink("List Of Animal Kinds", "OwnCab", "Account")
+                    <li>@Html.ActionLink("List Of Particular Animals", "OwnCab", "Account")
+                </ul>
                 <li>@Html.ActionLink("Registration", "GetRegistrationView", "Account")</li>
                 <li>@Html.ActionLink("Authorization", "Authorization", "Account")</li>
-                <li>@Html.ActionLink("Logout","Logout","Account")</li>
-
+                <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
             </ul>
+           
         </div>
     </div>
 </div>
@@ -49,7 +65,7 @@
     
 
     <footer id ="footer">
-        <p>&copy; Rastsvietalov Sergey PI-15-4 @DateTime.Now.TimeOfDay - Animal Family</p>
+        <p>&copy; Rastsvietalov Sergey PI-15-4 @DateTime.UtcNow - Animal Family</p>
         
         Email: rastsvietalovjudo@gmail.com
     </footer>

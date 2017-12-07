@@ -20,6 +20,7 @@ namespace Animal.Common.Models.Bal
 		[Required]
 		public string Login { get; set; }
 		[Required]
+		[DataType(DataType.Password)]
 		public string Password { get; set; }
 	//	[Required]
 		public string Description { get; set; }

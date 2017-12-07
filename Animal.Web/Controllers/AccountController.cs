@@ -77,5 +77,11 @@ namespace Animal.Web.Controllers
 		{
 			return View("OwnCab");
 		}
+
+		[HttpGet]
+		public RedirectResult RedirectingToRegistration()
+		{
+			return Redirect("Registration");
+		}
 	}
 }

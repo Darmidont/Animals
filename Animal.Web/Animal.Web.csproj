@@ -235,6 +235,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\logoWolf.ico" />
+    <Content Include="Images\logoWolf.jpg" />
     <Content Include="logoWolf.ico" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -279,6 +280,8 @@
     <Content Include="Views\NewsBoard\NewsBoardPage.cshtml" />
     <Content Include="Views\WorkWithAnimalParticular\AddingNewParticularAnimal.cshtml" />
     <Content Include="Views\Account\OwnCab.cshtml" />
+    <Content Include="Views\WorkWithAnimalParticular\AddingNewParticularAnimalCompleted.cshtml" />
+    <Content Include="Views\NewsBoard\AddingNewsCompleted.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

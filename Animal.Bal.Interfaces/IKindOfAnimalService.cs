@@ -8,8 +8,8 @@ namespace Animal.Bal.Interfaces
 	{
 		IEnumerable<AnimalKindEntity> GetAnimalKinds();
 		void AddAnimalKind(AnimalKindModel animalKind);
-		void Update(AnimalKindModel animalKind);
-		void Delete(AnimalKindModel animalKind);
+		void UpdateAnimalKind(AnimalKindModel animalKind);
+		void DeleteAnimalKind(AnimalKindModel animalKind);
 
 	}
 }
