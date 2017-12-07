@@ -1,21 +1,17 @@
-﻿@using Animal.Common.Models.Data
-
-
-
-<h2>Different Kinds Of Animals List</h2>
+﻿@model Animal.Common.Models.Data.AnimalKindEntity
 
 @{
-    ViewBag.Title = "DifferentKindsOfAnimalsList";
-@model  Animal.Common.Models.Bal.AnimalKindModel
- }
+    ViewBag.Title = "AddingNewKindOfAnimal";
 
+}
 
+<h2>AddingNewKindOfAnimal</h2>
 
 <h2>Here you can add new kinds of animals that you have</h2>
 
-@using (Html.BeginForm("AddNewKindOfAnimal", "WorkWithAnimal", "Post"))
+@using (Html.BeginForm("AddNewAnimalKind", "WorkWithAnimalKind", "Post"))
 {
-    <div class ="adding_kind_of_animals">
+    <div class="adding_kind_of_animals">
         @Html.LabelFor(x => x.Name)
         @Html.TextBoxFor(x => x.Name)
         @Html.ValidationMessageFor(x => x.Name)
@@ -35,6 +31,4 @@
         <button type="submit" value="ListOfAnimalKinds">Add New</button>
     </div>
 }
-
-
 

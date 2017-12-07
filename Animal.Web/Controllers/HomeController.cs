@@ -10,7 +10,7 @@ namespace Animal.Web.Controllers
 {
 	public class HomeController : Controller
 	{		
-		public ActionResult Index()
+	   public ActionResult Index()
 		{
 			return View();
 		}
@@ -91,6 +91,9 @@ namespace Animal.Web.Controllers
 			return View("About");
 		}
 
+
 		
+
+
 	}
 }

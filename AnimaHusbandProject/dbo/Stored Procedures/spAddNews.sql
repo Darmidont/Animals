@@ -1,6 +1,10 @@
 ﻿CREATE PROCEDURE [dbo].[spAddNews]
-	@param1 int = 0,
-	@param2 int
+       
+	   @Name NVARCHAR(200),
+	   @Message NVARCHAR(1000)
 AS
-	SELECT @param1, @param2
-RETURN 0
+BEGIN
+INSERT INTO [dbo.NewsIntoBoard]
+	([Name], [Message])
+VALUES (@Name, @Message)
+END

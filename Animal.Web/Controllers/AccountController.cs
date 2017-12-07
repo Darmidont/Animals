@@ -49,7 +49,7 @@ namespace Animal.Web.Controllers
 		}
 
 
-		[HttpPost]
+		[HttpGet]
 		public ActionResult GetAuthorizationView()
 		{
 			var model = new UserModel();
@@ -61,8 +61,16 @@ namespace Animal.Web.Controllers
 		public ActionResult Authorization()
 		{
 			var model = new UserModel();
+			if (ModelState.IsValid)
+			{
+			//	_userService.Login(model);
+				return RedirectToAction("Index", "Home");
+			}
+
 			return View("Authorization", model);
 		}
+
+
 
 		[HttpPost]
 		public ActionResult Logout()
@@ -81,14 +89,14 @@ namespace Animal.Web.Controllers
 			//return View("UserWasDeleted", model)
 		}
 
+		[HttpGet]
+		public ActionResult OwnCab()
+		{
+			return View("OwnCab");
+		}
 
 		
 
-	//	[HttpPost]
-		//public async Task<ActionResult> Logout()
-		//{
-			//await _signInManager.SignOutAsync();
-	//		return RedirectToAction("Index", "Home");
-	//	}
+
 	}
 }

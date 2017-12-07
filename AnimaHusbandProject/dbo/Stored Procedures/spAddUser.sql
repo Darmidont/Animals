@@ -7,7 +7,7 @@
 	@Description nvarchar(500)
 AS
 BEGIN
-insert into dbo.[Users] 
+insert into dbo.[User] 
 ([FirstName], [LastName], [Email], [Login], [Password], [Description], CreatedDate)
 VALUES (@FirstName, @LastName, @Email, @Login, @Password, @Description, getdate())
 SELECT SCOPE_IDENTITY() -- UserId

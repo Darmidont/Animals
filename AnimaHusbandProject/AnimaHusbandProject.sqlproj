@@ -79,6 +79,8 @@
     <Build Include="dbo\Stored Procedures\spDeleteNews.sql" />
     <Build Include="dbo\Stored Procedures\spGetKindsOfAnimals.sql" />
     <Build Include="dbo\Stored Procedures\spGetListOfParticularAnimals.sql" />
+    <Build Include="dbo\Stored Procedures\spAuthorizeUser.sql" />
+    <Build Include="dbo\Stored Procedures\spAddAnimalKind.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="AnimaHusbandProject.refactorlog" />

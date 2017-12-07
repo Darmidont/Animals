@@ -20,7 +20,7 @@ namespace Animal.Common.Models.Bal
 		[Required]
 		public int CurrentNumberOfAnimals { get; set; }		
 
-		[Required]
+		//[Required]
 		public string DescriptionOFAnimals { get; set; }
 
 	}

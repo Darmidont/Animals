@@ -6,12 +6,15 @@
     <title>@ViewBag.Title - Animal Husbandry</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+<link rel ="icon" href ="@Url.Content("~/Images/logoWolf.ico")/>
     
-    <link rel ="icon" href ="@Url.Content("~/Images/favicon.ico")/>
+
 </head>
 
 
 <body>
+    
+
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -26,8 +29,8 @@
             <ul class="nav navbar-nav">
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
                 <li>@Html.ActionLink("About", "About", "Home")</li>
-                <li>@Html.ActionLink("News board","NewsBoardView","Board")
-             <!--   <li>@Html.ActionLink("Contact", "AboutUs", "Home")</li> -->
+                <li>@Html.ActionLink("News board","NewsBoardPage","NewsBoard")
+                <li>@Html.ActionLink("Own Cab","OwnCab","Account")
                 <li>@Html.ActionLink("Registration", "GetRegistrationView", "Account")</li>
                 <li>@Html.ActionLink("Authorization", "Authorization", "Account")</li>
                 <li>@Html.ActionLink("Logout","Logout","Account")</li>
@@ -37,7 +40,7 @@
     </div>
 </div>
     
-    @Html.Partial("_LoginPartial")
+   
 
 <div class="container body-content">
     @RenderBody()
@@ -46,7 +49,9 @@
     
 
     <footer id ="footer">
-        <p>&copy; Rastsvietalov Sergey PI-15-4 @DateTime.Now.Year - Animal Family</p>
+        <p>&copy; Rastsvietalov Sergey PI-15-4 @DateTime.Now.TimeOfDay - Animal Family</p>
+        
+        Email: rastsvietalovjudo@gmail.com
     </footer>
     
   

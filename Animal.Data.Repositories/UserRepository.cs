@@ -47,6 +47,19 @@ namespace Animal.Data.Repositories
 				Database.AddInParameter(dbCommand, "@Login", DbType.String, user.Login);
 				Database.AddInParameter(dbCommand, "@Password", DbType.String, user.Password);
 				Database.AddInParameter(dbCommand, "@Description", DbType.String, user.Description);
+			//	Database.ExecuteNonQuery(dbCommand);
+			}
+		}
+
+
+		public void Authorize(UserModel user)
+		{
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAuthorizeUser"))
+			{
+
+				//Database.
+				Database.AddInParameter(dbCommand, "@Login", DbType.String, user.Login);
+				Database.AddInParameter(dbCommand, "@Password", DbType.String, user.Password);
 				Database.ExecuteNonQuery(dbCommand);
 			}
 		}

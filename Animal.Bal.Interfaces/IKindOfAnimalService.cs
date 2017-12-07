@@ -7,7 +7,7 @@ namespace Animal.Bal.Interfaces
    public interface IKindOfAnimalService
 	{
 		IEnumerable<AnimalKindEntity> GetAnimalKinds();
-		void Add(AnimalKindModel animalKind);
+		void AddAnimalKind(AnimalKindModel animalKind);
 		void Update(AnimalKindModel animalKind);
 		void Delete(AnimalKindModel animalKind);
 

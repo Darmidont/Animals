@@ -13,6 +13,8 @@ namespace Animal.Common.Models.Bal
 
 		[Required]
 		public bool Alive { get; set; }
+		[Required]
+		public bool HasCollar { get; set; }
 
 		[Required]
 		public int HeartRhythms { get; set; }
@@ -25,7 +27,9 @@ namespace Animal.Common.Models.Bal
 
 		[Required]
 		public int LastWeight { get; set; }
+		[Required]
 		public int CurrentNumberOfAnimals { get; set; }
 		public string DescriptionOFAnimals { get; set; }
+	
 	}
 }

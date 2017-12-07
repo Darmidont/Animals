@@ -36,6 +36,11 @@ namespace Animal.Bal.Services
 			_userRepository.Add(user);
 		}
 
+		public void AuthorizeUser(UserModel user)
+		{
+			_userRepository.Authorize(user);
+		}
+
 		public void ChangeUser(UserModel user)
 		{
 			_userRepository.Update(user);

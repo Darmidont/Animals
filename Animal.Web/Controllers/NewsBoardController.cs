@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Animal.Common.Models.Bal;
 
 namespace Animal.Web.Controllers
 {
@@ -13,8 +14,14 @@ namespace Animal.Web.Controllers
 			return View();
 		}
 
+		[HttpGet]
+		public ActionResult NewsBoardPage()
+		{
+			var model = new ParticularNewsModel();
+			return View("NewsBoardPage", model);
+		}
 
-	//	public ActionResult
+		//	public ActionResult
 
 	}
 }

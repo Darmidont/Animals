@@ -5,10 +5,13 @@ namespace Animal.Web.Controllers
 	public class AdminController : Controller
 	{
 		// GET: Admin
-		public ActionResult Index()
-		{
-			return View();
-		}
+	//	public ActionResult Index()
+	//	{
+	//		return View();
+		//}
+
+
+
 
 
 		[HttpPost]

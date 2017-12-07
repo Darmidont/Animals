@@ -21,7 +21,7 @@ namespace Animal.Common.Models.Bal
 		public string Login { get; set; }
 		[Required]
 		public string Password { get; set; }
-		[Required]
+	//	[Required]
 		public string Description { get; set; }
 
 	//	public int CreatedDate { get; set; }

@@ -10,7 +10,7 @@ namespace Animal.Bal.Interfaces
 		void AddUser(UserModel user);
 		void DeleteUser(UserModel user);
 		void UpdateUserData(UserModel user);
-
 		void AddNews(ParticularNewsModel news);
+		void DeleteNews(ParticularNewsModel news);
 	}
 }

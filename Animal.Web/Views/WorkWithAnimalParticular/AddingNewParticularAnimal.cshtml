@@ -1,15 +1,13 @@
-﻿@using Animal.Common.Models.Data
-
-
+﻿
 @{
-    ViewBag.Title = "DifferentAnimalsFromKindList";
-  @model Animal.Common.Models.Bal.AnimalParticularModel
+    ViewBag.Title = "";
+@model Animal.Common.Models.Bal.AnimalParticularModel
 
-}
+    }
 
-<h2>DifferentAnimalsFromKindList</h2>
+<h2>AddingNewParticularAnimal</h2>
 
-@using (Html.BeginForm("AddNewAnimal", "WorkWithAnimal", "Post"))
+@using (Html.BeginForm("AddNewAnimal", "WorkWithAnimalParticular", "Post"))
 {
     <div class="adding_animals">
         @Html.LabelFor(x => x.Name)

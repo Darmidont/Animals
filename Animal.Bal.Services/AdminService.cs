@@ -83,5 +83,10 @@ public class AdminService: IAdminService
 		{
 			throw new NotImplementedException();
 		}
+
+		public void DeleteNews(ParticularNewsModel news)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

@@ -17,7 +17,7 @@ namespace Animal.Bal.Services
 			throw new NotImplementedException();
 		}
 
-		public void Add(AnimalKindModel animalKind)
+		public void AddAnimalKind(AnimalKindModel animalKind)
 		{
 			throw new NotImplementedException();
 		}
