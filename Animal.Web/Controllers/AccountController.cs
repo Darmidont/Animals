@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.ClientServices.Providers;
 using System.Web.Mvc;
 using Animal.Bal.Interfaces;
 using Animal.Common.Models.Bal;
-using System.Data;
-using System.Configuration;
-using System.Data.SqlClient;
+
 //using System.ComponentModel.DataAnnotations;
 //using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -32,7 +25,6 @@ namespace Animal.Web.Controllers
 		}
 
 
-
 		[HttpPost]
 		public ActionResult Register(UserModel model)
 		{
@@ -41,11 +33,7 @@ namespace Animal.Web.Controllers
 				_userService.AddUser(model);
 				return View("RegistrationCompleted");
 			}
-			else
-			{
-				return View("Registration", model);
-			}
-			
+			return View("Registration", model);
 		}
 
 
@@ -62,14 +50,10 @@ namespace Animal.Web.Controllers
 		{
 			var model = new UserModel();
 			if (ModelState.IsValid)
-			{
-			//	_userService.Login(model);
 				return RedirectToAction("Index", "Home");
-			}
 
 			return View("Authorization", model);
 		}
-
 
 
 		[HttpPost]
@@ -77,14 +61,13 @@ namespace Animal.Web.Controllers
 		{
 			Session.Clear();
 			return RedirectToAction("Index", "Home");
-
 		}
 
 
 		[HttpPost]
 		public ActionResult DeletingUser()
 		{
-			throw  new NotImplementedException();
+			throw new NotImplementedException();
 			//var model = 
 			//return View("UserWasDeleted", model)
 		}
@@ -94,9 +77,5 @@ namespace Animal.Web.Controllers
 		{
 			return View("OwnCab");
 		}
-
-		
-
-
 	}
 }
