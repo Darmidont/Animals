@@ -22,12 +22,13 @@ namespace Animal.Bal.Services
 			throw new NotImplementedException();
 		}
 
-		public void Update(AnimalKindModel animalKind)
+
+		public void UpdateAnimalKind(AnimalKindModel animalKind)
 		{
 			throw new NotImplementedException();
 		}
 
-		public void Delete(AnimalKindModel animalKind)
+		public void DeleteAnimalKind(AnimalKindModel animalKind)
 		{
 			throw new NotImplementedException();
 		}

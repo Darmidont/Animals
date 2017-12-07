@@ -6,7 +6,6 @@ namespace Animal.Bal.Interfaces
 {
 	public interface IUserService
 	{
-	//	string Hello();
 		IEnumerable<UserEntity> GetUsers();
 		void AddUser(UserModel user);
         void Update(UserModel user);

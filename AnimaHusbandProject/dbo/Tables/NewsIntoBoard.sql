@@ -4,6 +4,4 @@
 	[Name] NVARCHAR(200) NOT NULL,
 	[DateOfCreating] DATETIME NOT NULL,
 	[Message] NVARCHAR(1000) NOT NULL
-	
-
 )
