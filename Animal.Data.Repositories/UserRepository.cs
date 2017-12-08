@@ -66,7 +66,8 @@ namespace Animal.Data.Repositories
 
 		public void Delete(UserModel user)
 		{
-			
+			using (var dbCommand = Database.)
+
 		}
 
 		public void Update(UserModel user)
@@ -83,5 +84,11 @@ namespace Animal.Data.Repositories
 				Database.ExecuteNonQuery(dbCommand);
 			}
 		}
+
+
+
+
+
+
 	}
 }

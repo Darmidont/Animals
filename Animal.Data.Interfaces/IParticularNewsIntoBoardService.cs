@@ -9,7 +9,6 @@ namespace Animal.Data.Interfaces
 {
 	public interface IParticularNewsIntoBoardService
 	{
-
 		IEnumerable<ParticularNewsIntoBoardEntity> GetNews(int NewsId);
 	}
 }

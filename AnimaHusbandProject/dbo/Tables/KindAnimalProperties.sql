@@ -7,6 +7,5 @@
 	[PlannedNumber] INT NOT NULL,
 	[CurrentNumber] INT NOT NULL,
 	[Description] NVARCHAR(500)
-	--[Value] nvarchar(100) NOT NULL,
 	--constraint FK_ConcreteAnimalProperties_AnimalTypeProperties foreign key ([AnimalTypePropertyId]) references dbo.[AnimalTypeProperties](Id)
 )
