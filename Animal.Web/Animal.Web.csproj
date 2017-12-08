@@ -220,7 +220,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsBoardController.cs" />
-    <Compile Include="Controllers\WorkWithAnimalKindController.cs" />
+    <Compile Include="Controllers\AnimalTypeController.cs" />
     <Compile Include="Controllers\WorkWithAnimalParticularController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -273,10 +273,10 @@
     <Content Include="Views\Account\Authorization.cshtml" />
     <Content Include="Views\Account\Logout.cshtml" />
     <Content Include="Views\Account\Registration.cshtml" />
-    <Content Include="Views\WorkWithAnimalKind\DifferentKindsOfAnimalsList.cshtml" />
+    <Content Include="Views\AnimalType\DifferentKindsOfAnimalsList.cshtml" />
     <Content Include="Views\WorkWithAnimalParticular\DifferentAnimalsFromKindList.cshtml" />
-    <Content Include="Views\WorkWithAnimalKind\AddingNewKindOfAnimalCompleted.cshtml" />
-    <Content Include="Views\WorkWithAnimalKind\AddingNewKindOfAnimal.cshtml" />
+    <Content Include="Views\AnimalType\AddingNewKindOfAnimalCompleted.cshtml" />
+    <Content Include="Views\AnimalType\AddingNewKindOfAnimal.cshtml" />
     <Content Include="Views\NewsBoard\NewsBoardPage.cshtml" />
     <Content Include="Views\WorkWithAnimalParticular\AddingNewParticularAnimal.cshtml" />
     <Content Include="Views\Account\OwnCab.cshtml" />

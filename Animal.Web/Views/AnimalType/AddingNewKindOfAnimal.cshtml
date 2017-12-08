@@ -1,4 +1,4 @@
-﻿@model Animal.Common.Models.Data.AnimalKindEntity
+﻿@model Animal.Common.Models.Bal.AnimalKindModel
 
 @{
     ViewBag.Title = "AddingNewKindOfAnimal";
@@ -9,7 +9,7 @@
 
 <h2>Here you can add new kinds of animals that you have</h2>
 
-@using (Html.BeginForm("AddNewAnimalKind", "WorkWithAnimalKind", "Post"))
+@using (Html.BeginForm("AddNewAnimalKind", "AnimalType", "Post"))
 {
     <div class="adding_kind_of_animals">
         @Html.LabelFor(x => x.Name)

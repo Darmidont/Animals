@@ -5,19 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Animal.Common.Models.Bal;
 using Animal.Common.Models.Data;
+using AutoMapper;
 using AutoMapper.Configuration;
 
 namespace Animal.Common.Config
 {
-	public class MapConfig
+	public class MappingProfile  : Profile
 	{
-		public static void Register()
+		public MappingProfile()
 		{
 			//var modelMapperBuilder = builder ?? new MapperBuilder();
 			var cfg = new MapperConfigurationExpression();
+			cfg.CreateMap<UserModel, UserEntity>();
 			cfg.CreateMap<UserEntity, UserModel>();
-
-			
+			cfg.CreateMap<AnimalKindEntity, AnimalKindModel>();
+			cfg.CreateMap<AnimalKindModel, AnimalKindEntity>();
 		}
 	}
 }

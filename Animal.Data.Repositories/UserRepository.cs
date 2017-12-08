@@ -37,7 +37,7 @@ namespace Animal.Data.Repositories
 			return result;
 		}
 
-		public void Add(UserModel user)
+		public void Add(UserEntity user)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAddUser"))
 			{
@@ -52,7 +52,7 @@ namespace Animal.Data.Repositories
 		}
 
 
-		public void Authorize(UserModel user)
+		public void Authorize(UserEntity user)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAuthorizeUser"))
 			{
@@ -64,13 +64,13 @@ namespace Animal.Data.Repositories
 			}
 		}
 
-		public void Delete(UserModel user)
+		public void Delete(UserEntity user)
 		{
 			using (var dbCommand = Database.)
 
 		}
 
-		public void Update(UserModel user)
+		public void Update(UserEntity user)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spUpdateUser"))
 			{

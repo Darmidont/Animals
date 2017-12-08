@@ -4,8 +4,6 @@ namespace Animal.Common.Models.Data
 {
 	public class UserEntity
 	{
-
-	
 		public int Id { get; set; }
 
 		[Display(Name = "First Name")]

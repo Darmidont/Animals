@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Animal.Common.Models.Bal
 {
@@ -22,17 +16,6 @@ namespace Animal.Common.Models.Bal
 		[Required]
 		[DataType(DataType.Password)]
 		public string Password { get; set; }
-	//	[Required]
 		public string Description { get; set; }
-
-	//	public int CreatedDate { get; set; }
-
-		//public int LastLoginDate { get; set; }
-
-	//	[Required]
-	//	[DataType(DataType.Password)]
-	//	public string Password { get; set; }
-		//[Required]
-		//public string Description { get; set; }
 	}
 }

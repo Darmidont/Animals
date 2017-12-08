@@ -25,7 +25,7 @@ namespace Animal.Web
 	        var source = ConfigurationSourceFactory.Create();
 	        DatabaseFactory.SetDatabaseProviderFactory(new DatabaseProviderFactory(source));
 
-	        MapConfig.Register();
+	       AutoMapperConfiguration.Configure();
 		}
     }
 }
