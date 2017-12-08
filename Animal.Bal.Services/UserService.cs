@@ -8,6 +8,7 @@ using Animal.Bal.Interfaces;
 using Animal.Common.Models.Bal;
 using Animal.Common.Models.Data;
 using Animal.Data.Interfaces;
+using AutoMapper;
 
 namespace Animal.Bal.Services
 {
@@ -32,18 +33,20 @@ namespace Animal.Bal.Services
 
 		public void AddUser(UserModel user)
 		{
-
-			_userRepository.Add(user);
+			var userEntity = Mapper.Map<UserEntity>(user);
+			_userRepository.Add(userEntity);
 		}
 
 		public void AuthorizeUser(UserModel user)
 		{
-			_userRepository.Authorize(user);
+			var userEntity = Mapper.Map<UserEntity>(user);
+			_userRepository.Authorize(userEntity);
 		}
 
 		public void ChangeUser(UserModel user)
 		{
-			_userRepository.Update(user);
+			var userEntity = Mapper.Map<UserEntity>(user);
+			_userRepository.Update(userEntity);
 		}
 
 		public void Update(UserModel user)

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Animal.Common.Models.Bal
 {
@@ -18,10 +13,9 @@ namespace Animal.Common.Models.Bal
 		public int PlannedNumberOfAnimals { get; set; }
 
 		[Required]
-		public int CurrentNumberOfAnimals { get; set; }		
+		public int CurrentNumberOfAnimals { get; set; }
 
 		//[Required]
 		public string DescriptionOFAnimals { get; set; }
-
 	}
 }

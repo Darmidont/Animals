@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Animal Husbandry</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-<link rel ="icon" href ="@Url.Content("~/Images/logoWolf.ico")/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@ViewBag.Title - Animal Husbandry</title>
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+<link rel="icon" href="@Url.Content("~/Images/logoWolf.ico")/>
     
 
 
@@ -17,67 +17,58 @@
     
 
 <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            
-            
+<div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
 
-       
-            <div class="logo">
-                <img src="Images/logoWolf.jpg" alt="" />
-            </div>
-                
-           
-             
-            </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                @Html.ActionLink("Animal Husbandry", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
-                <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li>@Html.ActionLink("About", "About", "Home")</li>
-                <li>@Html.ActionLink("News board", "NewsBoardPage", "NewsBoard")
-                <li>@Html.ActionLink("Own Cab", "OwnCab", "Account")
-                <ul>
-                    <li>@Html.ActionLink("Personal page", "OwnCab", "Account")
-                    <li>@Html.ActionLink("List Of Animal Kinds", "OwnCab", "Account")
-                    <li>@Html.ActionLink("List Of Particular Animals", "OwnCab", "Account")
-                </ul>
-                <li>@Html.ActionLink("Registration", "GetRegistrationView", "Account")</li>
-                <li>@Html.ActionLink("Authorization", "Authorization", "Account")</li>
-                <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
-            </ul>
-           
+
+        <div class="logo">
+            <img src="Images/logoWolf.jpg" alt=""/>
         </div>
     </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            @Html.ActionLink("Animal Husbandry", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("About", "About", "Home")</li>
+            <li>@Html.ActionLink("News board", "NewsBoardPage", "NewsBoard")
+            <li>@Html.ActionLink("Own Cab", "OwnCab", "Account")
+            <ul>
+                <li>@Html.ActionLink("Personal page", "OwnCab", "Account")
+                <li>@Html.ActionLink("List Of Animal Kinds", "GetAnimalKindView", "AnimalType")
+                <li>@Html.ActionLink("List Of Particular Animals", "OwnCab", "Account")
+            </ul>
+            <li>@Html.ActionLink("Registration", "GetRegistrationView", "Account")</li>
+            <li>@Html.ActionLink("Authorization", "Authorization", "Account")</li>
+            <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
+        </ul>
+
+    </div>
 </div>
-    
-   
+</div>
+
 
 <div class="container body-content">
     @RenderBody()
     <hr/>
- 
-    
 
-    <footer id ="footer">
+
+    <footer id="footer">
         <p>&copy; Rastsvietalov Sergey PI-15-4 @DateTime.UtcNow - Animal Family</p>
-        
+
         Email: rastsvietalovjudo@gmail.com
     </footer>
-    
-  
-   
+
+
 </div>
-    
+
 
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")
-@RenderSection("scripts", required: false)
+@RenderSection("scripts", false)
 </body>
 </html>
-

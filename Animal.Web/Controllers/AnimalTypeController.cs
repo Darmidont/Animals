@@ -6,11 +6,11 @@ using Animal.Common.Models.Data;
 
 namespace Animal.Web.Controllers
 {
-	public class WorkWithAnimalKindController : Controller
+	public class AnimalTypeController : Controller
 	{
 		private readonly IKindOfAnimalService _animalKindService;
 
-		public WorkWithAnimalKindController(IKindOfAnimalService animalKindService)
+		public AnimalTypeController(IKindOfAnimalService animalKindService)
 		{
 			_animalKindService = animalKindService;
 		}
