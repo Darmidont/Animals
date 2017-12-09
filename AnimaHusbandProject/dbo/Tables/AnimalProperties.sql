@@ -9,6 +9,6 @@
 	[CaloriesBurnedPerDay] INT NOT NULL,
 	[BreathingRatePerMinute] INT NOT NULL,
 	[LastWeight] FLOAT NOT NULL,
-	[Description] nvarchar(500)
-
+	[Description] nvarchar(500),
+	constraint FK_AnimalProperties_KindOfAnimal foreign key (AnimalKindId) references dbo.[KindOfAnimal](Id)
 )

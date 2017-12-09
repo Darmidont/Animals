@@ -83,7 +83,6 @@
     <Compile Include="Models\Bal\LoginViewModel.cs" />
     <Compile Include="Models\Bal\ParticularNewsModel.cs" />
     <Compile Include="Models\Bal\UserModel.cs" />
-    <Compile Include="Models\Data\AdminEntity.cs" />
     <Compile Include="Models\Data\AnimalKindEntity.cs" />
     <Compile Include="Models\Data\AnimalParticularEntity.cs" />
     <Compile Include="Models\Data\NewsBoardEntity.cs" />

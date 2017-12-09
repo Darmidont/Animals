@@ -8,5 +8,5 @@
     [Password] nvarchar(200) NOT NULL, 
 	[Description] nvarchar(500), 
     [CreatedDate] DATETIME NOT NULL, 
-	[IsAdmin] bit default(0)
+	[IsAdmin] bit default(0) NOT NULL
 )
