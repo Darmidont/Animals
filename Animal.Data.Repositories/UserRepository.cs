@@ -66,7 +66,7 @@ namespace Animal.Data.Repositories
 
 		public void Delete(UserEntity user)
 		{
-			using (var dbCommand = Database.)
+			//using (var dbCommand = Database.)
 
 		}
 
