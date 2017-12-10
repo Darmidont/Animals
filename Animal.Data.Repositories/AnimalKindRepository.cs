@@ -20,7 +20,7 @@ namespace Animal.Data.Repositories
 		public IEnumerable<AnimalKindEntity> GetAnimalTypes()
 		{
 			var result = new List<AnimalKindEntity>();
-			using (var dbCommand = Database.GetStoredProcCommand("dbo.spGetAnimalTypes"))
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.[spGetAnimalTypes]"))
 			{
 				using (var reader = Database.ExecuteReader(dbCommand))
 				{

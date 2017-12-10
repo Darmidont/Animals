@@ -77,7 +77,6 @@
     <Compile Include="Config\MappingProfile.cs" />
     <Compile Include="Config\NonDisposableUnityContainerDecorator.cs" />
     <Compile Include="Constants.cs" />
-    <Compile Include="Models\Bal\AdminModel.cs" />
     <Compile Include="Models\Bal\AnimalKindModel.cs" />
     <Compile Include="Models\Bal\AnimalParticularModel.cs" />
     <Compile Include="Models\Bal\LoginViewModel.cs" />

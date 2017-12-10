@@ -49,10 +49,10 @@ public class AdminService: IAdminService
 			throw new NotImplementedException();
 		}
 
-		public void ChangeAdminData(AdminModel admin)
-		{
-			throw new NotImplementedException();
-		}
+	//	public void ChangeAdminData(AdminModel admin)
+	//	{
+		//	throw new NotImplementedException();
+		//}
 
 		public void UpdateUser(UserModel user)
 		{

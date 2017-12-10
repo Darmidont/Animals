@@ -6,6 +6,4 @@ AS
 	INSERT INTO [dbo.NewsIntoBoard]
 	([Login], [Password])
 VALUES (@Login, @Password)
-	--([Login],[Password])
-	--VALUES (@Login,@Password)
 end

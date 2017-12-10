@@ -1,6 +1,16 @@
 ﻿CREATE PROCEDURE [dbo].[spGetListOfParticularAnimals]
-	@param1 int = 0,
-	@param2 int
-AS
-	SELECT @param1, @param2
-RETURN 0
+as
+begin
+select 	
+	[Id],
+    [AnimalKindId],
+	[HasCollar],
+	[Name],
+	[IsAlive],
+	[HeartRhythms],
+	[CaloriesBurnedPerDay],
+	[BreathingRatePerMinute].
+	[LastWeight].
+	[Description]
+	from dbo.[AnimalProperties]
+end

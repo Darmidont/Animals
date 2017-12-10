@@ -74,10 +74,8 @@
     <Build Include="dbo\Tables\NewsIntoBoard.sql" />
     <Build Include="dbo\Stored Procedures\spUpdateUser.sql" />
     <Build Include="dbo\Stored Procedures\spDeleteUserByAdmin.sql" />
-    <Build Include="dbo\Stored Procedures\spUpdateAdminsData.sql" />
     <Build Include="dbo\Stored Procedures\spAddNews.sql" />
     <Build Include="dbo\Stored Procedures\spDeleteNews.sql" />
-    <Build Include="dbo\Stored Procedures\spGetKindsOfAnimals.sql" />
     <Build Include="dbo\Stored Procedures\spGetListOfParticularAnimals.sql" />
     <Build Include="dbo\Stored Procedures\spAuthorizeUser.sql" />
     <Build Include="dbo\Stored Procedures\spAddAnimalKind.sql" />

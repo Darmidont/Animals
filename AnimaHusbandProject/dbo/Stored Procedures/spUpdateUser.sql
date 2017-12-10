@@ -11,7 +11,7 @@ begin
 	 update  u 
 	 set 
 	 u.FirstName  = @FirstName
-	 ---
+
 	 from dbo.Users u
 	 where u.Id = @Id 
 end

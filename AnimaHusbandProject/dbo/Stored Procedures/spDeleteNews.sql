@@ -1,6 +1,14 @@
 ﻿CREATE PROCEDURE [dbo].[spDeleteNews]
-	@param1 int = 0,
-	@param2 int
+	@Name NVARCHAR(200),
+	@Message NVARCHAR(1000)
+
+
 AS
-	SELECT @param1, @param2
-RETURN 0
+BEGIN
+	DELETE FROM [dbo].[NewsIntoBoard] WHERE [Name] = @Name
+
+	--[Name] = @Name,
+--	[Message] = @Message
+	--([Name], [Message])
+  --  VALUES (@Name,@Message)
+END

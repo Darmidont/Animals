@@ -1,5 +1,16 @@
 ﻿CREATE PROCEDURE [dbo].[spGetUsers]
+
 as
 begin
-select * from dbo.[Users]
+select 	
+	[Id],
+    [FirstName],
+	[LastName],
+	[Email],
+	[Login],
+	[Password],
+	[Description],
+	[CreatedDate].
+	[IsAdmin]
+	from dbo.[User]
 end

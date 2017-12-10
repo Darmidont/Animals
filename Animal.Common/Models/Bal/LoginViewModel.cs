@@ -18,6 +18,7 @@ public class LoginViewModel
 		[DataType(DataType.Password)]
 		public string Password { get; set; }
 
+		[DataType(DataType.Time)]
 		public string ReturnUrl { get; set; }
 	}
 }
