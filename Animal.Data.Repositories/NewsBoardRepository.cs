@@ -49,6 +49,17 @@ namespace Animal.Data.Repositories
 			}
 		}
 
+		public void Delete(NewsBoardEntity news)
+		{
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.spDeleteNewsById"))
+			{
+				Database.AddInParameter(dbCommand, "@Id", DbType.Int32, news.Id);
+				Database.ExecuteNonQuery(dbCommand);
+			}
+		}
+
+
+
 		public IEnumerable<ParticularNewsIntoBoardEntity> GetNews(int NewsId)
 		{
 			throw new NotImplementedException();

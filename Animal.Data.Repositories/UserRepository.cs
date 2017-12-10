@@ -73,6 +73,8 @@ namespace Animal.Data.Repositories
 			}
 		}
 
+
+
 		public void Update(UserEntity user)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spUpdateUser"))
