@@ -6,10 +6,8 @@
 <title>@ViewBag.Title - Animal Husbandry</title>
 @Styles.Render("~/Content/css")
 @Scripts.Render("~/bundles/modernizr")
-<link rel="icon" href="@Url.Content("~/Images/logoWolf.ico")/>
+<link rel="icon" class ="logoWolf" href="@Url.Content("~/Images/logoWolf.ico") />
     
-
-
 </head>
 
 
@@ -19,19 +17,21 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
 <div class="container">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-        </button>
+        </button> -->
 
-
+        
         <div class="logo">
             <img src="Images/logoWolf.jpg" alt=""/>
         </div>
     </div>
     <div class="navbar-collapse collapse">
-        <ul class="menu">
+        
+        <ul class="menu-main">
+
             @Html.ActionLink("Animal Husbandry", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
 
             <li>@Html.ActionLink("Home", "Index", "Home")</li>
@@ -39,13 +39,9 @@
             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
             <li>@Html.ActionLink("News board", "NewsBoardPage", "NewsBoard")<li>
             <li>@Html.ActionLink("Own Cab", "OwnCab", "Account")</li>
-           
-               <!-- <li>@Html.ActionLink("Personal page", "OwnCab", "Account")
-                <li>@Html.ActionLink("List Of Animal Kinds", "GetAnimalKindView", "AnimalType")
-                <li>@Html.ActionLink("List Of Particular Animals", "OwnCab", "Account") -->
-            
+
             <li>@Html.ActionLink("Registration", "GetRegistrationView", "Account")</li>
-            <li>@Html.ActionLink("Authorization", "Authorization", "Account")</li>
+            <li>@Html.ActionLink("Authorization", "GetAuthorizationView", "Account")</li>
             <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
         </ul>
 

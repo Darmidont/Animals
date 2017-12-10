@@ -236,6 +236,7 @@
     <Content Include="Images\logoWolf.ico" />
     <Content Include="Images\logoWolf.jpg" />
     <Content Include="Images\mainPicture.jpg" />
+    <Content Include="Images\main_back.jpg" />
     <Content Include="logoWolf.ico" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -269,7 +270,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\RegistrationCompleted.cshtml" />
-    <Content Include="Views\Account\Authorization.cshtml" />
     <Content Include="Views\Account\Logout.cshtml" />
     <Content Include="Views\Account\Registration.cshtml" />
     <Content Include="Views\AnimalType\DifferentKindsOfAnimalsList.cshtml" />
@@ -282,6 +282,8 @@
     <Content Include="Views\WorkWithAnimalParticular\AddingNewParticularAnimalCompleted.cshtml" />
     <Content Include="Views\NewsBoard\AddingNewsCompleted.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Account\AuthorizationCompleted.cshtml" />
+    <Content Include="Views\Account\Authorization.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,7 +1,4 @@
-﻿@using Animal.Common.Models.Data
-
-
-@{
+﻿@{
     ViewBag.Title = "Registration";
     @model  Animal.Common.Models.Bal.UserModel
 }
@@ -12,7 +9,7 @@
 
     @using (Html.BeginForm("Register", "Account", "Post"))
     {
-        <div class ="registration_form">
+        <div class ="registration-form">
             @Html.LabelFor(x => x.FirstName)
             @Html.TextBoxFor(x => x.FirstName)
             @Html.ValidationMessageFor(x => x.FirstName)
@@ -37,7 +34,9 @@
             @Html.TextBoxFor(x => x.Description)
             @Html.ValidationMessageFor(x => x.Description)
             <br>
-            <button type="submit" value="Register">Register!</button>
+          <!--  <button type="submit" value="Register">Register!</button>-->
+            
+            <button type="submit" class="btn btn-primary btn-large btn-block">Register!</button>
         </div>
     }
 
