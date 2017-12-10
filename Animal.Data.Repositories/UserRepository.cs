@@ -66,15 +66,18 @@ namespace Animal.Data.Repositories
 
 		public void Delete(UserEntity user)
 		{
-			//using (var dbCommand = Database.)
-
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.spDeleteUserbyId"))
+			{
+				Database.AddInParameter(dbCommand, "@Id", DbType.Int32, user.Id);
+				Database.ExecuteNonQuery(dbCommand);
+			}
 		}
 
 		public void Update(UserEntity user)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spUpdateUser"))
 			{
-				Database.AddInParameter(dbCommand, "@Id", DbType.String, user.Id);
+				Database.AddInParameter(dbCommand, "@Id", DbType.Int32, user.Id);
 				Database.AddInParameter(dbCommand, "@FirstName", DbType.String, user.FirstName);
 				Database.AddInParameter(dbCommand, "@LastName", DbType.String, user.LastName);
 				Database.AddInParameter(dbCommand, "@Email", DbType.String, user.Email);

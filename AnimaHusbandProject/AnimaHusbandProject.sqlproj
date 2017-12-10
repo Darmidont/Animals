@@ -62,7 +62,7 @@
     <Folder Include="dbo\Tables" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tables\User.sql" />
+    <Build Include="dbo\Tables\Users.sql" />
     <Build Include="dbo\Tables\AnimalProperties.sql" />
     <Build Include="dbo\Tables\KindOfAnimal.sql" />
     <Build Include="dbo\Stored Procedures\spGetUsers.sql" />
@@ -73,7 +73,7 @@
     <Build Include="dbo\Stored Procedures\spGetParticularAnimalStats.sql" />
     <Build Include="dbo\Tables\NewsIntoBoard.sql" />
     <Build Include="dbo\Stored Procedures\spUpdateUser.sql" />
-    <Build Include="dbo\Stored Procedures\spDeleteUserByAdmin.sql" />
+    <Build Include="dbo\Stored Procedures\spDeleteUserById.sql" />
     <Build Include="dbo\Stored Procedures\spAddNews.sql" />
     <Build Include="dbo\Stored Procedures\spDeleteNews.sql" />
     <Build Include="dbo\Stored Procedures\spGetListOfParticularAnimals.sql" />
