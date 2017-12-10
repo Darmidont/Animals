@@ -13,7 +13,6 @@ namespace Animal.Web.Controllers
 		private readonly IAccountValidationService _accountValidationService;
 		private readonly IUserService _userService;
 
-
 		public AccountController(IUserService userService, IAccountValidationService accountValidationService)
 		{
 			_userService = userService;
@@ -51,18 +50,30 @@ namespace Animal.Web.Controllers
 		[HttpGet]
 		public ActionResult GetAuthorizationView()
 		{
-			var model = new UserModel();
+			var model = new LoginModel();
 			return View("Authorization", model);
 		}
 
 
 		[HttpPost]
-		public ActionResult Authorization()
+		public ActionResult Authorization(LoginModel model)
 		{
-			var model = new UserModel();
 			if (ModelState.IsValid)
-				return View("AuthorizationCompleted");
+			{
+				var loginResult = _userService.LoginUser(model);
+				if (!loginResult)
+				{
+					ModelState.AddModelError("Email", "Invalid email or password");
+					return View("Authorization", model);
+				}
+				else
+				{
+					return View("AuthorizationCompleted");
+				}
+			}
+
 			return View("Authorization", model);
+
 		}
 
 

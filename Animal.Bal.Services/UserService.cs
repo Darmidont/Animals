@@ -37,10 +37,10 @@ namespace Animal.Bal.Services
 			_userRepository.Add(userEntity);
 		}
 
-		public void AuthorizeUser(UserModel user)
+		public bool LoginUser(LoginModel loginModel)
 		{
-			var userEntity = Mapper.Map<UserEntity>(user);
-			_userRepository.Authorize(userEntity);
+			var loginEntity = Mapper.Map<LoginEntity>(loginModel);
+			return _userRepository.Login(loginEntity);
 		}
 
 		public void ChangeUser(UserModel user)

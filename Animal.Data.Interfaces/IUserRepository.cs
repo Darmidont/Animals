@@ -7,7 +7,7 @@ namespace Animal.Data.Interfaces
 	{
 		IEnumerable<UserEntity> GetUsers();
 		void Add(UserEntity user);
-		void Authorize(UserEntity user);
+		bool Login(LoginEntity user);
 		void Update(UserEntity user);
 		bool IsEmailAlreadyExists(string email);
 	}

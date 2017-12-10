@@ -9,6 +9,7 @@ namespace Animal.Bal.Interfaces
 		IEnumerable<UserEntity> GetUsers();
 		void AddUser(UserModel user);
         void Update(UserModel user);
+		bool LoginUser(LoginModel loginModel);
 	}
 }
 

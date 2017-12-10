@@ -52,13 +52,13 @@ namespace Animal.Data.Repositories
 		}
 
 
-		public void Authorize(UserEntity user)
+		public bool Login(LoginEntity loginEntity)
 		{
-			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAuthorizeUser"))
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.spLoginUser"))
 			{
-				Database.AddInParameter(dbCommand, "@Login", DbType.String, user.Login);
-				Database.AddInParameter(dbCommand, "@Password", DbType.String, user.Password);
-				Database.ExecuteNonQuery(dbCommand);
+				Database.AddInParameter(dbCommand, "@Email", DbType.String, loginEntity.Email);
+				Database.AddInParameter(dbCommand, "@Password", DbType.String, loginEntity.Password);
+				return (bool)Database.ExecuteScalar(dbCommand);
 			}
 		}
 

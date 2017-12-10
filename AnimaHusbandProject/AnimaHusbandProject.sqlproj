@@ -76,7 +76,7 @@
     <Build Include="dbo\Stored Procedures\spDeleteUserById.sql" />
     <Build Include="dbo\Stored Procedures\spAddNews.sql" />
     <Build Include="dbo\Stored Procedures\spGetListOfParticularAnimals.sql" />
-    <Build Include="dbo\Stored Procedures\spAuthorizeUser.sql" />
+    <Build Include="dbo\Stored Procedures\spLoginUser.sql" />
     <Build Include="dbo\Stored Procedures\spAddAnimalKind.sql" />
     <Build Include="dbo\Stored Procedures\spGetAnimalTypes.sql" />
     <Build Include="dbo\Stored Procedures\spCheckUser.sql" />

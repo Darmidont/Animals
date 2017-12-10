@@ -1,6 +1,6 @@
 ﻿@{
     ViewBag.Title = "Authorization";
-    @model  Animal.Common.Models.Bal.UserModel
+    @model  Animal.Common.Models.Bal.LoginModel
 }
 
 <h2>Login</h2>
@@ -9,17 +9,14 @@
 @using (Html.BeginForm("Authorization", "Account", "Post"))
 {
     <div class="login-form">
-        @Html.LabelFor(x => x.Login)
-        @Html.TextBoxFor(x => x.Login)
-        @Html.ValidationMessageFor(x => x.Login)
-       <br>
+        @Html.LabelFor(x => x.Email)
+        @Html.TextBoxFor(x => x.Email)
+        @Html.ValidationMessageFor(x => x.Email)
+        <br>
         @Html.LabelFor(x => x.Password)
         @Html.TextBoxFor(x => x.Password)
         @Html.ValidationMessageFor(x => x.Password)
         <br>
         <button type="submit" class="btn btn-primary btn-large btn-block">Login!</button>
     </div>
-
-
-
 }
