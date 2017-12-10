@@ -84,15 +84,5 @@ namespace Animal.Data.Repositories
 			}
 
 		}
-
-		public IEnumerable<AnimalKindEntity> GetAnimalTypes(int Id)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		object IAnimalKindRepository.GetAnimalTypes()
-		{
-			throw new System.NotImplementedException();
-		}
 	}
 }

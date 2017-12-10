@@ -5,8 +5,7 @@ namespace Animal.Data.Interfaces
 {
 	public interface IAnimalKindRepository
 	{
-		IEnumerable<AnimalKindEntity> GetAnimalTypes(int Id);
-		object GetAnimalTypes();
-		//object GetAnimalTypes();
+
+		IEnumerable<AnimalKindEntity> GetAnimalTypes();
 	}
 }
