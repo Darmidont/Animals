@@ -51,8 +51,11 @@ namespace Animal.Web.Controllers
 			var model = new UserModel();
 			if (ModelState.IsValid)
 				return RedirectToAction("Index", "Home");
-
-			return View("Authorization", model);
+			else
+			{
+				return View("Authorization", model);
+			}
+		
 		}
 
 
