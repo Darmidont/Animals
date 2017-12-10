@@ -8,7 +8,7 @@
 
 @using (Html.BeginForm("Authorization", "Account", "Post"))
 {
-    <div class ="authorization_form">
+    <div class="login-form">
       
         @Html.LabelFor(x => x.Login)
         @Html.TextBoxFor(x => x.Login)
@@ -20,6 +20,7 @@
         <br>
         <button type="submit" value="Login">Login!</button>
     </div>
+
 
 
 }
