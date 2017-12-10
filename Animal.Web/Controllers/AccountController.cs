@@ -10,11 +10,14 @@ namespace Animal.Web.Controllers
 {
 	public class AccountController : Controller
 	{
+		private readonly IAccountValidationService _accountValidationService;
 		private readonly IUserService _userService;
 
-		public AccountController(IUserService userService)
+
+		public AccountController(IUserService userService, IAccountValidationService accountValidationService)
 		{
 			_userService = userService;
+			_accountValidationService = accountValidationService;
 		}
 
 		[HttpGet]
@@ -30,9 +33,17 @@ namespace Animal.Web.Controllers
 		{
 			if (ModelState.IsValid)
 			{
+				var isEmailAlreadyExists = _accountValidationService.IsEmailAlreadyExists(model.Email);
+				if (isEmailAlreadyExists)
+				{
+					ModelState.AddModelError("Email", "Email already registered");
+					return View("Registration", model);
+				}
 				_userService.AddUser(model);
+
 				return View("RegistrationCompleted");
 			}
+
 			return View("Registration", model);
 		}
 
@@ -50,17 +61,9 @@ namespace Animal.Web.Controllers
 		{
 			var model = new UserModel();
 			if (ModelState.IsValid)
-			{
 				return View("AuthorizationCompleted");
-			}
-			else
-			{
-				return View("Authorization", model);
-			}
-
+			return View("Authorization", model);
 		}
-
-
 
 
 		[HttpPost]

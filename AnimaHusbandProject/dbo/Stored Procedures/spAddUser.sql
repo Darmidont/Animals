@@ -7,7 +7,7 @@
 	@Description nvarchar(500)
 AS
 BEGIN
-insert into dbo.[User] 
+insert into dbo.[Users] 
 ([FirstName], [LastName], [Email], [Login], [Password], [Description], CreatedDate)
 VALUES (@FirstName, @LastName, @Email, @Login, @Password, @Description, getdate())
 END

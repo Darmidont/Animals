@@ -71,8 +71,6 @@ namespace Animal.Data.Repositories
 			}
 		}
 
-
-
 		public void Update(UserEntity user)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spUpdateUser"))
@@ -88,10 +86,13 @@ namespace Animal.Data.Repositories
 			}
 		}
 
-
-
-
-
-
+		public bool IsEmailAlreadyExists(string email)
+		{
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.spIsEmailExists"))
+			{
+				Database.AddInParameter(dbCommand, "@Email", DbType.String, email);
+				return  (bool)Database.ExecuteScalar(dbCommand);
+			}
+		}
 	}
 }

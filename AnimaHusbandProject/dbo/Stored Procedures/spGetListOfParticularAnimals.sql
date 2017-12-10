@@ -9,8 +9,8 @@ select
 	[IsAlive],
 	[HeartRhythms],
 	[CaloriesBurnedPerDay],
-	[BreathingRatePerMinute].
-	[LastWeight].
+	[BreathingRatePerMinute],
+	[LastWeight],
 	[Description]
 	from dbo.[AnimalProperties]
 end

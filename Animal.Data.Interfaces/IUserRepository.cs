@@ -9,5 +9,6 @@ namespace Animal.Data.Interfaces
 		void Add(UserEntity user);
 		void Authorize(UserEntity user);
 		void Update(UserEntity user);
+		bool IsEmailAlreadyExists(string email);
 	}
 }
