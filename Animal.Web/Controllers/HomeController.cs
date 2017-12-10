@@ -91,7 +91,11 @@ namespace Animal.Web.Controllers
 			return View("About");
 		}
 
-
+		public ActionResult Contact()
+		{
+			ViewBag.Message = "Personal information:";
+			return View("Contact");
+		}
 		
 
 

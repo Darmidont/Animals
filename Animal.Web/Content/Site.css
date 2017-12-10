@@ -11,6 +11,12 @@ body {
 }
 
 
+.menu {
+    font-family: monospace;
+    color: #308299;
+    display: inline;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;

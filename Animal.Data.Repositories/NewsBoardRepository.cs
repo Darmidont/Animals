@@ -37,15 +37,13 @@ namespace Animal.Data.Repositories
 		}
 
 
-		public void Add(ParticularNewsModel newsModel)
+		public void Add(NewsBoardEntity news)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAddNews"))
 			{
-				Database.AddInParameter(dbCommand, "@Name", DbType.String, newsModel.Name);
-				Database.AddInParameter(dbCommand, "@Message", DbType.String, newsModel.Message);
-			//	Database.AddInParameter(dbCommand, "@Email", DbType.String, newsModel.Email);
-			
-				//	Database.ExecuteNonQuery(dbCommand);
+				Database.AddInParameter(dbCommand, "@Name", DbType.String, news.Name);
+				Database.AddInParameter(dbCommand, "@Message", DbType.String, news.Message);
+				Database.ExecuteNonQuery(dbCommand);
 			}
 		}
 
@@ -58,7 +56,17 @@ namespace Animal.Data.Repositories
 			}
 		}
 
+		public void Update(NewsBoardEntity news)
+		{
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.spUpdateNews"))
+			{
+			//	Database.AddInParameter(dbCommand,"@Id", DbType.Int32, news.Id);
+				Database.AddInParameter(dbCommand, "@Name", DbType.String, news.Name);
+				Database.AddInParameter(dbCommand, "@Message", DbType.String, news.Message);
+				Database.ExecuteNonQuery(dbCommand);
 
+			}
+		}
 
 		public IEnumerable<ParticularNewsIntoBoardEntity> GetNews(int NewsId)
 		{

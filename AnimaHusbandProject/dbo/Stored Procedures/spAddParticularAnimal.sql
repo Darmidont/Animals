@@ -10,10 +10,10 @@
          @BreathingRate INT,
 	     @LastWeight INT,
 		 @CurrentNumberOfAnimals INT,
-	     @DescriptionOFAnimals NVARCHAR(200)
+	     @Description NVARCHAR(200)
 AS
 BEGIN
 INSERT INTO dbo.[ParticularAnimalProperties] 
-([Name], [HasCollar], [IsAlive], [HeartRhythms], [CaloriesBurned], [BreathingRate], [LastWeight],[CurrentNumberOfAnimals],[DescriptionOFAnimals])
-VALUES (@Name, @HasCollar, @IsAlive, @HeartRhythms, @CaloriesBurned, @BreathingRate, @LastWeight,@CurrentNumberOfAnimals, @DescriptionOFAnimals)
+([Name], [HasCollar], [IsAlive], [HeartRhythms], [CaloriesBurned], [BreathingRate], [LastWeight],[CurrentNumberOfAnimals],[Description])
+VALUES (@Name, @HasCollar, @IsAlive, @HeartRhythms, @CaloriesBurned, @BreathingRate, @LastWeight,@CurrentNumberOfAnimals, @Description)
 end

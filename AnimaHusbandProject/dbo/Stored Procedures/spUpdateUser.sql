@@ -10,8 +10,12 @@ as
 begin
 	 update  u 
 	 set 
-	 u.FirstName  = @FirstName
-
+	 u.FirstName  = @FirstName,
+	 u.LastName = @Lastname,
+	 u.Email = @Email,
+	 u.Login = @Login,
+	 u.Password = @Password,
+	 u.Description = @Description
 	 from dbo.Users u
 	 where u.Id = @Id 
 end

@@ -39,23 +39,53 @@ namespace Animal.Data.Repositories
 
 
 
-		public void AddAnimalParticular(AnimalParticularModel animalParticular)
+		public void Add(AnimalParticularEntity animalParticular)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAddParticularAnimal"))
 			{
-				Database.AddInParameter(dbCommand, "@Name", DbType.String, animalParticular.Name);
+
+			//	Database.AddInParameter(dbCommand, "@AnimalKindId", DbType.Int32, animalParticular.AnimalKindId);
 				Database.AddInParameter(dbCommand, "@HasCollar", DbType.Int32, animalParticular.HasCollar);
-				Database.AddInParameter(dbCommand, "@Alive", DbType.Int32, animalParticular.Alive);
-				Database.AddInParameter(dbCommand, "@CurrentNumberOfAnimals", DbType.Int32, animalParticular.HeartRhythms);
-				Database.AddInParameter(dbCommand, "@DescriptionOFAnimals", DbType.String, animalParticular.CaloriesBurned);
-				Database.AddInParameter(dbCommand, "@LastWeight", DbType.Int32, animalParticular.BreathingRate);
+				Database.AddInParameter(dbCommand, "@Name", DbType.String, animalParticular.Name);
+				//Database.AddInParameter(dbCommand, "@IsAlive", DbType.Int32, animalParticular.IsAlive);
+				//Database.AddInParameter(dbCommand, "@HeartRhythms", DbType.Int32, animalParticular.HeartRhythms);
+			//	Database.AddInParameter(dbCommand, "@CaloriesBurnedPerDay", DbType.String, animalParticular.CaloriesBurnedPerDay);
+				//Database.AddInParameter(dbCommand, "@BreathingRatePerMinute", DbType.String, animalParticular.BreathingRatePerMinute);
 				Database.AddInParameter(dbCommand, "@LastWeight", DbType.Int32, animalParticular.LastWeight);
+				Database.AddInParameter(dbCommand, "@Description", DbType.Int32, animalParticular.Description);
 				Database.ExecuteNonQuery(dbCommand);
 	}
 
 		}
 
 
+		public void Update(AnimalParticularEntity animalParticular)
+		{
+
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.spUpdateAnimalParticular"))
+			{
+				//Database.AddInParameter(dbCommand, "@AnimalKindId", DbType.Int32, animalParticular.AnimalKindId);
+				Database.AddInParameter(dbCommand, "@HasCollar", DbType.Int32, animalParticular.HasCollar);
+				Database.AddInParameter(dbCommand, "@Name", DbType.String, animalParticular.Name);
+				//Database.AddInParameter(dbCommand, "@IsAlive", DbType.Int32, animalParticular.IsAlive);
+				//Database.AddInParameter(dbCommand, "@HeartRhythms", DbType.Int32, animalParticular.HeartRhythms);
+				//	Database.AddInParameter(dbCommand, "@CaloriesBurnedPerDay", DbType.String, animalParticular.CaloriesBurnedPerDay);
+				//Database.AddInParameter(dbCommand, "@BreathingRatePerMinute", DbType.String, animalParticular.BreathingRatePerMinute);
+				Database.AddInParameter(dbCommand, "@LastWeight", DbType.Int32, animalParticular.LastWeight);
+				Database.AddInParameter(dbCommand, "@Description", DbType.Int32, animalParticular.Description);
+				Database.ExecuteNonQuery(dbCommand);
+			}
+		}
+
+
+		public void Delete(AnimalParticularEntity animalParticular)
+		{
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.spDeleteParticularAnimalById"))
+			{
+				Database.AddInParameter(dbCommand, "@Id", DbType.Int32, animalParticular.Id);
+				Database.ExecuteNonQuery(dbCommand);
+			}
+		}
 	
 
 		public IEnumerable<AnimalParticularEntity> GetAnimals(int animalKindId)

@@ -11,5 +11,6 @@
 		public int CaloriesBurned { get; set; }
 		public int BreathingRate { get; set; }
 		public int LastWeight { get; set; }
+		public string Description { get; set; }
 	}
 }

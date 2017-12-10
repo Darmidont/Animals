@@ -52,7 +52,7 @@ namespace Animal.Data.Repositories
 			return result;
 		}
 
-		public void AddAnimalKind(AnimalKindModel animalKind)
+		public void Add(AnimalKindEntity animalKind)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAddAnimalKind"))
 			{
@@ -62,6 +62,37 @@ namespace Animal.Data.Repositories
 				Database.AddInParameter(dbCommand, "@DescriptionOFAnimals", DbType.String, animalKind.DescriptionOFAnimals);
 				Database.ExecuteNonQuery(dbCommand);
 			}
+		}
+
+		public void Update(AnimalKindEntity animalKind)
+		{
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.spUpdateAnimalKind"))
+			{
+				Database.AddInParameter(dbCommand, "@Name", DbType.String, animalKind.Name);
+				Database.AddInParameter(dbCommand, "@HasCollar", DbType.Int32, animalKind.PlannedNumberOfAnimals);
+				Database.AddInParameter(dbCommand, "@Alive", DbType.Int32, animalKind.DescriptionOFAnimals);
+				Database.ExecuteNonQuery(dbCommand);
+			}
+		}
+
+		public void Delete(AnimalKindEntity animalKind)
+		{
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.spDeleteKindOfAnimalById"))
+			{
+				Database.AddInParameter(dbCommand, "@Id", DbType.Int32, animalKind.Id);
+				Database.ExecuteNonQuery(dbCommand);
+			}
+
+		}
+
+		public IEnumerable<AnimalKindEntity> GetAnimalTypes(int Id)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		object IAnimalKindRepository.GetAnimalTypes()
+		{
+			throw new System.NotImplementedException();
 		}
 	}
 }

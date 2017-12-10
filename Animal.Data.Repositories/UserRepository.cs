@@ -47,7 +47,7 @@ namespace Animal.Data.Repositories
 				Database.AddInParameter(dbCommand, "@Login", DbType.String, user.Login);
 				Database.AddInParameter(dbCommand, "@Password", DbType.String, user.Password);
 				Database.AddInParameter(dbCommand, "@Description", DbType.String, user.Description);
-			//	Database.ExecuteNonQuery(dbCommand);
+			  	Database.ExecuteNonQuery(dbCommand);
 			}
 		}
 
@@ -56,8 +56,6 @@ namespace Animal.Data.Repositories
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAuthorizeUser"))
 			{
-
-				//Database.
 				Database.AddInParameter(dbCommand, "@Login", DbType.String, user.Login);
 				Database.AddInParameter(dbCommand, "@Password", DbType.String, user.Password);
 				Database.ExecuteNonQuery(dbCommand);
@@ -79,7 +77,7 @@ namespace Animal.Data.Repositories
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spUpdateUser"))
 			{
-				Database.AddInParameter(dbCommand, "@Id", DbType.Int32, user.Id);
+			    //.Update(dbCommand, "@Id", DbType.Int32, user.Id);
 				Database.AddInParameter(dbCommand, "@FirstName", DbType.String, user.FirstName);
 				Database.AddInParameter(dbCommand, "@LastName", DbType.String, user.LastName);
 				Database.AddInParameter(dbCommand, "@Email", DbType.String, user.Email);
