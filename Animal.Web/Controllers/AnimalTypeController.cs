@@ -62,6 +62,11 @@ namespace Animal.Web.Controllers
 
 
 
+		[HttpGet]
+		public ActionResult ListOfKindsView()
+		{
+			return View("DifferentKindsOfAnimalList");
+		}
 		//	private AnimalParticularModel db = new AnimalParticularModel();
 		public ActionResult ShowingListOfAnimalsFromKind()
 		{

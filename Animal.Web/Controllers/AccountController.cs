@@ -94,7 +94,7 @@ namespace Animal.Web.Controllers
 		}
 
 		[HttpGet]
-		public ActionResult OwnCab()
+		public ActionResult OwnCabView()
 		{
 			return View("OwnCab");
 		}
@@ -104,5 +104,7 @@ namespace Animal.Web.Controllers
 		{
 			return View("Registration");
 		}
+
+
 	}
 }
