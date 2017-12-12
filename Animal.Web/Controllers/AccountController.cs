@@ -100,9 +100,9 @@ namespace Animal.Web.Controllers
 		}
 
 		[HttpGet]
-		public RedirectResult RedirectingToRegistration()
+		public ActionResult RedirectToRegistration()
 		{
-			return Redirect("Registration");
+			return View("Registration");
 		}
 	}
 }
