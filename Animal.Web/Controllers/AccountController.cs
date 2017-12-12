@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
+using System.Web.Security;
 using Animal.Bal.Interfaces;
 using Animal.Common.Models.Bal;
 
@@ -68,6 +69,7 @@ namespace Animal.Web.Controllers
 				}
 				else
 				{
+					FormsAuthentication.SetAuthCookie(model.Email, true);
 					return View("AuthorizationCompleted");
 				}
 			}
