@@ -16,20 +16,16 @@ namespace Animal.Common.Models.Bal
 		[Required]
 		public bool HasCollar { get; set; }
 
-		[Required]
 		public int HeartRhythms { get; set; }
 
-		[Required]
 		public int CaloriesBurned { get; set; }
 
-		[Required]
 		public int BreathingRate { get; set; }
 
 		[Required]
 		public int LastWeight { get; set; }
 		[Required]
 		public int CurrentNumberOfAnimals { get; set; }
-		public string DescriptionOFAnimals { get; set; }
-	
+		public string DescriptionOFAnimals { get; set; }	
 	}
 }
