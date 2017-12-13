@@ -51,8 +51,6 @@ namespace Animal.Web.Controllers
 		}
 
 
-
-
 		[HttpGet]
 		public ActionResult GetAnimalKindAddingView()
 		{
@@ -61,22 +59,12 @@ namespace Animal.Web.Controllers
 		}
 
 
-
 		[HttpGet]
 		public ActionResult ListOfKindsView()
 		{
-<<<<<<< HEAD
 			return View("DifferentKindsOfAnimalsList");
 		}
 
-		[HttpGet]
-		public ActionResult ListOfAnimalKindsShow()
-		{
-			return View();
-=======
-			return View("DifferentKindsOfAnimalList");
->>>>>>> 5c6223a266323cca412c492bb2117f22307e8c2f
-		}
 		//	private AnimalParticularModel db = new AnimalParticularModel();
 		public ActionResult ShowingListOfAnimalsFromKind()
 		{

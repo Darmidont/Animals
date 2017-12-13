@@ -10,22 +10,14 @@ namespace Animal.Common.Models.Bal
 		[Required]
 		public string Name { get; set; }
 
-
 		[Display(Name = "Planned number of animals:")]
 		[Required]
 		public int PlannedNumberOfAnimals { get; set; }
 
 		[Display(Name = "Current number of animals:")]
-	    public 	readonly int CurrentNumberOfAnimals;
+	    public 	int CurrentNumberOfAnimals { get; set; }
 
 		[Display(Name = "Description of animals:")]
-		//[Required]
 		public string DescriptionOFAnimals { get; set; }
-
-	//	public <AnimalParticularModel> ParticularAnimals { get; set; }
-		//public AnimalKindModel()
-		//{
-		//	ParticularAnimals = new List<AnimalParticularModel>();
-		//}
 	}
 }

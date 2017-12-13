@@ -9,11 +9,8 @@
 
 @using (Html.BeginForm("AddNewAnimal", "WorkWithAnimalParticular", "Post"))
 {
-<<<<<<< HEAD
+
     <div class="adding-animals-form">
-=======
-    <div class="adding_animals">
->>>>>>> 5c6223a266323cca412c492bb2117f22307e8c2f
         @Html.LabelFor(x => x.HasCollar)
         @Html.TextBoxFor(x => x.HasCollar)
         @Html.ValidationMessageFor(x => x.HasCollar)
@@ -26,16 +23,6 @@
         @Html.TextBoxFor(x => x.IsAlive)
         @Html.ValidationMessageFor(x => x.IsAlive)  
         <br>
-<<<<<<< HEAD
-        @Html.LabelFor(x => x.LastWeight)
-        @Html.TextBoxFor(x => x.LastWeight)
-        @Html.ValidationMessageFor(x => x.LastWeight)
-        <br>
-        @Html.LabelFor(x => x.DescriptionOFAnimals)
-        @Html.TextBoxFor(x => x.DescriptionOFAnimals)
-        @Html.ValidationMessageFor(x => x.DescriptionOFAnimals)
-        <button type="submit" value="btn btn-primary btn-large btn-block">Add New</button>
-=======
         @Html.LabelFor(x => x.HeartRhythms)
         @Html.TextBoxFor(x => x.HeartRhythms)
         @Html.ValidationMessageFor(x => x.HeartRhythms)
@@ -55,7 +42,6 @@
         @Html.LabelFor(x => x.DescriptionOFAnimals)
         @Html.TextBoxFor(x => x.DescriptionOFAnimals)
         @Html.ValidationMessageFor(x => x.DescriptionOFAnimals)
-        <button type="submit" value="ListOfAnimals">Add New</button>
->>>>>>> 5c6223a266323cca412c492bb2117f22307e8c2f
+        <button type="submit" value="btn btn-primary btn-large btn-block">Add New</button>
     </div>
 }
