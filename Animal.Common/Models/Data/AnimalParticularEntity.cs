@@ -4,9 +4,9 @@
 	{
 		public int Id { get; set; }
 		public int AnimalTypeId { get; set; }
-		public string Name { get; set; }
 		public bool HasCollar { get; set; }
-		public bool Alive { get; set; }
+		public string Name { get; set; }
+		public bool IsAlive { get; set; }
 		public int HeartRhythms { get; set; }
 		public int CaloriesBurned { get; set; }
 		public int BreathingRate { get; set; }

@@ -21,6 +21,15 @@ namespace Animal.Web.Controllers
 			return View("NewsBoardPage", model);
 		}
 
+
+		[HttpPost]
+		public ActionResult  AddNews()
+		{
+
+
+
+			return View("AddNewsPage");
+		}
 		//	public ActionResult
 
 	}

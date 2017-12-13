@@ -5,6 +5,53 @@
 <h2>Different Kinds Of Animals List</h2>
 
 @{
-    
+
 @model  IEnumerable<Animal.Common.Models.Bal.AnimalKindModel>
  }
+
+
+@using (Html.BeginForm("AddNewAnimalKind", "AnimalType", "Get"))
+{
+
+    <table width="100%">
+       
+        <tr>  
+            <th>
+                  @Html.DisplayNameFor(model => model.Name)
+            </th>       
+            <th>
+                @Html.DisplayNameFor(model => model.PlannedNumberOfAnimals)
+            </th>
+            <th>
+        
+            </th>   
+            <th>
+                @Html.DisplayNameFor(model => model.DescriptionOFAnimals)
+        </tr>
+
+
+            @foreach (var animalKind in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => animalKind.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelUser => animalKind.PlannedNumberOfAnimals)
+                    </td>
+                    <td>
+                      
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelUser => animalKind.DescriptionOFAnimals)
+                    </td>
+                    <td>
+                      
+                        </td>
+                </tr>
+}
+        </table>
+
+        <button type="submit" class="btn btn-primary btn-large btn-block">Add new kind</button>
+
+}

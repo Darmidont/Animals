@@ -51,11 +51,35 @@ namespace Animal.Web.Controllers
 		}
 
 
+
+
+		[HttpGet]
+		public ActionResult GetAnimalKindAddingView()
+		{
+			var model = new AnimalKindModel();
+			return View("AddingNewKindOfAnimal", model);
+		}
+
+
+
+		[HttpGet]
+		public ActionResult ListOfKindsView()
+		{
+			return View("DifferentKindsOfAnimalsList");
+		}
+
+		[HttpGet]
+		public ActionResult ListOfAnimalKindsShow()
+		{
+			return View();
+		}
 		//	private AnimalParticularModel db = new AnimalParticularModel();
 		public ActionResult ShowingListOfAnimalsFromKind()
 		{
 			//   var animals = db.CurrentNumberOfAnimals.ToList<AnimalParticularModel>().
 			throw new NotImplementedException();
 		}
+
+
 	}
 }

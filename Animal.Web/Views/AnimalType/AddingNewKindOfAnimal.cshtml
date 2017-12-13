@@ -1,17 +1,18 @@
-﻿@model Animal.Common.Models.Bal.AnimalKindModel
+﻿
 
 @{
     ViewBag.Title = "AddingNewKindOfAnimal";
+    @model Animal.Common.Models.Bal.AnimalKindModel
 
 }
 
-<h2>AddingNewKindOfAnimal</h2>
+<h2>Add new kind of animal</h2>
 
 <h2>Here you can add new kinds of animals that you have</h2>
 
 @using (Html.BeginForm("AddNewAnimalKind", "AnimalType", "Post"))
 {
-    <div class="adding_kind_of_animals">
+    <div class="adding-kind-of-animals-form">
         @Html.LabelFor(x => x.Name)
         @Html.TextBoxFor(x => x.Name)
         @Html.ValidationMessageFor(x => x.Name)
@@ -20,15 +21,13 @@
         @Html.TextBoxFor(x => x.PlannedNumberOfAnimals)
         @Html.ValidationMessageFor(x => x.PlannedNumberOfAnimals)
         <br>
-        @Html.LabelFor(x => x.CurrentNumberOfAnimals)
-        @Html.TextBoxFor(x => x.CurrentNumberOfAnimals)
-        @Html.ValidationMessageFor(x => x.CurrentNumberOfAnimals)
-        <br>
         @Html.LabelFor(x => x.DescriptionOFAnimals)
         @Html.TextBoxFor(x => x.DescriptionOFAnimals)
         @Html.ValidationMessageFor(x => x.DescriptionOFAnimals)
         <br>
-        <button type="submit" value="ListOfAnimalKinds">Add New</button>
+        <button type="submit" value="btn btn-primary btn-large btn-block">Add new</button>
     </div>
 }
+
+
 

@@ -17,6 +17,14 @@ namespace Animal.Web.Controllers
 		}
 
 
+		[HttpGet]
+		public ActionResult GetAnimalParticularAddingView()
+		{
+			var model = new AnimalParticularModel();
+			return View("AddingNewParticularAnimal", model);
+		}
+
+
 
 		[HttpGet]
 		public ActionResult GetAnimalParticularView()

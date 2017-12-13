@@ -12,7 +12,7 @@ namespace Animal.Common.Models.Bal
 		public string Name { get; set; }
 
 		[Required]
-		public bool Alive { get; set; }
+		public bool IsAlive { get; set; }
 		[Required]
 		public bool HasCollar { get; set; }
 

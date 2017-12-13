@@ -94,5 +94,6 @@ namespace Animal.Data.Repositories
 				return  (bool)Database.ExecuteScalar(dbCommand);
 			}
 		}
+
 	}
 }

@@ -79,6 +79,9 @@ namespace Animal.Web.Controllers
 		}
 
 
+
+
+
 		[HttpPost]
 		public ActionResult Logout()
 		{
@@ -96,15 +99,17 @@ namespace Animal.Web.Controllers
 		}
 
 		[HttpGet]
-		public ActionResult OwnCab()
+		public ActionResult OwnCabView()
 		{
 			return View("OwnCab");
 		}
 
 		[HttpGet]
-		public RedirectResult RedirectingToRegistration()
+		public ActionResult RedirectToRegistration()
 		{
-			return Redirect("Registration");
+			return View("Registration");
 		}
+
+
 	}
 }

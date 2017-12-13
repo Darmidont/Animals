@@ -6,8 +6,8 @@
 <title>@ViewBag.Title - Animal Husbandry</title>
 @Styles.Render("~/Content/css")
 @Scripts.Render("~/bundles/modernizr")
-<link rel="icon" class ="logoWolf" href="@Url.Content("~/Images/logoWolf.ico") />
-    
+<link rel="icon" href="@Url.Content("~/Images/logoWolf.ico") />
+   
 </head>
 
 
@@ -28,6 +28,8 @@
             <img src="Images/logoWolf.jpg" alt=""/>
         </div>
     </div>
+          
+
     <div class="navbar-collapse collapse">
         
         <ul class="menu-main">
@@ -39,11 +41,21 @@
             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
             <li>@Html.ActionLink("News board", "NewsBoardPage", "NewsBoard")<li>
             <li>@Html.ActionLink("Own Cab", "OwnCab", "Account")</li>
-
             <li>@Html.ActionLink("Registration", "GetRegistrationView", "Account")</li>
             <li>@Html.ActionLink("Authorization", "GetAuthorizationView", "Account")</li>
+
+         
+         <!--   <li>@Html.ActionLink("Add new kind of animal", "GetAnimalKindAddingView", "AnimalType")</li>
+            <li>@Html.ActionLink("Add new animal", "GetAnimalParticularAddingView", "WorkWithAnimalParticular")</li> -->
+
+            <li>@Html.ActionLink("Kinds of animals", "ListOfKindsView", "AnimalType")</li>
+
+            <li>@Html.ActionLink("Own cab", "OwnCabView", "Account")</li>
+        
             <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
         </ul>
+
+     
 
     </div>
 </div>
@@ -56,8 +68,8 @@
 
 
     <footer id="footer">
-        <p>&copy; Rastsvietalov Sergey PI-15-4 @DateTime.UtcNow - Animal Family</p>
-
+        <p>&copy; Rastsvietalov Sergey PI-15-4 @DateTime.UtcNow - Animal Husbandry</p>
+        <br>
         Email: rastsvietalovjudo@gmail.com
     </footer>
 
