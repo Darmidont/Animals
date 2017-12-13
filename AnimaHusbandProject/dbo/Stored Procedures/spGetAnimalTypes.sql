@@ -4,8 +4,8 @@ begin
 select 	
 	[Id],
 	[Name],
-	[PlannedNumber],
-	[CurrentNumber],
-	[Description]
-	from dbo.[KindOAnimal]
+	[PlannedNumber] PlannedNumberOfAnimals,
+	[CurrentNumber] CurrentNumberOfAnimals,
+	[Description] DescriptionOFAnimals
+	from dbo.[KindOfAnimal]
 end

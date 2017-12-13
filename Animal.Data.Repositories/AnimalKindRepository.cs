@@ -57,9 +57,8 @@ namespace Animal.Data.Repositories
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAddAnimalKind"))
 			{
 				Database.AddInParameter(dbCommand, "@Name", DbType.String, animalKind.Name);
-				Database.AddInParameter(dbCommand, "@PlannedNumberOfAnimals", DbType.Int32, animalKind.PlannedNumberOfAnimals);
-				//	Database.AddInParameter(dbCommand, "@CurrentNumberOfAnimals", DbType.Int32, animalKind.CurrentNumberOfAnimals);
-				Database.AddInParameter(dbCommand, "@DescriptionOFAnimals", DbType.String, animalKind.DescriptionOFAnimals);
+				Database.AddInParameter(dbCommand, "@PlannedNumber", DbType.Int32, animalKind.PlannedNumberOfAnimals);
+				Database.AddInParameter(dbCommand, "@Description", DbType.String, animalKind.DescriptionOFAnimals);
 				Database.ExecuteNonQuery(dbCommand);
 			}
 		}

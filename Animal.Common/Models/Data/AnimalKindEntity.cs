@@ -5,8 +5,7 @@
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public int PlannedNumberOfAnimals { get; set; }
-
-		public readonly int CurrentNumberOfAnimals;
+		public  int CurrentNumberOfAnimals { get; set; }
 		public string DescriptionOFAnimals { get; set; }
 	}
 }

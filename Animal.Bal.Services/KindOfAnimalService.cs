@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Animal.Bal.Interfaces;
 using Animal.Common.Models.Bal;
 using Animal.Common.Models.Data;
@@ -23,11 +18,9 @@ namespace Animal.Bal.Services
 
 		public IEnumerable<AnimalKindModel> GetAnimalKinds()
 		{
-			var animalDbTypes =  _animalKindRepository.GetAnimalTypes();
+			var animalDbTypes = _animalKindRepository.GetAnimalTypes();
 			return Mapper.Map<IEnumerable<AnimalKindEntity>, IEnumerable<AnimalKindModel>>(animalDbTypes);
 		}
-
-
 
 
 		public void AddAnimalKind(AnimalKindModel animalKind)
@@ -39,12 +32,10 @@ namespace Animal.Bal.Services
 
 		public void UpdateAnimalKind(AnimalKindModel animalKind)
 		{
-			
 		}
 
 		public void DeleteAnimalKind(AnimalKindModel animalKind)
 		{
-			
 		}
 	}
 }

@@ -4,7 +4,7 @@
 	@Description nvarchar(500)
 AS
 BEGIN
-INSERT INTO dbo.[KindAnimalsProperties] 
+INSERT INTO dbo.[KindOfAnimal]
 ([Name], [PlannedNumber],  [Description])
 VALUES (@Name, @PlannedNumber,  @Description)
 END
