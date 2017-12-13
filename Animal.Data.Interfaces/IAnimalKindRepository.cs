@@ -7,7 +7,7 @@ namespace Animal.Data.Interfaces
 	{
 
 		IEnumerable<AnimalKindEntity> GetAnimalTypes();
-		IEnumerable<AnimalKindEntity> GetKindOfAnimalStats();
+		//IEnumerable<AnimalKindEntity> GetKindOfAnimalStats();
 
 		void Add(AnimalKindEntity kind);
 		void Update(AnimalKindEntity kind);

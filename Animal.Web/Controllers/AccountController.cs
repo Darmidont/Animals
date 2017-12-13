@@ -86,7 +86,7 @@ namespace Animal.Web.Controllers
 		public ActionResult Logout()
 		{
 			Session.Clear();
-			return RedirectToAction("Index", "Home");
+			return View("Index");
 		}
 
 

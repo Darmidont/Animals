@@ -8,6 +8,8 @@ namespace Animal.Bal.Interfaces
 	{
 		IEnumerable<ParticularNewsIntoBoardEntity> NewsBoard();
 		void AddBoard(ParticularNewsModel modelId);
+		void UpdateBoard(ParticularNewsModel modelId);
 		void DeleteBoard(ParticularNewsModel modelId);
+
 	}
 }

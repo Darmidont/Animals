@@ -20,6 +20,27 @@ namespace Animal.Data.Repositories
 		{
 		}
 
+
+
+		public IEnumerable<AnimalParticularEntity> GetAnimalsParticular()
+		{
+			var result = new List<AnimalParticularEntity>();
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.[spGetListOfParticularAnimals]"))
+			{
+				using (var reader = Database.ExecuteReader(dbCommand))
+				{
+					if (reader.Read())
+						result.Add(RowMapper.MapRow(reader));
+
+					while (reader.Read())
+						result.Add(RowMapper.MapRow(reader));
+				}
+			}
+
+			return result;
+		}
+
+
 		public IEnumerable<AnimalParticularEntity> GetParticularAnimalStats()
 		{
 			var result = new List<AnimalParticularEntity>();
@@ -36,6 +57,8 @@ namespace Animal.Data.Repositories
 			}
 			return result;
 		}
+
+
 
 
 

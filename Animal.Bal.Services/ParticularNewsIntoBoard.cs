@@ -14,17 +14,17 @@ namespace Animal.Bal.Services
 
 		public void AddNews(ParticularNewsModel news)
 		{
-			throw new NotImplementedException();
+			
 		}
 
 		public void ChangeNews(ParticularNewsModel news)
 		{
-			throw new NotImplementedException();
+			
 		}
 
 		public void DeleteNews(ParticularNewsModel news)
 		{
-			throw new NotImplementedException();
+			
 		}
 
 		public IEnumerable<ParticularNewsIntoBoardEntity> GetNews()

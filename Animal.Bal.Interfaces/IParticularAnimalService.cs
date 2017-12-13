@@ -11,11 +11,11 @@ namespace Animal.Bal.Interfaces
 	public interface IParticularAnimalService
 	{
 
-		IEnumerable<AnimalParticularEntity> GetParticularAnimalStats();
+		IEnumerable<AnimalParticularModel> GetParticularAnimalStats();
 
-		void AddAnimal(AnimalParticularModel animal);
-		void DeleteAnimal(AnimalParticularModel animal);
-		void ChangeAnimal(AnimalParticularModel animal);
-		void AddAnimalParticular(AnimalParticularModel model);
+		void AddAnimalParticular(AnimalParticularModel animal);
+		void DeleteAnimalParticular(AnimalParticularModel animal);
+		void UpdateAnimalParticular(AnimalParticularModel animal);
+		//void AddAnimalParticular(AnimalParticularModel model);
 	}
 }

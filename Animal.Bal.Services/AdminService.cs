@@ -26,33 +26,29 @@ public class AdminService: IAdminService
 		public void AddUser(UserModel user)
 		{
 
-			throw new NotImplementedException();
+		
 		}
 
 		public void DeleteUser(UserModel user)
 		{
-			throw new NotImplementedException();
+			
 		}
 
 		public void UpdateUserData(UserModel user)
 		{
-			throw new NotImplementedException();
+			
 		}
 
 		public void AddNews(ParticularNewsModel news)
 		{
-			throw new NotImplementedException();
+			
 		}
 
 		public void UpdateAdminData(UserModel user)
 		{
-			throw new NotImplementedException();
+			
 		}
 
-	//	public void ChangeAdminData(AdminModel admin)
-	//	{
-		//	throw new NotImplementedException();
-		//}
 
 		public void UpdateUser(UserModel user)
 		{

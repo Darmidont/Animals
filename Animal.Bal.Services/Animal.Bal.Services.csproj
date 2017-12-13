@@ -47,7 +47,6 @@
     <Compile Include="AccountValidationService.cs" />
     <Compile Include="AdminService.cs" />
     <Compile Include="KindOfAnimalService.cs" />
-    <Compile Include="NewsBoardService.cs" />
     <Compile Include="ParticularAnimalService.cs" />
     <Compile Include="ParticularNewsIntoBoard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

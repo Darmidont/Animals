@@ -27,20 +27,24 @@ namespace Animal.Bal.Services
 			return Mapper.Map<IEnumerable<AnimalKindEntity>, IEnumerable<AnimalKindModel>>(animalDbTypes);
 		}
 
+
+
+
 		public void AddAnimalKind(AnimalKindModel animalKind)
 		{
-			throw new NotImplementedException();
+			var animalKindEntity = Mapper.Map<AnimalKindEntity>(animalKind);
+			_animalKindRepository.Add(animalKindEntity);
 		}
 
 
 		public void UpdateAnimalKind(AnimalKindModel animalKind)
 		{
-			throw new NotImplementedException();
+			
 		}
 
 		public void DeleteAnimalKind(AnimalKindModel animalKind)
 		{
-			throw new NotImplementedException();
+			
 		}
 	}
 }

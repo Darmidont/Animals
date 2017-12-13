@@ -35,7 +35,7 @@ namespace Animal.Data.Repositories
 			return result;
 		}
 
-		public IEnumerable<AnimalKindEntity> GetKindOfAnimalStats()
+	/*	public IEnumerable<AnimalKindEntity> GetKindOfAnimalStats()
 		{
 			var result = new List<AnimalKindEntity>();
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.[spGetKindAnimalStats]"))
@@ -50,7 +50,7 @@ namespace Animal.Data.Repositories
 				}
 			}
 			return result;
-		}
+		}*/
 
 		public void Add(AnimalKindEntity animalKind)
 		{

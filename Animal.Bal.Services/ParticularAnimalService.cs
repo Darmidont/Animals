@@ -8,54 +8,46 @@ using Animal.Bal.Interfaces;
 using Animal.Common.Models.Bal;
 using Animal.Common.Models.Data;
 using Animal.Data.Interfaces;
-
+using AutoMapper;
 namespace Animal.Bal.Services
 {
    public class ParticularAnimalService: IParticularAnimalService
 	{
-		public IEnumerable<AnimalParticularEntity> GetAnimal()
+
+		private readonly IAnimalParticularRepository _animalParticularRepository;
+
+		public ParticularAnimalService(IAnimalParticularRepository animalParticularRepository)
+		{
+			_animalParticularRepository = animalParticularRepository;
+		}
+
+
+		public IEnumerable<AnimalParticularModel> GetParticularAnimalStats()
+		{
+			var animalDbTypes = _animalParticularRepository.GetAnimalsParticular();
+			return Mapper.Map<IEnumerable<AnimalParticularEntity>, IEnumerable<AnimalParticularModel>>(animalDbTypes);
+		}
+
+
+
+		public void AddAnimalParticular(AnimalParticularModel animalParticular)
+		{
+			var animalParticularEntity = Mapper.Map<AnimalParticularEntity>(animalParticular);
+			_animalParticularRepository.Add(animalParticularEntity);
+		}
+
+		public void UpdateAnimalParticular(AnimalParticularModel animalKindParticular)
 		{
 			throw new NotImplementedException();
 		}
 
-		public void Add(AnimalParticularModel animalParticular)
+		public void DeleteAnimalParticular(AnimalParticularModel animalParticular)
 		{
 			throw new NotImplementedException();
 		}
 
-		public void Update(AnimalParticularModel animalKindParticular)
-		{
-			throw new NotImplementedException();
-		}
+		
 
-		public void Delete(AnimalParticularModel animalParticular)
-		{
-			throw new NotImplementedException();
-		}
-
-		public IEnumerable<AnimalParticularEntity> GetParticularAnimalStats()
-		{
-			throw new NotImplementedException();
-		}
-
-		public void AddAnimal(AnimalParticularModel animal)
-		{
-			throw new NotImplementedException();
-		}
-
-		public void DeleteAnimal(AnimalParticularModel animal)
-		{
-			throw new NotImplementedException();
-		}
-
-		public void ChangeAnimal(AnimalParticularModel animal)
-		{
-			throw new NotImplementedException();
-		}
-
-		public void AddAnimalParticular(AnimalParticularModel model)
-		{
-			throw new NotImplementedException();
-		}
+	
 	}
 }
