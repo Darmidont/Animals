@@ -16,6 +16,5 @@ namespace Animal.Bal.Interfaces
 		void AddAnimalParticular(AnimalParticularModel animal);
 		void DeleteAnimalParticular(AnimalParticularModel animal);
 		void UpdateAnimalParticular(AnimalParticularModel animal);
-		//void AddAnimalParticular(AnimalParticularModel model);
 	}
 }

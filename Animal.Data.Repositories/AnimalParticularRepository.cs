@@ -83,7 +83,7 @@ namespace Animal.Data.Repositories
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spUpdateAnimalParticular"))
 			{
 				//Database.AddInParameter(dbCommand, "@AnimalKindId", DbType.Int32, animalParticular.AnimalKindId);
-				Database.AddInParameter(dbCommand, "@HasCollar", DbType.Int32, animalParticular.HasCollar);
+				Database.AddInParameter(dbCommand, "@HasCollar", DbType.Boolean, animalParticular.HasCollar);
 				Database.AddInParameter(dbCommand, "@Name", DbType.String, animalParticular.Name);
 				//Database.AddInParameter(dbCommand, "@IsAlive", DbType.Int32, animalParticular.IsAlive);
 				//Database.AddInParameter(dbCommand, "@HeartRhythms", DbType.Int32, animalParticular.HeartRhythms);

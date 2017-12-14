@@ -1,16 +1,67 @@
 ﻿@{
     ViewBag.Title = "DifferentAnimalsFromKindList";
+    @model  IEnumerable<Animal.Common.Models.Bal.AnimalParticularModel
 
 }
 
-<h2>Here you can see list of particular animals from this type:</h2>
+<h2>Here you can see list of particular animals of this type:</h2>
 
 
-@using (Html.BeginForm("AddNewAnimalKind", "AnimalType", "Get"))
+@using (Html.BeginForm("AddNewAnimalParticular", "AnimalType", "Get"))
 {
-    <div class="adding-kind-of-animals-form">
-       
-        <br>
+ 
+        <table width="70%">
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PlannedNumberOfAnimals)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CurrentNumberOfAnimals)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DescriptionOFAnimals)
+            </tr>
+
+
+            @foreach (var animalParticular in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => animalParticular.HasCollar)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => animalParticular.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => animalParticular.IsAlive)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => animalParticular.HeartRhythms)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => animalParticular.CaloriesBurnedPerDay)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => animalParticular.BreathingRatePerMinute)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => animalParticular.LastWeight)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => animalParticular.Description)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Update", "Update", new { id = animalParticular.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = animalParticular.Id })
+                    </td>
+                </tr>
+}
+        </table>
+
+        <button type="submit" class="btn btn-primary btn-large btn-block">Add new kind</button>
          
-    </div>
 }

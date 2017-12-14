@@ -227,8 +227,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\index.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -274,16 +272,15 @@
     <Content Include="Views\Account\Registration.cshtml" />
     <Content Include="Views\AnimalType\DifferentKindsOfAnimalsList.cshtml" />
     <Content Include="Views\WorkWithAnimalParticular\DifferentAnimalsFromKindList.cshtml" />
-    <Content Include="Views\AnimalType\AddingNewKindOfAnimalCompleted.cshtml" />
     <Content Include="Views\AnimalType\AddingNewKindOfAnimal.cshtml" />
     <Content Include="Views\NewsBoard\NewsBoardPage.cshtml" />
     <Content Include="Views\WorkWithAnimalParticular\AddingNewParticularAnimal.cshtml" />
     <Content Include="Views\Account\OwnCab.cshtml" />
-    <Content Include="Views\WorkWithAnimalParticular\AddingNewParticularAnimalCompleted.cshtml" />
-    <Content Include="Views\NewsBoard\AddingNewsCompleted.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Account\AuthorizationCompleted.cshtml" />
     <Content Include="Views\Account\Authorization.cshtml" />
+    <Content Include="Views\WorkWithAnimalParticular\UpdateAnimalsParticular.cshtml" />
+    <Content Include="Views\AnimalType\UpdateInformationAboutKind.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

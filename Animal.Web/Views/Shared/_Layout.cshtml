@@ -9,7 +9,9 @@
 <link rel="icon" href="@Url.Content("~/Images/logoWolf.ico") />   
 </head>
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top">
+
+
+<div class="navbar navbar-inverse navbar-fixed-top" >
 <div class="container">
     <div class="navbar-header">
         <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -17,9 +19,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button> -->
-        <div class="logo">
+       <!-- <div class="logo">
             <img src="Images/logoWolf.jpg" alt=""/>
-        </div>
+        </div> -->
     </div>
     <div class="navbar-collapse collapse">
 
@@ -30,7 +32,6 @@
             <li>@Html.ActionLink("About", "About", "Home")</li>
             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
             <li>@Html.ActionLink("News board", "NewsBoardPage", "NewsBoard")<li>
-            <li>@Html.ActionLink("Own Cab", "OwnCab", "Account")</li>
             <li>@Html.ActionLink("Registration", "GetRegistrationView", "Account")</li>
             <li>@Html.ActionLink("Authorization", "GetAuthorizationView", "Account")</li>
 
@@ -53,14 +54,13 @@
     <hr/>
     <footer id="footer">
         <p>&copy; Rastsvietalov Sergey PI-15-4 @DateTime.UtcNow - Animal Husbandry</p>
-        <br>
-        Email: rastsvietalovjudo@gmail.com
+        <br>  Email: rastsvietalovjudo@gmail.com
     </footer>
 </div>
 
 
 @Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/bootstrap")
+<!--@Scripts.Render("~/bundles/bootstrap") -->
 @RenderSection("scripts", false)
 </body>
 </html>

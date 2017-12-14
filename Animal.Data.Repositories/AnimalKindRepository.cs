@@ -31,7 +31,6 @@ namespace Animal.Data.Repositories
 						result.Add(RowMapper.MapRow(reader));
 				}
 			}
-
 			return result;
 		}
 
@@ -68,8 +67,8 @@ namespace Animal.Data.Repositories
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spUpdateAnimalKind"))
 			{
 				Database.AddInParameter(dbCommand, "@Name", DbType.String, animalKind.Name);
-				Database.AddInParameter(dbCommand, "@HasCollar", DbType.Int32, animalKind.PlannedNumberOfAnimals);
-				Database.AddInParameter(dbCommand, "@Alive", DbType.Int32, animalKind.DescriptionOFAnimals);
+				Database.AddInParameter(dbCommand, "@PlannedNumber", DbType.Int32, animalKind.PlannedNumberOfAnimals);
+				Database.AddInParameter(dbCommand, "@Description", DbType.Int32, animalKind.DescriptionOFAnimals);
 				Database.ExecuteNonQuery(dbCommand);
 			}
 		}

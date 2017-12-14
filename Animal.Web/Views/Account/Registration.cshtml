@@ -12,7 +12,7 @@
         <div class ="registration-form">
         
             @Html.LabelFor(x => x.FirstName)
-           <class ="textbox"> @Html.TextBoxFor(x => x.FirstName) </class>
+            @Html.TextBoxFor(x => x.FirstName)
             @Html.ValidationMessageFor(x => x.FirstName, null, new { @class = "validation" }) 
             <br>
             @Html.LabelFor(x => x.LastName)

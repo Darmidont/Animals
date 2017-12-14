@@ -45,7 +45,7 @@ namespace Animal.Web.Controllers
 			if (ModelState.IsValid)
 			{
 				_animalKindService.AddAnimalKind(model);
-				return View("AddingNewKindOfAnimalCompleted");
+				return View("DifferentKindsOfAnimalsList");
 			}
 			return View("AddingNewKindOfAnimal");
 		}
@@ -62,16 +62,55 @@ namespace Animal.Web.Controllers
 		[HttpGet]
 		public ActionResult ListOfKindsView()
 		{
-			var animalKineds = _animalKindService.GetAnimalKinds();
-			return View("DifferentKindsOfAnimalsList", animalKineds);
+			var animalKinds = _animalKindService.GetAnimalKinds();
+			return View("DifferentKindsOfAnimalsList", animalKinds);
 		}
 
-		//	private AnimalParticularModel db = new AnimalParticularModel();
-		public ActionResult ShowingListOfAnimalsFromKind()
+		[HttpGet]
+		public ActionResult GetUpdateAnimalKind()
 		{
-			//   var animals = db.CurrentNumberOfAnimals.ToList<AnimalParticularModel>().
-			throw new NotImplementedException();
+			var animalKindEntity = new AnimalKindEntity();
+			return View("UpdateInformationAboutKind", animalKindEntity);
 		}
+
+		[HttpPost]
+		public ActionResult UpdateAnimalKind(AnimalKindModel model)
+		{
+			if (ModelState.IsValid)
+			{
+				_animalKindService.AddAnimalKind(model);
+				return View("DifferentKindsOfAnimalsList");
+			}
+			return View("AddingNewKindOfAnimal");
+		}
+
+
+	//	public ActionResult Edit()
+	//	{
+	//		return View();
+	//	}
+
+	//	[HttpPost]
+	//	public ActionResult Delete(int id = 0)
+	//	{
+			//AnimalKindModel _
+
+		//	_animalKindService.DeleteAnimalKind
+			//	if(_animalKindService == null)
+		//	{
+			//	return HttpNotFound();
+			//}
+		//	return View("DifferentKindsOfAnimalsList");
+		//}
+		//	private AnimalParticularModel db = new AnimalParticularModel();
+	//	public ActionResult ShowingListOfAnimalsFromKind()
+	//	{
+			//   var animals = db.CurrentNumberOfAnimals.ToList<AnimalParticularModel>().
+	//		throw new NotImplementedException();
+	//	}
+
+
+
 
 
 	}

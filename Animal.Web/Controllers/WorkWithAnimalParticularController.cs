@@ -51,6 +51,20 @@ namespace Animal.Web.Controllers
 		}
 
 
+		[HttpPost]
+		public ActionResult Update()
+		{
+			return View("UpdateAnimalsParticular");
+		}
+
+		[HttpPost]
+		public ActionResult Delete()
+		{
+			return View("DifferentAnimalsFromKindList");
+		}
+
+
+
 
 		public ActionResult AddNewAnimal()
 		{

@@ -21,10 +21,10 @@ namespace Animal.Bal.Services
 			_userRepository = userRepository;
 		}
 
-		public string Hello()
-		{
-			return "Hello";
-		}
+	//	public string Hello()
+	//	{
+		//	return "Hello";
+		//}
 
 		public IEnumerable<UserEntity> GetUsers()
 		{

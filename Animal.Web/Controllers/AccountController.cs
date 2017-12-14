@@ -90,13 +90,13 @@ namespace Animal.Web.Controllers
 		}
 
 
-		[HttpPost]
-		public ActionResult DeletingUser()
-		{
-			throw new NotImplementedException();
+	//	[HttpPost]
+	//	public ActionResult DeletingUser()
+	//	{
+		
 			//var model = 
 			//return View("UserWasDeleted", model)
-		}
+	//	}
 
 		[HttpGet]
 		public ActionResult OwnCabView()
