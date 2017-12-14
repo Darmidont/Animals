@@ -1,7 +1,46 @@
 ﻿
 @{
     ViewBag.Title = "NewsBoardPage";
+    @model  IEnumerable<Animal.Common.Models.Bal.ParticularNewsModel>
 }
 
 <h2>NewsBoardPage</h2>
 
+@using (Html.BeginForm("Add", "AnimalType", "Get"))
+{
+
+    <table width="70%" class="news-board">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfCreatingMessage)
+            </th>
+
+        @foreach (var newsParticular in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => newsParticular.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => newsParticular.Message)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => newsParticular.DateOfCreatingMessage)
+                </td>
+                <td>
+                    @Html.ActionLink("Update", "Update", new { id = newsParticular.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = newsParticular.Id })
+                </td>
+            </tr>
+        }
+    </table>
+
+        <button type="submit" class="btn btn-primary btn-large btn-block">Add news</button>
+
+}
