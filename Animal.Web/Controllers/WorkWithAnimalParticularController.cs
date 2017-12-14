@@ -41,7 +41,7 @@ namespace Animal.Web.Controllers
 			if (ModelState.IsValid)
 			{
 				_animalParticularService.AddAnimalParticular(model);
-				return View("AddingNewParticularAnimalCompleted");
+				return View("DifferentAnimalsFromKindList");
 			}
 			else
 			{
@@ -54,7 +54,7 @@ namespace Animal.Web.Controllers
 		[HttpGet]
 		public ActionResult GetByAnimalType(int id)
 		{
-			return View();
+			return View("DifferentAnimalsFromKindList");
 		}
 
 		[HttpPost]
@@ -70,12 +70,21 @@ namespace Animal.Web.Controllers
 		}
 
 
-
-
-		public ActionResult AddNewAnimal()
+		[HttpGet]
+		public ActionResult UpdateInformationAboutAnimal()
 		{
-			return View();
+			return View("UpdateAnimalsParticular");
 		}
+		
+
+
+
+	
+			
+	//	public ActionResult AddNewAnimal()
+	//	{
+	//		return View();
+	//	}
 
 	}
 }

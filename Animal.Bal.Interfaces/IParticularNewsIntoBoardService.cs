@@ -13,7 +13,7 @@ namespace Animal.Bal.Interfaces
 
 		IEnumerable<ParticularNewsIntoBoardEntity> GetNews();
 		void AddNews(ParticularNewsModel news);
-		void DeleteNews(ParticularNewsModel news);
+		//void DeleteNews(ParticularNewsModel news);
 		void ChangeNews(ParticularNewsModel news);
 
 	}

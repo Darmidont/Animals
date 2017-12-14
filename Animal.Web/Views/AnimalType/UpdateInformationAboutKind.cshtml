@@ -9,7 +9,7 @@
 
 @using (Html.BeginForm("UpdateAnimalKind", "AnimalType", "Post"))
 {
-    <div class="updatingkind-form">
+    <div class="change-form">
         @Html.LabelFor(x => x.Name)
         @Html.TextBoxFor(x => x.Name)
         @Html.ValidationMessageFor(x => x.Name)
@@ -23,6 +23,6 @@
         @Html.ValidationMessageFor(x => x.DescriptionOFAnimals)
         <br>
         <button type="submit" value="btn btn-primary btn-large btn-block">Update</button>
-        <button type="" value="btn btn-primary btn-large btn-block">Cancel</button>
+     
     </div>
 }

@@ -41,9 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountValidationService.cs" />
-    <Compile Include="IAdminService.cs" />
     <Compile Include="IKindOfAnimalService.cs" />
-    <Compile Include="INewsBoardService.cs" />
     <Compile Include="IParticularAnimalService.cs" />
     <Compile Include="IParticularNewsIntoBoardService.cs" />
     <Compile Include="IUserService.cs" />

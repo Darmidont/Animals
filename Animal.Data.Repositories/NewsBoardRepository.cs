@@ -46,7 +46,7 @@ namespace Animal.Data.Repositories
 				Database.ExecuteNonQuery(dbCommand);
 			}
 		}
-
+		
 		public void Delete(NewsBoardEntity news)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spDeleteNewsById"))
@@ -55,7 +55,7 @@ namespace Animal.Data.Repositories
 				Database.ExecuteNonQuery(dbCommand);
 			}
 		}
-
+		
 		public void Update(NewsBoardEntity news)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spUpdateNews"))

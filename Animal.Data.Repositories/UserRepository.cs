@@ -61,7 +61,7 @@ namespace Animal.Data.Repositories
 				return (bool)Database.ExecuteScalar(dbCommand);
 			}
 		}
-
+		/*
 		public void Delete(UserEntity user)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spDeleteUserbyId"))
@@ -69,7 +69,7 @@ namespace Animal.Data.Repositories
 				Database.AddInParameter(dbCommand, "@Id", DbType.Int32, user.Id);
 				Database.ExecuteNonQuery(dbCommand);
 			}
-		}
+		}*/
 
 		public void Update(UserEntity user)
 		{

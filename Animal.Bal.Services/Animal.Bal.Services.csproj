@@ -45,7 +45,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountValidationService.cs" />
-    <Compile Include="AdminService.cs" />
     <Compile Include="KindOfAnimalService.cs" />
     <Compile Include="ParticularAnimalService.cs" />
     <Compile Include="ParticularNewsIntoBoard.cs" />

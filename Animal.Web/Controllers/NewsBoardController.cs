@@ -4,11 +4,19 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Animal.Common.Models.Bal;
+using Animal.Bal.Interfaces;
 
 namespace Animal.Web.Controllers
 {
 	public class NewsBoardController:Controller
 	{
+
+		private readonly IParticularNewsIntoBoardService _newsBoardService;
+		public NewsBoardController(IParticularNewsIntoBoardService newsBoardService)
+		{
+			_newsBoardService = newsBoardService;
+		}
+
 		public ActionResult Index()
 		{
 			return View();
@@ -22,15 +30,24 @@ namespace Animal.Web.Controllers
 		}
 
 
-		[HttpPost]
-		public ActionResult  AddNews()
+		[HttpGet]
+		public ActionResult  GetAddNews()
 		{
-
-
-
-			return View("AddNewsPage");
+			return View("NewsBoardPage");
 		}
-		//	public ActionResult
 
+		[HttpPost]
+		public ActionResult AddNews(ParticularNewsModel model)
+		{
+			if(ModelState.IsValid)
+			{
+				_newsBoardService.AddNews(model);
+				return View("NewsBoardPage");
+			}
+			else
+			{
+				return View("AddNews");
+			}
+		}
 	}
 }

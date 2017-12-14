@@ -1,0 +1,23 @@
+﻿@model Animal.Common.Models.Bal.ParticularNewsModel
+
+@{
+    ViewBag.Title = "AddNews";
+}
+
+<h2>AddNews</h2>
+
+@using (Html.BeginForm("AddNews", "NewsBoard", "Post"))
+{
+
+    <div class="change-form">
+        @Html.LabelFor(x => x.Name)
+        @Html.TextBoxFor(x => x.Name)
+        @Html.ValidationMessageFor(x => x.Name)
+        <br>
+        @Html.LabelFor(x => x.Message)
+        @Html.TextBoxFor(x => x.Message)
+        @Html.ValidationMessageFor(x => x.Message)
+        <br>
+        <button type="submit" value="btn btn-primary btn-large btn-block">Add News</button>
+    </div>
+}
