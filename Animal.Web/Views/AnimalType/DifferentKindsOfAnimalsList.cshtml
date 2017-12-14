@@ -2,14 +2,8 @@
 <h2>Different Kinds Of Animals List</h2>
 
 @{
-
 @model  IEnumerable<Animal.Common.Models.Bal.AnimalKindModel>
  }
-
-
-@using (Html.BeginForm("AddNewAnimalKind", "AnimalType", "Get"))
-{
-
     <table width="70%">
        
         <tr>  
@@ -31,7 +25,8 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => animalKind.Name)
+                        @*@Html.DisplayFor(modelItem => animalKind.Name)*@
+                        @Html.ActionLink(animalKind.Name, "GetByAnimalType", "WorkWithAnimalParticular", new { Id = animalKind.Id},  null) |
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => animalKind.PlannedNumberOfAnimals)
@@ -49,7 +44,5 @@
                 </tr>
 }
         </table>
-        
+w        
         <button type="submit" class="btn btn-primary btn-large btn-block">Add new kind</button>
-
-}

@@ -51,6 +51,12 @@ namespace Animal.Web.Controllers
 		}
 
 
+		[HttpGet]
+		public ActionResult GetByAnimalType(int id)
+		{
+			return View();
+		}
+
 		[HttpPost]
 		public ActionResult Update()
 		{
