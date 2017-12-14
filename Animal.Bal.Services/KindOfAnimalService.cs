@@ -23,10 +23,17 @@ namespace Animal.Bal.Services
 		}
 
 
-		public void AddAnimalKind(AnimalKindModel animalKind)
+		public void AddOrUpdateAnimalKind(AnimalKindModel animalKind)
 		{
 			var animalKindEntity = Mapper.Map<AnimalKindEntity>(animalKind);
-			_animalKindRepository.Add(animalKindEntity);
+			if (animalKindEntity.Id == 0)
+			{
+				_animalKindRepository.Add(animalKindEntity);
+			}
+			else
+			{
+				_animalKindRepository.Update(animalKindEntity);
+			}
 		}
 
 
@@ -42,6 +49,11 @@ namespace Animal.Bal.Services
 			var animalKindEntity = Mapper.Map<AnimalKindEntity>(animalKind);
 			_animalKindRepository.Delete(animalKindEntity);
 
+		}
+
+		public AnimalKindModel GetAnimalKindById(int id)
+		{
+			return Mapper.Map<AnimalKindModel>(_animalKindRepository.GetById(id));
 		}
 	}
 }

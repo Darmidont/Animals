@@ -15,11 +15,6 @@ namespace Animal.Web.Controllers
 			_animalKindService = animalKindService;
 		}
 
-		// GET: WorkWithAnimal
-
-
-		
-
 		[HttpGet]
 		public ActionResult GetExistingAnimalKind()
 		{
@@ -39,7 +34,7 @@ namespace Animal.Web.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				_animalKindService.AddAnimalKind(model);
+				_animalKindService.AddOrUpdateAnimalKind(model);
 				return View("DifferentKindsOfAnimalsList");
 			}
 			return View("AddingNewKindOfAnimal");
@@ -52,7 +47,6 @@ namespace Animal.Web.Controllers
 			var model = new AnimalKindModel();
 			return View("AddingNewKindOfAnimal", model);
 		}
-
 
 		[HttpGet]
 		public ActionResult ListOfKindsView()
@@ -67,16 +61,13 @@ namespace Animal.Web.Controllers
 			var animalKindEntity = new AnimalKindEntity();
 			return View("UpdateInformationAboutKind", animalKindEntity);
 		}
+		
 
-		[HttpPost]
-		public ActionResult UpdateAnimalKind(AnimalKindModel model)
+		[HttpGet]
+		public ActionResult GetAnimalKind(int animalKindId)
 		{
-			if (ModelState.IsValid)
-			{
-				_animalKindService.AddAnimalKind(model);
-				return View("DifferentKindsOfAnimalsList");
-			}
-			return View("AddingNewKindOfAnimal");
+			var model = _animalKindService.GetAnimalKindById(animalKindId);
+			return View("AddingNewKindOfAnimal", model);
 		}
 
 		//[HttpGet]
@@ -86,29 +77,29 @@ namespace Animal.Web.Controllers
 		//}
 
 
-	//	public ActionResult Edit()
-	//	{
-	//		return View();
-	//	}
+		//	public ActionResult Edit()
+		//	{
+		//		return View();
+		//	}
 
-	//	[HttpPost]
-	//	public ActionResult Delete(int id = 0)
-	//	{
-			//AnimalKindModel _
+		//	[HttpPost]
+		//	public ActionResult Delete(int id = 0)
+		//	{
+		//AnimalKindModel _
 
 		//	_animalKindService.DeleteAnimalKind
-			//	if(_animalKindService == null)
+		//	if(_animalKindService == null)
 		//	{
-			//	return HttpNotFound();
-			//}
+		//	return HttpNotFound();
+		//}
 		//	return View("DifferentKindsOfAnimalsList");
 		//}
 		//	private AnimalParticularModel db = new AnimalParticularModel();
-	//	public ActionResult ShowingListOfAnimalsFromKind()
-	//	{
-			//   var animals = db.CurrentNumberOfAnimals.ToList<AnimalParticularModel>().
-	//		throw new NotImplementedException();
-	//	}
+		//	public ActionResult ShowingListOfAnimalsFromKind()
+		//	{
+		//   var animals = db.CurrentNumberOfAnimals.ToList<AnimalParticularModel>().
+		//		throw new NotImplementedException();
+		//	}
 
 
 

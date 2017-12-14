@@ -5,13 +5,10 @@ namespace Animal.Data.Interfaces
 {
 	public interface IAnimalKindRepository
 	{
-
 		IEnumerable<AnimalKindEntity> GetAnimalTypes();
-		//IEnumerable<AnimalKindEntity> GetKindOfAnimalStats();
-
 		void Add(AnimalKindEntity kind);
 		void Update(AnimalKindEntity kind);
 		void Delete(AnimalKindEntity kind);
-
+		AnimalKindEntity GetById(int id);
 	}
 }

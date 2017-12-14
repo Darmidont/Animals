@@ -12,6 +12,8 @@
 @using (Html.BeginForm("AddNewAnimalKind", "AnimalType", "Post"))
 {
     <div class="change-form">
+        @Html.HiddenFor(_ => _.Id)
+
         @Html.LabelFor(x => x.Name)
         @Html.TextBoxFor(x => x.Name)
         @Html.ValidationMessageFor(x => x.Name)
