@@ -18,12 +18,7 @@ namespace Animal.Web.Controllers
 		// GET: WorkWithAnimal
 
 
-		[HttpGet]
-		public ActionResult GetAnimalKindView()
-		{
-			var models = _animalKindService.GetAnimalKinds();
-			return View("DifferentKindsOfAnimalsList", models);
-		}
+		
 
 		[HttpGet]
 		public ActionResult GetExistingAnimalKind()
@@ -83,6 +78,12 @@ namespace Animal.Web.Controllers
 			}
 			return View("AddingNewKindOfAnimal");
 		}
+
+		//[HttpGet]
+		//public ActionResult GetByType(int id)
+		//{
+		//	return View("AddingNewKindOfAnimal");
+		//}
 
 
 	//	public ActionResult Edit()
