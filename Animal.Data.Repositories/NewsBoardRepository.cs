@@ -11,7 +11,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data;
 
 namespace Animal.Data.Repositories
 {
-	public class NewsBoardRepository: Repository<ParticularNewsIntoBoardEntity>, IParticularNewsIntoBoardService
+	public class NewsBoardRepository: Repository<ParticularNewsIntoBoardEntity>, IParticularNewsIntoBoardRepository
 	{
 		public NewsBoardRepository(Database database) : base(database)
 		{

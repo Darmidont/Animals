@@ -7,7 +7,7 @@ using Animal.Common.Models.Data;
 
 namespace Animal.Data.Interfaces
 {
-	public interface IParticularNewsIntoBoardService
+	public interface IParticularNewsIntoBoardRepository
 	{
 		IEnumerable<ParticularNewsIntoBoardEntity> GetNews();
 		void Add(ParticularNewsIntoBoardEntity news);

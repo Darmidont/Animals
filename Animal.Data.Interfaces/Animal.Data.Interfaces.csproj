@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="IAnimalKindRepository.cs" />
     <Compile Include="IAnimalParticularRepository.cs" />
-    <Compile Include="IParticularNewsIntoBoardService.cs" />
+    <Compile Include="IParticularNewsIntoBoardRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
