@@ -1,6 +1,6 @@
 ﻿@{
     ViewBag.Title = "DifferentAnimalsFromKindList";
-    @model  IEnumerable<Animal.Common.Models.Bal.AnimalParticularModel
+    @model  IEnumerable<Animal.Common.Models.Bal.AnimalParticularModel>
 
 }
 
@@ -14,22 +14,34 @@
 
             <tr>
                 <th>
+                    @Html.DisplayNameFor(model => model.HasCollar)
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.Name)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.PlannedNumberOfAnimals)
+                    @Html.DisplayNameFor(model => model.IsAlive)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.CurrentNumberOfAnimals)
+                    @Html.DisplayNameFor(model => model.HeartRhythms)
+           </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CaloriesBurned)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DescriptionOFAnimals)
-            </tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BreathingRate)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastWeight)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescriptionOFAnimals)
+                </th>
+ </tr>
 
-
-            @foreach (var animalParticular in Model)
-            {
-                <tr>
+                @foreach (var animalParticular in Model)
+                {
+<tr>
                     <td>
                         @Html.DisplayFor(modelItem => animalParticular.HasCollar)
                     </td>
@@ -43,16 +55,16 @@
                         @Html.DisplayFor(modelItem => animalParticular.HeartRhythms)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => animalParticular.CaloriesBurnedPerDay)
+                        @Html.DisplayFor(modelItem => animalParticular.CaloriesBurned)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => animalParticular.BreathingRatePerMinute)
+                        @Html.DisplayFor(modelItem => animalParticular.BreathingRate)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => animalParticular.LastWeight)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => animalParticular.Description)
+                        @Html.DisplayFor(modelItem => animalParticular.DescriptionOFAnimals)
                     </td>
                     <td>
                         @Html.ActionLink("Update", "Update", new { id = animalParticular.Id }) |
