@@ -9,9 +9,9 @@ namespace Animal.Data.Interfaces
 {
 	public interface IParticularNewsIntoBoardService
 	{
-		IEnumerable<ParticularNewsIntoBoardEntity> GetNews(int NewsId);
-		void Add(NewsBoardEntity news);
-		void Delete(NewsBoardEntity news);
-		void Update(NewsBoardEntity news);
+		IEnumerable<ParticularNewsIntoBoardEntity> GetNews();
+		void Add(ParticularNewsIntoBoardEntity news);
+	//	void Delete(NewsBoardEntity news);
+	//	void Update(NewsBoardEntity news);
 	}
 }

@@ -11,10 +11,12 @@ namespace Animal.Bal.Interfaces
 	public interface IParticularNewsIntoBoardService
 	{
 
-		IEnumerable<ParticularNewsIntoBoardEntity> GetNews();
+		IEnumerable<ParticularNewsModel> GetNews();
 		void AddNews(ParticularNewsModel news);
+		//void AddNews(NewsBoardEntity newsEntity);
+		//	void AddNews(NewsBoardEntity newsEntity);
 		//void DeleteNews(ParticularNewsModel news);
-		void ChangeNews(ParticularNewsModel news);
-
+		//	void ChangeNews(ParticularNewsModel news);
+		//	void AddNews(NewsBoardEntity newsEntity);
 	}
 }

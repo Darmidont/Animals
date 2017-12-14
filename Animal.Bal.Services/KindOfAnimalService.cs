@@ -32,10 +32,16 @@ namespace Animal.Bal.Services
 
 		public void UpdateAnimalKind(AnimalKindModel animalKind)
 		{
+			var animalKindEntity = Mapper.Map<AnimalKindEntity>(animalKind);
+			_animalKindRepository.Update(animalKindEntity);
+
 		}
 
 		public void DeleteAnimalKind(AnimalKindModel animalKind)
 		{
+			var animalKindEntity = Mapper.Map<AnimalKindEntity>(animalKind);
+			_animalKindRepository.Delete(animalKindEntity);
+
 		}
 	}
 }

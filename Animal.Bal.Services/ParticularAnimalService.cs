@@ -36,18 +36,18 @@ namespace Animal.Bal.Services
 			_animalParticularRepository.Add(animalParticularEntity);
 		}
 
-		public void UpdateAnimalParticular(AnimalParticularModel animalKindParticular)
+		public void UpdateAnimalParticular(AnimalParticularModel animalParticular)
 		{
-			throw new NotImplementedException();
+			var animalParticularEntity = Mapper.Map<AnimalParticularEntity>(animalParticular);
+			_animalParticularRepository.Update(animalParticularEntity);
+
 		}
 
 		public void DeleteAnimalParticular(AnimalParticularModel animalParticular)
 		{
-			throw new NotImplementedException();
+			var animalParticularEntity = Mapper.Map<AnimalParticularEntity>(animalParticular);
+			_animalParticularRepository.Delete(animalParticularEntity);
 		}
 
-		
-
-	
 	}
 }

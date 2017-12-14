@@ -37,7 +37,7 @@ namespace Animal.Data.Repositories
 		}
 
 
-		public void Add(NewsBoardEntity news)
+		public void Add(ParticularNewsIntoBoardEntity news)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAddNews"))
 			{
@@ -46,7 +46,7 @@ namespace Animal.Data.Repositories
 				Database.ExecuteNonQuery(dbCommand);
 			}
 		}
-		
+	/*	
 		public void Delete(NewsBoardEntity news)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spDeleteNewsById"))
@@ -55,7 +55,8 @@ namespace Animal.Data.Repositories
 				Database.ExecuteNonQuery(dbCommand);
 			}
 		}
-		
+	*/
+	/*
 		public void Update(NewsBoardEntity news)
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spUpdateNews"))
@@ -67,8 +68,13 @@ namespace Animal.Data.Repositories
 
 			}
 		}
-
+		*/
 		public IEnumerable<ParticularNewsIntoBoardEntity> GetNews(int NewsId)
+		{
+			throw new NotImplementedException();
+		}
+
+		public IEnumerable<ParticularNewsIntoBoardEntity> GetNews()
 		{
 			throw new NotImplementedException();
 		}
