@@ -36,7 +36,7 @@
                     <tr>
                         <td>
                             @*@Html.DisplayFor(modelItem => animalKind.Name)*@
-                            @Html.ActionLink(animalKind.Name, "GetByAnimalType", "WorkWithAnimalParticular", new {Id = animalKind.Id}, null) |
+                            @Html.ActionLink(animalKind.Name, "GetByAnimalType", "AnimalParticular", new {Id = animalKind.Id}, null) |
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => animalKind.PlannedNumberOfAnimals)

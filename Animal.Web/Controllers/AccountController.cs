@@ -70,7 +70,7 @@ namespace Animal.Web.Controllers
 				else
 				{
 					FormsAuthentication.SetAuthCookie(model.Email, true);
-					return View("AuthorizationCompleted");
+					return RedirectToAction("Index", "Home");
 				}
 			}
 
