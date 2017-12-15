@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Animal.Common.Models.Bal;
 using Animal.Bal.Interfaces;
 using Animal.Common.Models.Data;
@@ -11,11 +7,10 @@ namespace Animal.Web.Controllers
 {
 	public class NewsBoardController:Controller
 	{
-
-		private readonly IParticularNewsIntoBoardService _newsBoardService;
-		public NewsBoardController(IParticularNewsIntoBoardService newsBoardService)
+		private readonly INewsService _newsService;
+		public NewsBoardController(INewsService newsService)
 		{
-			_newsBoardService = newsBoardService;
+			_newsService = newsService;
 		}
 
 		public ActionResult Index()
@@ -26,7 +21,7 @@ namespace Animal.Web.Controllers
 		[HttpGet]
 		public ActionResult GetNewsBoardPageView()
 		{
-			var model = _newsBoardService.GetNews();
+			var model = _newsService.GetNews();
 			return View("NewsBoardPage", model);
 		}
 
@@ -45,7 +40,7 @@ namespace Animal.Web.Controllers
 		{
 			if(ModelState.IsValid)
 			{
-				_newsBoardService.AddNews(model);
+				_newsService.AddNews(model);
 				return View("NewsBoardPage");
 			}
 			else
@@ -53,9 +48,5 @@ namespace Animal.Web.Controllers
 				return View("AddNews");
 			}
 		}
-
-
-
-	
 	}
 }

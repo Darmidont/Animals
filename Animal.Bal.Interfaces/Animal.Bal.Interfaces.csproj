@@ -40,10 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountValidationService.cs" />
+    <Compile Include="IAccountValidationService.cs" />
     <Compile Include="IKindOfAnimalService.cs" />
     <Compile Include="IParticularAnimalService.cs" />
-    <Compile Include="IParticularNewsIntoBoardService.cs" />
+    <Compile Include="INewsService.cs" />
     <Compile Include="IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

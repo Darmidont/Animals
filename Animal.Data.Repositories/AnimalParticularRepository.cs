@@ -15,7 +15,6 @@ namespace Animal.Data.Repositories
 {
 	public class AnimalParticularRepository : Repository<AnimalParticularEntity>, IAnimalParticularRepository
 	{
-
 		public AnimalParticularRepository([Dependency(Constants.AnimalDatabase)]Database database): base(database)
 		{
 		}

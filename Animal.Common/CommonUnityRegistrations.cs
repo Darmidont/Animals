@@ -11,14 +11,14 @@ namespace Animal.Common
 		public static void RegisterCommonTypes(IUnityContainer container)
 		{
 			container.AddNewExtension<Interception>()
-			
 				//Data Access Layer
-				.RegisterType<Database>(Constants.AnimalDatabase,
+			.RegisterType<Database>(Constants.AnimalDatabase,
 					new HierarchicalLifetimeManager(),
 					new InjectionFactory(c => CreateDatabaseInstance(Constants.Animal)));
 
+
 			RegisterServices(container, Constants.DatabaseLibraryName);
-			RegisterServices(container, Constants.ServiceLibraryName);
+			RegisterServices(container, Constants.ServiceLibraryName); 
 		}
 
 		private static object CreateDatabaseInstance(string databaseName)

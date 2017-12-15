@@ -7,19 +7,12 @@ using AutoMapper;
 
 namespace Animal.Bal.Services
 {
-	public class ParticularNewsIntoBoard : IParticularNewsIntoBoardService
+	public class NewsService : INewsService
 	{
-		private readonly IParticularNewsIntoBoardRepository _newsRepository;
-
-		public ParticularNewsIntoBoard(IParticularNewsIntoBoardRepository newsRepository)
+		private readonly INewsRepository _newsRepository;
+		public NewsService(INewsRepository newsRepository)
 		{
 			_newsRepository = newsRepository;
-		}
-
-		public IEnumerable<ParticularNewsModel> GetParticularNewsStats()
-		{
-			var newsDbTypes = _newsRepository.GetNews();
-			return Mapper.Map<IEnumerable<ParticularNewsIntoBoardEntity>, IEnumerable<ParticularNewsModel>>(newsDbTypes);
 		}
 
 		public void AddNews(ParticularNewsModel news)

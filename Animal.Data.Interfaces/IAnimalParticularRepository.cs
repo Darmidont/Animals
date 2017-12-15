@@ -5,9 +5,7 @@ namespace Animal.Data.Interfaces
 {
 	public interface IAnimalParticularRepository
 	{
-
 		IEnumerable<AnimalParticularEntity> GetAnimalsParticular();
-
 		void Add(AnimalParticularEntity particular);
 		void Update(AnimalParticularEntity particular);
 		void Delete(AnimalParticularEntity particular);

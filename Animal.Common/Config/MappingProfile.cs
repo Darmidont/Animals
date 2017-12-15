@@ -18,6 +18,9 @@ namespace Animal.Common.Config
 			cfg.CreateMap<LoginModel, LoginEntity>();
 			cfg.CreateMap<AnimalParticularModel, AnimalParticularEntity>();
 			cfg.CreateMap<AnimalParticularEntity, AnimalParticularModel>();
+			cfg.CreateMap<ParticularNewsModel, ParticularNewsIntoBoardEntity>();
+			cfg.CreateMap<ParticularNewsIntoBoardEntity, ParticularNewsModel>();
+				;
 		}
 	}
 }
