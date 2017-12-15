@@ -66,12 +66,12 @@ namespace Animal.Web.Controllers
 		}
 		
 
-		[HttpGet]
-		public ActionResult GetAnimalKind(int animalKindId)
-		{
-			var model = _animalKindService.GetAnimalKindById(animalKindId);
-			return View("AddingNewKindOfAnimal", model);
-		}
+		//[HttpGet]
+		//public ActionResult GetAnimalKind(int animalKindId)
+		//{
+		//	var model = _animalKindService.GetAnimalKindById(animalKindId);
+		//	return View("AddingNewKindOfAnimal", model);
+		//}
 
 
 

@@ -16,9 +16,8 @@ namespace Animal.Common.Models.Bal
 		public int CaloriesBurned { get; set; }
 		public int BreathingRate { get; set; }
 		[Required]
-		public int LastWeight { get; set; }
-		[Required]
-		public int CurrentNumberOfAnimals { get; set; }
-		public string DescriptionOFAnimals { get; set; }	
+		public int LastWeight { get; set; }		
+		public string Description { get; set; }	
 	}
 }
+

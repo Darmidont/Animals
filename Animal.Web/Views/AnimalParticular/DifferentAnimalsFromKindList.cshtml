@@ -7,8 +7,8 @@
     <h2>Here you can see list of particular animals of this type:</h2>
 
 
-@using (Html.BeginForm("AddNewAnimalParticular", "AnimalParticular", "Get"))
-{
+@*@using (Html.BeginForm("AddNewAnimalParticular", "AnimalParticular", "Get"))
+{*@
 
         <table width="80%">
             <tr>
@@ -34,7 +34,7 @@
                 @Html.DisplayNameFor(model => model.LastWeight)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.DescriptionOFAnimals)
+                    @Html.DisplayNameFor(model => model.Description)
                 </th>
                 <th>
                     <label>Actions</label>
@@ -67,7 +67,7 @@
                         @Html.DisplayFor(modelItem => animalParticular.LastWeight)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => animalParticular.DescriptionOFAnimals)
+                        @Html.DisplayFor(modelItem => animalParticular.Description)
                     </td>
                     <td>
                         @Html.ActionLink("Update", "Update", new { id = animalParticular.Id }) |
@@ -76,8 +76,9 @@
                 </tr>
 }
         </table>
+        @Html.ActionLink("Add new Animal", "GetAnimalViewForAdd") 
+        @*<button type="submit" class="btn btn-primary btn-large btn-block">Add new animal</button>*@
 
-        <button type="submit" class="btn btn-primary btn-large btn-block">Add new animal</button>
          
-}
+@*}*@
 </div>

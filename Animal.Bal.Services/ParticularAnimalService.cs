@@ -41,6 +41,11 @@ namespace Animal.Bal.Services
 
 		}
 
+		public IEnumerable<AnimalParticularModel> GetParticularAnimalByKindId(int typeId)
+		{
+			return Mapper.Map<IEnumerable<AnimalParticularModel>>(_animalParticularRepository.GetAnimalsbyAnimalKindId(typeId));
+		}
+
 		public void DeleteAnimalParticular(AnimalParticularModel animalParticular)
 		{
 			var animalParticularEntity = Mapper.Map<AnimalParticularEntity>(animalParticular);

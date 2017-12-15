@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Animal.Common.Models.Bal;
+using Animal.Common.Models.Data;
 
 namespace Animal.Bal.Interfaces
 {
@@ -8,6 +9,5 @@ namespace Animal.Bal.Interfaces
 		IEnumerable<AnimalKindModel> GetAnimalKinds();
 		void AddOrUpdateAnimalKind(AnimalKindModel animalKind);
 		void DeleteAnimalKind(AnimalKindModel animalKind);
-		AnimalKindModel GetAnimalKindById(int id);
 	}
 }
