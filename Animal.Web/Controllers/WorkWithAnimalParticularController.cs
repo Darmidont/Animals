@@ -19,6 +19,30 @@ namespace Animal.Web.Controllers
 		}
 
 
+/*
+		[HttpGet]
+		public ActionResult GetNewAnimalKind()
+		{
+			var animalKindEntity = new AnimalKindEntity();
+			return View("DifferentKindsOfAnimalsList", animalKindEntity);
+		}
+
+		[HttpPost]
+		public ActionResult AddNewAnimalKind(AnimalKindModel model)
+		{
+			if (ModelState.IsValid)
+			{
+				_animalKindService.AddOrUpdateAnimalKind(model);
+				return View("DifferentKindsOfAnimalsList");
+			}
+			else
+			{
+				return View("AddingNewKindOfAnimal");
+			}
+		}
+*/
+
+
 		[HttpGet]
 		public ActionResult GetAnimalParticularAddingView()
 		{
@@ -56,7 +80,7 @@ namespace Animal.Web.Controllers
 		[HttpGet]
 		public ActionResult GetByAnimalType(int id)
 		{
-			var animals = _animalParticularService.
+			var animals = _animalParticularService.GetParticularAnimalStats();
 			return View("DifferentAnimalsFromKindList", animals);
 		}
 

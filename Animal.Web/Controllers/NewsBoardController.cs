@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Animal.Common.Models.Bal;
 using Animal.Bal.Interfaces;
+using Animal.Common.Models.Data;
 
 namespace Animal.Web.Controllers
 {
@@ -33,8 +34,11 @@ namespace Animal.Web.Controllers
 		[HttpGet]
 		public ActionResult  GetAddNews()
 		{
-			return View("NewsBoardPage");
+			var newsBoardEntity = new ParticularNewsIntoBoardEntity();
+			return View("NewsBoardPage",newsBoardEntity);
 		}
+
+
 
 		[HttpPost]
 		public ActionResult AddNews(ParticularNewsModel model)
@@ -49,5 +53,9 @@ namespace Animal.Web.Controllers
 				return View("AddNews");
 			}
 		}
+
+
+
+	
 	}
 }

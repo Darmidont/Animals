@@ -39,7 +39,7 @@ namespace Animal.Data.Repositories
 
 		public void Add(ParticularNewsIntoBoardEntity news)
 		{
-			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAddNews"))
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.[spAddNews]"))
 			{
 				Database.AddInParameter(dbCommand, "@Name", DbType.String, news.Name);
 				Database.AddInParameter(dbCommand, "@Message", DbType.String, news.Message);
