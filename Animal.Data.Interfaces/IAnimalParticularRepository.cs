@@ -13,6 +13,6 @@ namespace Animal.Data.Interfaces
 		void Add(AnimalParticularEntity particular);
 		void Update(AnimalParticularEntity particular);
 		void Delete(AnimalParticularEntity particular);
-
+		IEnumerable<AnimalParticularEntity> GetAnimals(int animalKindId);
 	}
 }

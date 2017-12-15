@@ -11,9 +11,11 @@ namespace Animal.Web.Controllers
 	public class WorkWithAnimalParticularController : Controller
 	{
 		private readonly IParticularAnimalService _animalParticularService;
-		public WorkWithAnimalParticularController(IParticularAnimalService animalParticularService)
+		private readonly IKindOfAnimalService _kindOfAnimalService;
+		public WorkWithAnimalParticularController(IParticularAnimalService animalParticularService, IKindOfAnimalService kindOfAnimalService)
 		{
 			_animalParticularService = animalParticularService;
+			_kindOfAnimalService = kindOfAnimalService;
 		}
 
 
@@ -54,7 +56,8 @@ namespace Animal.Web.Controllers
 		[HttpGet]
 		public ActionResult GetByAnimalType(int id)
 		{
-			return View("DifferentAnimalsFromKindList");
+			var animals = _animalParticularService.
+			return View("DifferentAnimalsFromKindList", animals);
 		}
 
 		[HttpPost]
@@ -74,17 +77,6 @@ namespace Animal.Web.Controllers
 		public ActionResult UpdateInformationAboutAnimal()
 		{
 			return View("UpdateAnimalsParticular");
-		}
-		
-
-
-
-	
-			
-	//	public ActionResult AddNewAnimal()
-	//	{
-	//		return View();
-	//	}
-
+		}		
 	}
 }
