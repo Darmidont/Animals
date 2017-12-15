@@ -18,7 +18,7 @@
                 @Html.DisplayNameFor(model => model.Message)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DateOfCreatingMessage)
+                @Html.DisplayNameFor(model => model.Date)
             </th>
 
         @foreach (var newsParticular in Model)
@@ -31,7 +31,7 @@
                     @Html.DisplayFor(modelItem => newsParticular.Message)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => newsParticular.DateOfCreatingMessage)
+                    @Html.DisplayFor(modelItem => newsParticular.Date)
                 </td>
                 <td>
                     @Html.ActionLink("Update", "Update", new { id = newsParticular.Id }) |
