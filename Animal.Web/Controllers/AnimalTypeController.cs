@@ -76,48 +76,13 @@ namespace Animal.Web.Controllers
 		[HttpPost]
 		public ActionResult Delete(int animalKindId)
 		{
+			
 			//AnimalKindModel model = new AnimalKindModel(animalKindId);
 		//	_animalKindService.DeleteAnimalKind(model);
 			//var model = _animalKindService.DeleteAnimalKind(animalKindId);
 
 			return View("DifferentKindsOfAnimalsList");
 		}
-
-
-		//[HttpGet]
-		//public ActionResult GetByType(int id)
-		//{
-		//	return View("AddingNewKindOfAnimal");
-		//}
-
-
-		//	public ActionResult Edit()
-		//	{
-		//		return View();
-		//	}
-
-		//	[HttpPost]
-		//	public ActionResult Delete(int id = 0)
-		//	{
-		//AnimalKindModel _
-
-		//	_animalKindService.DeleteAnimalKind
-		//	if(_animalKindService == null)
-		//	{
-		//	return HttpNotFound();
-		//}
-		//	return View("DifferentKindsOfAnimalsList");
-		//}
-		//	private AnimalParticularModel db = new AnimalParticularModel();
-		//	public ActionResult ShowingListOfAnimalsFromKind()
-		//	{
-		//   var animals = db.CurrentNumberOfAnimals.ToList<AnimalParticularModel>().
-		//		throw new NotImplementedException();
-		//	}
-
-
-
-
 
 	}
 }
