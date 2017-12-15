@@ -10,7 +10,7 @@
         @using (Html.BeginForm("AddNewAnimalKind", "AnimalType", "Get"))
         {
 
-            <table width="80%">
+            <table width="90%">
                 <tr>
                     <th>
                         @Html.DisplayNameFor(model => model.Name)
@@ -49,7 +49,7 @@
                         </td>
                         <td>
                             @Html.ActionLink("Update", "Update", new {id = animalKind.Id}) |
-                            @Html.ActionLink("Delete", "Delete", new {id = animalKind.Id})
+                            @Html.ActionLink("Delete", "DeleteKind", new {id = animalKind.Id})
                         </td>
                     </tr>
                 }

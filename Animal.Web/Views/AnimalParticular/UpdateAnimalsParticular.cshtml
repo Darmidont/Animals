@@ -11,21 +11,19 @@
 {
 
 <div class="change-form">
-    <div class="editor-label">
+   
         @Html.LabelFor(x => x.HasCollar)
-        </div>
-    <div class="editor-field">
+      
         @Html.TextBoxFor(x => x.HasCollar)
         @Html.ValidationMessageFor(x => x.HasCollar)
-        </div>
+        
         <br>
-    <div class="editor-label">
+    
         @Html.LabelFor(x => x.Name)
-        </div>
-    <div class="editor-field">
+       
+   
         @Html.TextBoxFor(x => x.Name)
         @Html.ValidationMessageFor(x => x.Name)
-        </div>
         <!-- <br>
             
           @Html.LabelFor(x => x.IsAlive)
@@ -45,22 +43,20 @@
           @Html.ValidationMessageFor(x => x.BreathingRate)
             -->
         <br>
-    <div class="editor-label">
+   
         @Html.LabelFor(x => x.LastWeight)
-        </div>
-    <div class="editor-field">
+      
         @Html.TextBoxFor(x => x.LastWeight)
         @Html.ValidationMessageFor(x => x.LastWeight)
-        </div>
+     
         <br>
-    <div class="editor-label">
+    
         @Html.LabelFor(x => x.DescriptionOFAnimals)
-        </div>
-    <div class="editor-field">
+      
         @Html.TextBoxFor(x => x.DescriptionOFAnimals)
         @Html.ValidationMessageFor(x => x.DescriptionOFAnimals)
-        </div>
+       
         <button type="submit" value="btn btn-primary btn-large btn-block">Update</button>
-    </div>
+  </div>
     }
 </div>
