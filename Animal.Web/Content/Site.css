@@ -426,10 +426,7 @@ input {
 }
 
 
-.editor-field {
-    display: flex;
-    align-items: center
-}
+
 
 
 
@@ -460,3 +457,26 @@ td {
     th:first-child, td:first-child {
         text-align: left;
     }
+
+
+.form-text {
+    padding: 5px;
+    background: #008000; 
+    margin: 0 auto; 
+    width: 100%; 
+    opacity: 0.9; 
+    filter: alpha(Opacity=70); 
+    height: 100%;
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px; 
+    -khtml-border-radius:10px; 
+    border-radius: 10px; 
+}
+
+#footer {
+    background: #3CB371;
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px; 
+    -khtml-border-radius:10px; 
+    border-radius: 10px; 
+}

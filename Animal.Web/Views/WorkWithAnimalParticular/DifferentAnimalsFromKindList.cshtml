@@ -3,15 +3,14 @@
     @model  IEnumerable<Animal.Common.Models.Bal.AnimalParticularModel>
 
 }
-
-<h2>Here you can see list of particular animals of this type:</h2>
+    <div class ="form-text">
+    <h2>Here you can see list of particular animals of this type:</h2>
 
 
 @using (Html.BeginForm("AddNewAnimalParticular", "WorkWithAnimalParticular", "Get"))
 {
- 
-        <table width="60%">
 
+        <table width="60%">
             <tr>
                 <th>
                     @Html.DisplayNameFor(model => model.HasCollar)
@@ -34,9 +33,13 @@
             <th>
                 @Html.DisplayNameFor(model => model.LastWeight)
                 </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DescriptionOFAnimals)
+                <th>
+                    @Html.DisplayNameFor(model => model.DescriptionOFAnimals)
                 </th>
+                <th>
+                    <label>Actions</label>
+                </th>
+
  </tr>
 
                 @foreach (var animalParticular in Model)
@@ -77,3 +80,4 @@
         <button type="submit" class="btn btn-primary btn-large btn-block">Add new animal</button>
          
 }
+</div>

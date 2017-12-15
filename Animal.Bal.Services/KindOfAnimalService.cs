@@ -22,7 +22,6 @@ namespace Animal.Bal.Services
 			return Mapper.Map<IEnumerable<AnimalKindEntity>, IEnumerable<AnimalKindModel>>(animalDbTypes);
 		}
 
-
 		public void AddOrUpdateAnimalKind(AnimalKindModel animalKind)
 		{
 			var animalKindEntity = Mapper.Map<AnimalKindEntity>(animalKind);
@@ -36,21 +35,18 @@ namespace Animal.Bal.Services
 			}
 		}
 
-
 		public void UpdateAnimalKind(AnimalKindModel animalKind)
 		{
 			var animalKindEntity = Mapper.Map<AnimalKindEntity>(animalKind);
 			_animalKindRepository.Update(animalKindEntity);
 
 		}
-
 		public void DeleteAnimalKind(AnimalKindModel animalKind)
 		{
 			var animalKindEntity = Mapper.Map<AnimalKindEntity>(animalKind);
 			_animalKindRepository.Delete(animalKindEntity);
 
 		}
-
 		public AnimalKindModel GetAnimalKindById(int id)
 		{
 			return Mapper.Map<AnimalKindModel>(_animalKindRepository.GetById(id));

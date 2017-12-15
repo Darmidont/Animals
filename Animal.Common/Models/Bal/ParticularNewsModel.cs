@@ -10,9 +10,9 @@ namespace Animal.Common.Models.Bal
 	public class ParticularNewsModel
 	{
 		public int Id { get; set; }
-		[Required]
 		public string Name { get; set; }
 		[Required]
+		[Display(Name = "Your message:")]
 		public string Message { get; set; }
 		[DataType(DataType.Time)]
 	    public int Date{ get; set; }

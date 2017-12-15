@@ -1,53 +1,60 @@
 ﻿
-<h2>Different Kinds Of Animals List</h2>
+
 
 @{
     @model  IEnumerable<Animal.Common.Models.Bal.AnimalKindModel>
-}
-@using (Html.BeginForm("AddNewAnimalKind", "AnimalType", "Get"))
-{
-
-    <table width="90%">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PlannedNumberOfAnimals)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CurrentNumberOfAnimals)
-            </th>
-            <th>
-            @Html.DisplayNameFor(model => model.DescriptionOFAnimals)
-        </tr>
-        <tr>
-            @Html.DisplayText("Actions");
-        </tr>
-
-        @foreach (var animalKind in Model)
-        {
-            <tr>
-                <td>
-                    @*@Html.DisplayFor(modelItem => animalKind.Name)*@
-                    @Html.ActionLink(animalKind.Name, "GetByAnimalType", "WorkWithAnimalParticular", new {Id = animalKind.Id}, null) |
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => animalKind.PlannedNumberOfAnimals)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => animalKind.CurrentNumberOfAnimals)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => animalKind.DescriptionOFAnimals)
-                </td>
-                <td>
-                    @Html.ActionLink("Update", "Update", new {id = animalKind.Id}) |
-                    @Html.ActionLink("Delete", "Delete", new {id = animalKind.Id})
-                </td>
-            </tr>
         }
-    </table>
-    <br>
-    <button type="submit" class="btn btn-primary btn-large btn-block">Add new kind</button>
-}
+
+    <div class="form-text">
+        <h2>Different Kinds Of Animals List</h2>
+        @using (Html.BeginForm("AddNewAnimalKind", "AnimalType", "Get"))
+        {
+
+            <table width="80%">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PlannedNumberOfAnimals)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CurrentNumberOfAnimals)
+                    </th>
+                    <th>
+                    @Html.DisplayNameFor(model => model.DescriptionOFAnimals)
+                        <th>
+                    <label>Actions</label>      
+                            </th>
+                </tr>
+              
+                   
+                
+
+                @foreach (var animalKind in Model)
+                {
+                    <tr>
+                        <td>
+                            @*@Html.DisplayFor(modelItem => animalKind.Name)*@
+                            @Html.ActionLink(animalKind.Name, "GetByAnimalType", "WorkWithAnimalParticular", new {Id = animalKind.Id}, null) |
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => animalKind.PlannedNumberOfAnimals)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => animalKind.CurrentNumberOfAnimals)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => animalKind.DescriptionOFAnimals)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Update", "Update", new {id = animalKind.Id}) |
+                            @Html.ActionLink("Delete", "Delete", new {id = animalKind.Id})
+                        </td>
+                    </tr>
+                }
+            </table>
+            <br>
+            <button type="submit" class="btn btn-primary btn-large btn-block">Add new kind</button>
+        }
+    </div>

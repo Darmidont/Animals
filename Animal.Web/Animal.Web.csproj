@@ -235,7 +235,7 @@
     <Content Include="Images\logoWolf.jpg" />
     <Content Include="Images\mainPicture.jpg" />
     <Content Include="Images\main_back.jpg" />
-    <Content Include="logoWolf.ico" />
+    <Content Include="favicon.ico" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -252,6 +252,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Views\Shared\favicon.ico" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

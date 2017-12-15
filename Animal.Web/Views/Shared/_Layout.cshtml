@@ -6,7 +6,8 @@
 <title>@ViewBag.Title - Animal Husbandry</title>
 @Styles.Render("~/Content/css")
 @Scripts.Render("~/bundles/modernizr")
-<link rel="icon" href="@Url.Content("~/Images/logoWolf.ico") />   
+    <link rel="icon" href="@Url.Content("favicon.ico")" type="image/x-icon" />
+    <link rel="shortcut icon" href="@Url.Content("favicon.ico")" type="image/x-icon" />
 </head>
 <body>
 
@@ -19,27 +20,21 @@
 
         <ul class="menu-main">
             @if (User.Identity.IsAuthenticated)
-    {
-        @Html.ActionLink("Animal Husbandry", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-
-        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
-        <!-- <li>@Html.ActionLink("Contact", "Contact", "Home")</li> -->
-        <li>@Html.ActionLink("News board", "GetNewsBoardPageView", "NewsBoard")</li>
-
-        <li>@Html.ActionLink("Authorization", "GetAuthorizationView", "Account")</li>
-
-
+          { 
+        @Html.ActionLink("Animal Husbandry:Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+       <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Сommentaries", "GetNewsBoardPageView", "NewsBoard")</li>
         <!-- <li>@Html.ActionLink("Add new kind of animal", "GetAnimalKindAddingView", "AnimalType")</li>
 <li>@Html.ActionLink("Add new animal", "GetAnimalParticularAddingView", "WorkWithAnimalParticular")</li> -->
 
         <li>@Html.ActionLink("Kinds of animals", "ListOfKindsView", "AnimalType")</li>
-
         <li>@Html.ActionLink("Own cab", "OwnCabView", "Account")</li>
-
         <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
-}           else
+            }
+            else
             {
+                @Html.ActionLink("Animal Husbandry:Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <li>@Html.ActionLink("About", "About", "Home")</li>
             <li>@Html.ActionLink("Login", "GetAuthorizationView", "Account")</li>
             <li>@Html.ActionLink("Registration", "GetRegistrationView", "Account")</li>
             }
@@ -51,6 +46,7 @@
 <div class="container body-content">
     @RenderBody()
     <hr/>
+    
     <footer id="footer">
         <p>&copy; Rastsvietalov Sergey PI-15-4 @DateTime.UtcNow - Animal Husbandry</p>
         <br>  Email: rastsvietalovjudo@gmail.com

@@ -3,29 +3,28 @@
 @{
     ViewBag.Title = "AddNews";
 }
-
-<h2>AddNews</h2>
+<div class ="form-text">
+<h2>Add news</h2>
 
 @using (Html.BeginForm("AddNews", "NewsBoard", "Post"))
 {
 
     <div class="change-form">
-        <div class="editor-label">
-    @Html.LabelFor(x => x.Name)
-            </div>
-        <div class="editor-field">
-            @Html.TextBoxFor(x => x.Name)
-            @Html.ValidationMessageFor(x => x.Name)
-            </div>
-            <br>
-        <div class="editor-label">
-            @Html.LabelFor(x => x.Message)
-            </div>
-        <div class="editor-field">
-            @Html.TextBoxFor(x => x.Message)
-            @Html.ValidationMessageFor(x => x.Message)
-            </div>
-            <br>
-            <button type="submit" value="btn btn-primary btn-large btn-block">Add News</button>
+
+        @Html.LabelFor(x => x.Message)
+        <br>
+        @Html.TextBoxFor(x => x.Message)
+        @Html.ValidationMessageFor(x => x.Message)
+    <br>
+    <div class="buttons-actions">
+        <div class="go">
+            <button type="submit" class="btn btn-primary btn-large btn-block">Add commentary</button>
         </div>
+        <div class="cancel">
+            <button type="reset" class="btn btn-primary btn-large btn-block">Back</button>
+        </div>
+    </div>
+    </div >
 }
+
+    </div>

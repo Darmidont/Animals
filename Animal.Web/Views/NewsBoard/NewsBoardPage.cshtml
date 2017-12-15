@@ -2,14 +2,15 @@
 @{
     ViewBag.Title = "NewsBoardPage";
     @model  IEnumerable<Animal.Common.Models.Bal.ParticularNewsModel>
+  
 }
-
-<h2>NewsBoardPage</h2>
+    <div class ="form-text">
+<h2>News board page</h2>
 
 @using (Html.BeginForm("GetAddNews", "NewsBoard", "Get"))
 {
 
-    <table width="70%" class="news-board">
+    <table width="90%" class="news-board">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
@@ -33,10 +34,6 @@
                 <td>
                     @Html.DisplayFor(modelItem => newsParticular.Date)
                 </td>
-                <td>
-                    @Html.ActionLink("Update", "Update", new { id = newsParticular.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = newsParticular.Id })
-                </td>
             </tr>
         }
     </table>
@@ -44,3 +41,4 @@
         <button type="submit" class="btn btn-primary btn-large btn-block">Add news</button>
 
 }
+        </div>

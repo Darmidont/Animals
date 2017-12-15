@@ -73,16 +73,19 @@ namespace Animal.Web.Controllers
 			return View("AddingNewKindOfAnimal", model);
 		}
 
+
+
 		[HttpPost]
 		public ActionResult Delete(int animalKindId)
 		{
-			
-			//AnimalKindModel model = new AnimalKindModel(animalKindId);
-		//	_animalKindService.DeleteAnimalKind(model);
-			//var model = _animalKindService.DeleteAnimalKind(animalKindId);
-
+			//_animalKindService.DeleteAnimalKind();
 			return View("DifferentKindsOfAnimalsList");
 		}
 
+		[HttpPost]
+		public ActionResult Update(int animalKind)
+		{
+			return View("UpdateInformationAboutKind");
+		}
 	}
 }
