@@ -23,7 +23,7 @@ namespace Animal.Data.Repositories
 		public IEnumerable<ParticularNewsIntoBoardEntity> GetNews()
 		{
 			var result = new List<ParticularNewsIntoBoardEntity>();
-			using (var dbCommand = Database.GetStoredProcCommand("dbo.[spGetBoardsNews]"))
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.[spGetBoardNews]"))
 			{
 				using (var reader = Database.ExecuteReader(dbCommand))
 				{

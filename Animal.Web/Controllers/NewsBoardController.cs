@@ -27,10 +27,10 @@ namespace Animal.Web.Controllers
 
 
 		[HttpGet]
-		public ActionResult  GetAddNews()
+		public ActionResult GetAddNews()
 		{
 			var newsBoardEntity = new ParticularNewsIntoBoardEntity();
-			return View("NewsBoardPage",newsBoardEntity);
+			return View("NewsBoardPage", newsBoardEntity);
 		}
 
 

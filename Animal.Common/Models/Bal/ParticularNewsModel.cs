@@ -15,7 +15,7 @@ namespace Animal.Common.Models.Bal
 		[Required]
 		public string Message { get; set; }
 		[DataType(DataType.Time)]
-	    public int DateOfCreatingMessage { get; set; }
+	    public int Date{ get; set; }
 
 	}
 }
