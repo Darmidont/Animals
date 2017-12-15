@@ -105,17 +105,27 @@ namespace Animal.Data.Repositories
 			}
 		}
 
-		public IEnumerable<AnimalParticularEntity> GetAnimals(int animalKindId)
+		public IEnumerable<AnimalParticularEntity> GetAnimalsbyAnimalKindId(int animalKindId)
 		{
-			using (var dbCommand = Database.GetStoredProcCommand("dbo.spDeleteParticularAnimalById"))
+			var result = new List<AnimalParticularEntity>();
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.spGetAnimalsbyAnimalKindId"))
 			{
-				Database.AddInParameter(dbCommand, "@Id", DbType.Int32, animalParticular.Id);
-				Database.ExecuteNonQuery(dbCommand);
+				Database.AddInParameter(dbCommand, "@AnimalKindId", DbType.Int32, animalKindId);
+				using (var reader = Database.ExecuteReader(dbCommand))
+				{
+					if (reader.Read())
+						result.Add(RowMapper.MapRow(reader));
+
+					while (reader.Read())
+						result.Add(RowMapper.MapRow(reader));
+				}
 			}
+
+			return result;
 		}
 
 		/*
-				public IEnumerable<AnimalParticularEntity> GetAnimals(int animalKindId)
+				public IEnumerable<AnimalParticularEntity> GetAnimalsbyAnimalKindId(int animalKindId)
 				{
 					var result = new List<AnimalParticularEntity>();
 					using (var dbCommand = Database.GetStoredProcCommand("dbo.[spGetAnimalTypesById]"))

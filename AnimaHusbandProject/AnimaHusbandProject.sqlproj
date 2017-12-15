@@ -69,8 +69,6 @@
     <Build Include="dbo\Stored Procedures\spAddUser.sql" />
     <Build Include="dbo\Stored Procedures\spAddParticularAnimal.sql" />
     <Build Include="dbo\Stored Procedures\spDeleteParticularAnimalById.sql" />
-    <Build Include="dbo\Stored Procedures\spGetParticularAnimal.sql" />
-    <Build Include="dbo\Stored Procedures\spGetParticularAnimalStats.sql" />
     <Build Include="dbo\Tables\NewsIntoBoard.sql" />
     <Build Include="dbo\Stored Procedures\spUpdateUser.sql" />
     <Build Include="dbo\Stored Procedures\spDeleteUserById.sql" />
@@ -87,7 +85,7 @@
     <Build Include="dbo\Stored Procedures\spUpdateAnimalParticular.sql" />
     <Build Include="dbo\Stored Procedures\spIsEmailExists.sql" />
     <Build Include="dbo\Stored Procedures\spGetAnimalTypesById.sql" />
-    <Build Include="dbo\Stored Procedures\spGetParticularAnimalById.sql" />
+    <Build Include="dbo\Stored Procedures\spGetAnimalsbyAnimalKindId.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="AnimaHusbandProject.refactorlog" />
