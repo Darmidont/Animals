@@ -22,12 +22,12 @@ namespace Animal.Web.Controllers
 			return View("DifferentKindsOfAnimalsList", models);
 		}
 
-		[HttpGet]
-		public ActionResult GetNewAnimalKind()
-		{
-			var animalKindEntity = new AnimalKindEntity();
-			return View("DifferentKindsOfAnimalsList", animalKindEntity);
-		}
+	//	[HttpGet]
+	//	public ActionResult GetNewAnimalKind()
+	//	{
+	//		var animalKindEntity = new AnimalKindEntity();
+		//	return View("DifferentKindsOfAnimalsList", animalKindEntity);
+	//	}
 
 		[HttpPost]
 		public ActionResult AddNewAnimalKind(AnimalKindModel model)
