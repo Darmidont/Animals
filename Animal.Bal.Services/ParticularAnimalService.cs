@@ -28,8 +28,6 @@ namespace Animal.Bal.Services
 			return Mapper.Map<IEnumerable<AnimalParticularEntity>, IEnumerable<AnimalParticularModel>>(animalDbTypes);
 		}
 
-
-
 		public void AddAnimalParticular(AnimalParticularModel animalParticular)
 		{
 			var animalParticularEntity = Mapper.Map<AnimalParticularEntity>(animalParticular);

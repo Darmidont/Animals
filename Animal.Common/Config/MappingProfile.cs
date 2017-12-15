@@ -16,6 +16,8 @@ namespace Animal.Common.Config
 			cfg.CreateMap<AnimalKindEntity, AnimalKindModel>();
 			cfg.CreateMap<AnimalKindModel, AnimalKindEntity>();
 			cfg.CreateMap<LoginModel, LoginEntity>();
+			cfg.CreateMap<AnimalParticularModel, AnimalParticularEntity>();
+			cfg.CreateMap<AnimalParticularEntity, AnimalParticularModel>();
 		}
 	}
 }
