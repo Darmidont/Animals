@@ -23,9 +23,9 @@ namespace Animal.Web.Controllers
 		}
 
 		[HttpGet]
-		public ActionResult NewsBoardPage()
+		public ActionResult GetNewsBoardPageView()
 		{
-			var model = new ParticularNewsModel();
+			var model = _newsBoardService.GetNews();
 			return View("NewsBoardPage", model);
 		}
 

@@ -16,21 +16,17 @@ namespace Animal.Bal.Services
 			_newsRepository = newsRepository;
 		}
 
+		public IEnumerable<ParticularNewsModel> GetParticularNewsStats()
+		{
+			var newsDbTypes = _newsRepository.GetNews();
+			return Mapper.Map<IEnumerable<ParticularNewsIntoBoardEntity>, IEnumerable<ParticularNewsModel>>(newsDbTypes);
+		}
+
 		public void AddNews(ParticularNewsModel news)
 		{
 			var newsEntity = Mapper.Map<ParticularNewsIntoBoardEntity>(news);
 			_newsRepository.Add(newsEntity);
 		}
-
-		//	public void ChangeNews(ParticularNewsModel news)
-		//{
-
-		//	}
-
-		//	public void DeleteNews(ParticularNewsModel news)
-		//{
-
-		//	}
 
 		public IEnumerable<ParticularNewsModel> GetNews()
 		{

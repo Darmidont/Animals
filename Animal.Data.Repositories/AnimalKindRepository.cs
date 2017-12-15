@@ -86,7 +86,7 @@ namespace Animal.Data.Repositories
 		public AnimalKindEntity GetById(int id)
 		{
 			var result = new List<AnimalKindEntity>();
-			using (var dbCommand = Database.GetStoredProcCommand("dbo.[spGetAnimalTypes]"))
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.[spGetAnimalTypesById]"))
 			{
 				Database.AddInParameter(dbCommand, "@Id", DbType.Int32, id);
 				using (var reader = Database.ExecuteReader(dbCommand))

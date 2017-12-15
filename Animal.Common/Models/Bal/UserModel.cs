@@ -5,13 +5,13 @@ namespace Animal.Common.Models.Bal
 	public class UserModel
 	{
 		public int Id { get; set; }
-		[Display(Name = "First Name")]
+		[Display(Name = "First Name:")]
 		[Required]
 		public string FirstName { get; set; }
-		[Display(Name = "Last Name")]
+		[Display(Name = "Last Name:")]
 		[Required]
 		public string LastName { get; set; }
-		[Display(Name = "Email")]
+		[Display(Name = "Email:")]
 		[Required]
 		public string Email { get; set; }
 		[Required]

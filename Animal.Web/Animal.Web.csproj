@@ -276,13 +276,11 @@
     <Content Include="Views\NewsBoard\NewsBoardPage.cshtml" />
     <Content Include="Views\WorkWithAnimalParticular\AddingNewParticularAnimal.cshtml" />
     <Content Include="Views\Account\OwnCab.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Account\AuthorizationCompleted.cshtml" />
     <Content Include="Views\Account\Authorization.cshtml" />
     <Content Include="Views\WorkWithAnimalParticular\UpdateAnimalsParticular.cshtml" />
     <Content Include="Views\AnimalType\UpdateInformationAboutKind.cshtml" />
     <Content Include="Views\NewsBoard\AddNews.cshtml" />
-    <Content Include="Views\OwnCab\OwnCab.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

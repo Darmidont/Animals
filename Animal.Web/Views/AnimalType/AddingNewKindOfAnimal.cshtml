@@ -12,21 +12,29 @@
 @using (Html.BeginForm("AddNewAnimalKind", "AnimalType", "Post"))
 {
     <div class="change-form">
+        <p align ="center">
         @Html.HiddenFor(_ => _.Id)
 
         @Html.LabelFor(x => x.Name)
+            <br>
         @Html.TextBoxFor(x => x.Name)
+            <br>
         @Html.ValidationMessageFor(x => x.Name)
         <br>
         @Html.LabelFor(x => x.PlannedNumberOfAnimals)
+            <br>
         @Html.TextBoxFor(x => x.PlannedNumberOfAnimals)
+            <br>
         @Html.ValidationMessageFor(x => x.PlannedNumberOfAnimals)
         <br>
         @Html.LabelFor(x => x.DescriptionOFAnimals)
+            <br>
         @Html.TextBoxFor(x => x.DescriptionOFAnimals)
+            <br>
         @Html.ValidationMessageFor(x => x.DescriptionOFAnimals)
+            </p>
         <br>
-        <button type="submit" value="btn btn-primary btn-large btn-block">Add new</button>
+        <button type="submit" class="btn btn-primary btn-large btn-block">Add new</button>
     </div>
 }
 

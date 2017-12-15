@@ -9,22 +9,25 @@
 @using (Html.BeginForm("Authorization", "Account", "Post"))
 {
     <div class="change-form">
-        <div class="editor-label">
-            @Html.LabelFor(x => x.Email)
-            </div>
-        <div class="editor-field">
+      
+        <p align ="center">
+            @Html.LabelFor(x => x.Email)    
+             <br>
             @Html.TextBoxFor(x => x.Email)
+            </p>
+        <p align="center">
             @Html.ValidationMessageFor(x => x.Email)
-            </div>
-            <br>
+            <p>
+            
 
-            <div class="editor-label">
-                @Html.LabelFor(x => x.Password)
-            </div>
-            <div class="editor-field">
-                @Html.TextBoxFor(x => x.Password)
-                @Html.ValidationMessageFor(x => x.Password)
-            </div>
+         <p align="center">
+            @Html.LabelFor(x => x.Password)
+            <br>
+            @Html.TextBoxFor(x => x.Password)
+            <p>
+                <p align ="center">
+            @Html.ValidationMessageFor(x => x.Password)
+            </p>
             <br>
             <button type="submit" class="btn btn-primary btn-large btn-block">Login!</button>
         </div>

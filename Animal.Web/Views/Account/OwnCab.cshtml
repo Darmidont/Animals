@@ -1,9 +1,56 @@
-﻿
+﻿@model Animal.Common.Models.Bal.UserModel
+
 @{
     ViewBag.Title = "OwnCab";
 }
 
-<h2>Own cab</h2>
+<h2>OwnCab</h2>
+
+@using (Html.BeginForm("Register", "Account", "Post"))
+{
+    <div class="change-form">
+
+        <p align="center">
+            @Html.LabelFor(x => x.FirstName)
+            <br>
+            @Html.TextBoxFor(x => x.FirstName)
+            <br>
+            @Html.ValidationMessageFor(x => x.FirstName, null, new { @class = "validation" })
+            <br>
+            @Html.LabelFor(x => x.LastName)
+            <br>
+            @Html.TextBoxFor(x => x.LastName)
+            <br>
+            @Html.ValidationMessageFor(x => x.LastName)
+            <br>
+            @Html.LabelFor(x => x.Email)
+            <br>
+            @Html.TextBoxFor(x => x.Email)
+            <br>
+            @Html.ValidationMessageFor(x => x.Email)
+            <br>
+            @Html.LabelFor(x => x.Login)
+            <br>
+            @Html.TextBoxFor(x => x.Login)
+            <br>
+            @Html.ValidationMessageFor(x => x.Login)
+            <br>
+            @Html.LabelFor(x => x.Password)
+            <br>
+            @Html.TextBoxFor(x => x.Password)
+            <br>
+            @Html.ValidationMessageFor(x => x.Password)
+            <br>
+            @Html.LabelFor(x => x.Description)
+            <br>
+            @Html.TextBoxFor(x => x.Description)
+            <br>
+            @Html.ValidationMessageFor(x => x.Description)
+        </p>
+        <br>
+    </div>
+}
+
 
 
 

@@ -7,8 +7,7 @@
 @using (Html.BeginForm("AddNewAnimalKind", "AnimalType", "Get"))
 {
 
-    <table width="70%">
-
+    <table width="90%">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
@@ -47,6 +46,6 @@
             </tr>
         }
     </table>
-
+    <br>
     <button type="submit" class="btn btn-primary btn-large btn-block">Add new kind</button>
 }

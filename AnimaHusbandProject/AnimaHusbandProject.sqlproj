@@ -86,6 +86,7 @@
     <Build Include="dbo\Stored Procedures\spUpdateAnimalKind.sql" />
     <Build Include="dbo\Stored Procedures\spUpdateAnimalParticular.sql" />
     <Build Include="dbo\Stored Procedures\spIsEmailExists.sql" />
+    <Build Include="dbo\Stored Procedures\spGetAnimalTypesById.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="AnimaHusbandProject.refactorlog" />
