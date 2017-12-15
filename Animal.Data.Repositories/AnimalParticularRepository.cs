@@ -107,7 +107,11 @@ namespace Animal.Data.Repositories
 
 		public IEnumerable<AnimalParticularEntity> GetAnimals(int animalKindId)
 		{
-			throw new NotImplementedException();
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.spDeleteParticularAnimalById"))
+			{
+				Database.AddInParameter(dbCommand, "@Id", DbType.Int32, animalParticular.Id);
+				Database.ExecuteNonQuery(dbCommand);
+			}
 		}
 
 		/*
