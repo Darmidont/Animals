@@ -21,7 +21,9 @@
             <th>
             @Html.DisplayNameFor(model => model.DescriptionOFAnimals)
         </tr>
-
+        <tr>
+            @Html.DisplayText("Actions");
+        </tr>
 
         @foreach (var animalKind in Model)
         {
