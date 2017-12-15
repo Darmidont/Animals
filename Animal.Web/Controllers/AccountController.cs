@@ -78,15 +78,13 @@ namespace Animal.Web.Controllers
 
 		}
 
-
-
-
-
-		[HttpPost]
+		[HttpGet]
 		public ActionResult Logout()
 		{
 			Session.Clear();
-			return View("Index");
+			
+			FormsAuthentication.SignOut();
+			return RedirectToAction("Index", "Home");
 		}
 
 
