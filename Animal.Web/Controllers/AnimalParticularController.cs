@@ -18,26 +18,21 @@ namespace Animal.Web.Controllers
 			_kindOfAnimalService = kindOfAnimalService;
 		}
 
-
+		
 		[HttpGet]
 		public ActionResult GetAnimalParticularAddingView()
 		{
 			var model = new AnimalPaticularEditModel
 			{
-				AnimalTypes = _kindOfAnimalService.GetAnimalKinds().ToDictionary(_ => _.Id, _ => _.Name)
+				AnimalTypes = _kindOfAnimalService.GetAnimalKinds().Select(_ => new SelectListItem()
+				{
+					 Text = _.Name,
+					Value = _.Id.ToString()
+				}).ToList()
 			};
-			return View("AddingNewParticularAnimal", model);
-		}
 
-		[HttpGet]
-		public ActionResult GetAnimalParticularView()
-		{
-			var model = new AnimalPaticularEditModel
-			{
-				AnimalTypes = _kindOfAnimalService.GetAnimalKinds().ToDictionary(_ => _.Id, _ => _.Name)
-			};
-			return View("DifferentAnimalsFromKindList", model);
-		}	
+			return View("AddingNewParticularAnimal", model);
+		}		
 
 		[HttpPost]
 		public ActionResult AddNewAnimalParticular(AnimalParticularModel model)
@@ -45,11 +40,22 @@ namespace Animal.Web.Controllers
 			if (ModelState.IsValid)
 			{
 				_animalParticularService.AddAnimalParticular(model);
-				return View("DifferentAnimalsFromKindList");
+
+				//return View("DifferentAnimalsFromKindList");
+				return RedirectToAction("GetByAnimalType", new {id = model.AnimalTypeId});
 			}
 			else
 			{
-				return View("AddingNewParticularAnimal");
+				var m1 = new AnimalPaticularEditModel
+				{
+					AnimalTypes = _kindOfAnimalService.GetAnimalKinds().Select(_ => new SelectListItem()
+					{
+						Text = _.Name,
+						Value = _.Id.ToString()
+					}).ToList()
+				};
+
+				return View("AddingNewParticularAnimal", m1);
 			}
 
 		}
@@ -57,7 +63,7 @@ namespace Animal.Web.Controllers
 		[HttpGet]
 		public ActionResult GetByAnimalType(int id)
 		{
-			var animals = _animalParticularService.GetParticularAnimalStats();
+			var animals = _animalParticularService.GetParticularAnimalByKindId(id);
 			return View("DifferentAnimalsFromKindList", animals);
 		}
 

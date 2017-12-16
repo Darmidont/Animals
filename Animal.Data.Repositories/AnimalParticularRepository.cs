@@ -43,7 +43,7 @@ namespace Animal.Data.Repositories
 		public IEnumerable<AnimalParticularEntity> GetParticularAnimalStats()
 		{
 			var result = new List<AnimalParticularEntity>();
-			using (var dbCommand = Database.GetStoredProcCommand("dbo.[spGetParticularAnimalStats]"))
+			using (var dbCommand = Database.GetStoredProcCommand("dbo.spGetParticularAnimalStats"))
 			{
 				using (var reader = Database.ExecuteReader(dbCommand))
 				{
@@ -61,20 +61,15 @@ namespace Animal.Data.Repositories
 		{
 			using (var dbCommand = Database.GetStoredProcCommand("dbo.spAddParticularAnimal"))
 			{
-			//	Database.AddInParameter(dbCommand, "@AnimalKindId", DbType.Int32, animalParticular.AnimalKindId);
+				Database.AddInParameter(dbCommand, "@TypeId", DbType.Int32, animalParticular.AnimalTypeId);
 				Database.AddInParameter(dbCommand, "@HasCollar", DbType.Boolean, animalParticular.HasCollar);
 				Database.AddInParameter(dbCommand, "@Name", DbType.String, animalParticular.Name);
-				//Database.AddInParameter(dbCommand, "@IsAlive", DbType.Int32, animalParticular.IsAlive);
-				//Database.AddInParameter(dbCommand, "@HeartRhythms", DbType.Int32, animalParticular.HeartRhythms);
-			//	Database.AddInParameter(dbCommand, "@CaloriesBurnedPerDay", DbType.String, animalParticular.CaloriesBurnedPerDay);
-				//Database.AddInParameter(dbCommand, "@BreathingRatePerMinute", DbType.String, animalParticular.BreathingRatePerMinute);
 				Database.AddInParameter(dbCommand, "@LastWeight", DbType.Int32, animalParticular.LastWeight);
-				Database.AddInParameter(dbCommand, "@Description", DbType.Int32, animalParticular.Description);
+				Database.AddInParameter(dbCommand, "@Description", DbType.String, animalParticular.Description);
 				Database.ExecuteNonQuery(dbCommand);
-	}
+			}
 
-		}
-
+ 		}
 
 		public void Update(AnimalParticularEntity animalParticular)
 		{

@@ -12,32 +12,42 @@
 {
 <div class="change-form">
 
-   
-        @Html.LabelFor(x => x.AnimalTypes)
-    
-        @Html.DropDownListFor(x => x.AnimalTypes, new SelectList(Model.AnimalTypes, "AnimalTypeId"))
-  
-        @Html.LabelFor(x => x.HasCollar)
-    
-        @Html.TextBoxFor(x => x.HasCollar)
-        @Html.ValidationMessageFor(x => x.HasCollar) 
-    <br> 
-        @Html.LabelFor(x => x.Name)
-   
-        @Html.TextBoxFor(x => x.Name)
-        @Html.ValidationMessageFor(x => x.Name)
+
+    @Html.LabelFor(x => x.AnimalTypes)
+
+
+    @Html.DropDownListFor(
+    x => x.AnimalTypeId,
+    new SelectList(Model.AnimalTypes, "Value", "Text"))
+
+
+    @Html.LabelFor(x => x.HasCollar)
+
+    @Html.TextBoxFor(x => x.HasCollar)
+    @Html.ValidationMessageFor(x => x.HasCollar)
+
     <br>
-        @Html.LabelFor(x => x.LastWeight)
-    
-        @Html.TextBoxFor(x => x.LastWeight)
-        @Html.ValidationMessageFor(x => x.LastWeight)
+
+    @Html.LabelFor(x => x.Name)
+
+    @Html.TextBoxFor(x => x.Name)
+    @Html.ValidationMessageFor(x => x.Name)
+
     <br>
-        @Html.LabelFor(x => x.DescriptionOFAnimals)
-  
-        @Html.TextBoxFor(x => x.DescriptionOFAnimals)
-        @Html.ValidationMessageFor(x => x.DescriptionOFAnimals)
-    </div>
-    <button type="submit" class="btn btn-primary btn-large btn-block">Add new</button>
+
+    @Html.LabelFor(x => x.LastWeight)
+
+    @Html.TextBoxFor(x => x.LastWeight)
+    @Html.ValidationMessageFor(x => x.LastWeight)
+
+    <br>
+
+    @Html.LabelFor(x => x.Description)
+
+    @Html.TextBoxFor(x => x.Description)
+    @Html.ValidationMessageFor(x => x.Description)
+</div>
+    <button type="submit" class="btn btn-primary btn-large btn-block">Add New</button>
 
 }
 </div>

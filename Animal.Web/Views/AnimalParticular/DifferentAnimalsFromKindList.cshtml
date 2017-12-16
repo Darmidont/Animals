@@ -1,15 +1,14 @@
 ﻿@{
     ViewBag.Title = "DifferentAnimalsFromKindList";
-    @model  IEnumerable<Animal.Common.Models.Bal.AnimalParticularModel>
+    
+@model  IEnumerable<Animal.Common.Models.Bal.AnimalParticularModel>
 
 }
     <div class ="form-text">
     <h2>Here you can see list of particular animals of this type:</h2>
 
-
-@using (Html.BeginForm("GetAnimalParticularView", "AnimalParticular", "Get"))
-{
-
+@*@using (Html.BeginForm("GetAnimalParticularView", "AnimalParticular", "Get"))
+{*@
         <table width="90%">
             <tr>
                 <th>
@@ -34,14 +33,12 @@
                 @Html.DisplayNameFor(model => model.LastWeight)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.DescriptionOFAnimals)
+                    @Html.DisplayNameFor(model => model.Description)
                 </th>
                 <th>
                     <label>Actions</label>
                 </th>
-
  </tr>
-
                 @foreach (var animalParticular in Model)
                 {
                      <tr>
@@ -67,7 +64,7 @@
                         @Html.DisplayFor(modelItem => animalParticular.LastWeight)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => animalParticular.DescriptionOFAnimals)
+                        @Html.DisplayFor(modelItem => animalParticular.Description)
                     </td>
                     <td>
                         @Html.ActionLink("Update", "Update", new { id = animalParticular.Id }) |
@@ -76,8 +73,5 @@
                 </tr>
 }
         </table>
-
-        <button type="submit" class="btn btn-primary btn-large btn-block">Add new animal</button>
-         
-}
-</div>
+        @Html.ActionLink("Add new animal", "GetAnimalParticularAddingView")
+    </div>

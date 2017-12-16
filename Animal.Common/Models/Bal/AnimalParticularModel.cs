@@ -18,8 +18,8 @@ namespace Animal.Common.Models.Bal
 		public int CaloriesBurned { get; set; }
 		public int BreathingRate { get; set; }
 		[Required]
-		[Display(Name = "Last weight:")]
-		public int LastWeight { get; set; }
-		public string DescriptionOFAnimals { get; set; }	
+		public int LastWeight { get; set; }		
+		public string Description { get; set; }	
 	}
 }
+
