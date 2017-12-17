@@ -20,7 +20,7 @@ namespace Animal.Web.Controllers
 
 		
 		[HttpGet]
-		public ActionResult GetAnimalViewForAdd()
+		public ActionResult GetAnimalParticularAddingView()
 		{
 			var model = new AnimalPaticularEditModel
 			{
@@ -74,7 +74,7 @@ namespace Animal.Web.Controllers
 		}
 
 		[HttpPost]
-		public ActionResult Delete()
+		public ActionResult DeleteParticular(int id)
 		{
 			return View("DifferentAnimalsFromKindList");
 		}

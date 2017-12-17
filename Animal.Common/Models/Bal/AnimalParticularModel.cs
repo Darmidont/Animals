@@ -9,8 +9,10 @@ namespace Animal.Common.Models.Bal
 		[Required]
 		public string Name { get; set; }
 		[Required]
+		[Display(Name = "Is alive(true or false):")]
 		public bool IsAlive { get; set; }
 		[Required]
+		[Display(Name = "Has collar(true or false):")]
 		public bool HasCollar { get; set; }
 		public int HeartRhythms { get; set; }
 		public int CaloriesBurned { get; set; }

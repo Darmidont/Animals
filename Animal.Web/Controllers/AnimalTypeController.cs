@@ -21,14 +21,6 @@ namespace Animal.Web.Controllers
 			var models = _animalKindService.GetAnimalKinds();
 			return View("DifferentKindsOfAnimalsList", models);
 		}
-
-	//	[HttpGet]
-	//	public ActionResult GetNewAnimalKind()
-	//	{
-	//		var animalKindEntity = new AnimalKindEntity();
-		//	return View("DifferentKindsOfAnimalsList", animalKindEntity);
-	//	}
-
 		[HttpPost]
 		public ActionResult AddNewAnimalKind(AnimalKindModel model)
 		{
@@ -42,7 +34,6 @@ namespace Animal.Web.Controllers
 				return View("AddingNewKindOfAnimal");
 			}
 		}
-
 
 		[HttpGet]
 		public ActionResult GetAnimalKindAddingView()
@@ -64,7 +55,14 @@ namespace Animal.Web.Controllers
 			var animalKindEntity = new AnimalKindEntity();
 			return View("UpdateInformationAboutKind", animalKindEntity);
 		}
-		
+
+		[HttpPost]
+		public ActionResult UpdateAnimalKind(int animalKind)
+		{
+			return View("UpdateInformationAboutKind");
+		}
+
+
 
 		//[HttpGet]
 		//public ActionResult GetAnimalKind(int animalKindId)
@@ -76,16 +74,11 @@ namespace Animal.Web.Controllers
 
 
 		[HttpPost]
-		public ActionResult Delete(int animalKindId)
+		public ActionResult DeleteKind(AnimalKindModel model)
 		{
-			//_animalKindService.DeleteAnimalKind();
+			_animalKindService.DeleteAnimalKind(model);
 			return View("DifferentKindsOfAnimalsList");
 		}
 
-		[HttpPost]
-		public ActionResult Update(int animalKind)
-		{
-			return View("UpdateInformationAboutKind");
-		}
 	}
 }
