@@ -221,6 +221,7 @@
     <Compile Include="Controllers\NewsBoardController.cs" />
     <Compile Include="Controllers\AnimalTypeController.cs" />
     <Compile Include="Controllers\AnimalParticularController.cs" />
+    <Compile Include="Controllers\AccountApiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
